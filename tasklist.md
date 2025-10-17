@@ -45,10 +45,19 @@
 - 커밋 메시지: `feat(result): og meta + ad-slot placeholders`
 - 비고: 이미 구현되어 있던 기능 검증 완료, 공유 버튼 포함
 
-4. AdSense A/B 테스트 인프라 설계 및 토글 구현
+4. AdSense A/B 테스트 인프라 설계 및 토글 구현 — ✅ 완료 (커밋: 예정)
 
 - 목적: 광고 위치/밀도 실험으로 eCPM/EPMV 극대화
-- Acceptance criteria: 쿼리파라미터/feature-flag로 광고 레이아웃 전환 가능, A/B 이벤트 로깅
+- Acceptance criteria: ✅ 모두 충족
+  - ✅ 쿼리파라미터 `?ab=A|B`로 광고 레이아웃 전환 가능
+  - ✅ data-ab-variant 속성이 html 요소에 설정됨
+  - ✅ Variant B에서 sticky 광고가 CSS로 숨김 처리
+  - ✅ A/B 실험 이벤트가 analytics에 기록 (ab_experiment_view)
+  - ✅ /api/track 엔드포인트로 이벤트 수집 및 조회
+  - ✅ Playwright E2E 7개 테스트 케이스 모두 통과 (TC4.1~TC4.7)
+  - ✅ 테스트 파일 제거 완료
+- 커밋 메시지: `feat(ads-ab): feature flag + ab logging verified`
+- 비고: 이미 구현되어 있던 A/B 인프라 검증 완료
 
 5. CMP(Consent Management Platform) 연동
 
