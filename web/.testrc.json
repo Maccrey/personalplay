@@ -1,0 +1,12 @@
+{
+  "globalSetup": "./tests/e2e/setup.js",
+  "testEnvironment": "node",
+  "testTimeout": 120000,
+  "testPathIgnorePatterns": [
+    "/node_modules/",
+    "/.next/"
+  ],
+  "setupFilesAfterEnv": [
+    "./tests/e2e/setup-tests.js"
+  ]
+}

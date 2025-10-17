@@ -168,4 +168,13 @@ PersonaPlay (퍼소나플레이) — 비즈니스 중심 PRD (AdSense 수익화 
 ---
 
 요약: 기술적으로는 Next.js 기반의 빠른 MVP로 시작해, AdSense로 초기 수익을 만들고 Google Ad Manager/헤더비딩, 브랜드 제휴, 프리미엄 제품으로 확장하는 구조를 권장합니다. 광고는 UX 우선으로 배치하고 정책 준수를 절대 원칙으로 하여 AdSense 수익화를 안정적으로 운영합니다.
+
+---
+
+## 개발 현황 요약 (자동 업데이트)
+
+- 구현: 기본 Next.js MVP 스캐폴드, 결과 페이지 템플릿(OG/meta/ads placeholder) 구현
+- 테스트: Playwright E2E(홈→테스트→결과) 작성 및 실행(통과), 테스트 파일은 규칙에 따라 제거됨
+- 커밋: feat(init): basic Next.js scaffold + result template (tests passed and removed)
+- 다음 단계: PRD의 우선순위에 따라 테스트 엔진, 광고 슬롯 A/B, CMP 연동 등을 순차 구현
 ```
