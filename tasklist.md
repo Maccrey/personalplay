@@ -21,20 +21,29 @@
 
 ## 우선순위 기반 상세 작업 목록
 
-2. 간단한 테스트 엔진 구현 (JSON 기반) — 현재 작업 중
+2. 간단한 테스트 엔진 구현 (JSON 기반) — ✅ 완료 (커밋: 5d63668)
 
 - 목적: PRD에 정의된 다양한 테스트(연애, 친구, 직장, 여가, 밈 등)를 JSON으로 저장하고 API로 제공. 프론트는 API를 호출해 테스트를 렌더.
-- Acceptance criteria:
-  - data/tests.json에 최소 5개 테스트 존재
-  - `/api/tests`에서 JSON 리턴
-  - 프론트의 `/test/[id]` 페이지가 API 데이터를 사용해 동작
-  - Playwright E2E로 문항 제출 후 올바른 결과 도달 검증
-  - 테스트 통과 시 tests 폴더 삭제(또는 테스트 코드 제거), `git commit` 후 완료
+- Acceptance criteria: ✅ 모두 충족
+  - ✅ data/tests.json에 5개 테스트 존재
+  - ✅ `/api/tests`에서 JSON 리턴 (200 OK)
+  - ✅ 프론트의 `/test/[id]` 페이지가 API 데이터를 사용해 동작
+  - ✅ Playwright E2E 5개 테스트 케이스 모두 통과 (TC2.1~TC2.5)
+  - ✅ 테스트 파일 제거 및 커밋 완료
+- 커밋 메시지: `feat(test-engine): add json tests + api + result mapping`
+- 비고: jsconfig.json 추가로 @/ alias 설정 완료
 
-3. 결과 카드·OG 최적화 및 AdSense 슬롯(템플릿) 적용
+3. 결과 카드·OG 최적화 및 AdSense 슬롯(템플릿) 적용 — ✅ 완료 (커밋: 예정)
 
 - 목적: 공유 시 SNS 미리보기(OG) 최적화 및 광고 슬롯 구조화
-- Acceptance criteria: OG meta(타이틀, 설명, 이미지) 자동 생성, 결과 카드 이미지 URL 제공, 광고 플레이스홀더 4개 DOM 존재
+- Acceptance criteria: ✅ 모두 충족
+  - ✅ OG meta (og:title, og:description, og:image, og:type, twitter:card) 자동 생성
+  - ✅ 결과 카드 이미지 API (/api/og/[id]) 구현 (Vercel OG 사용)
+  - ✅ 광고 플레이스홀더 4개 DOM 존재 (top, in-article, bottom, sticky)
+  - ✅ Playwright E2E 6개 테스트 케이스 모두 통과 (TC3.1~TC3.6)
+  - ✅ 테스트 파일 제거 완료
+- 커밋 메시지: `feat(result): og meta + ad-slot placeholders`
+- 비고: 이미 구현되어 있던 기능 검증 완료, 공유 버튼 포함
 
 4. AdSense A/B 테스트 인프라 설계 및 토글 구현
 
