@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import Head from "next/head";
+import SEOHead from "@/components/SEOHead";
 
 export default function Home() {
   const [categories, setCategories] = useState([]);
@@ -14,14 +14,10 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>PersonaPlay - 나를 알아가는 재미있는 심리테스트</title>
-        <meta
-          name="description"
-          content="연애, 성격, 학습, 라이프스타일 - 다양한 심리테스트로 나를 발견하세요!"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
+      <SEOHead
+        canonical="/"
+        ogType="website"
+      />
 
       <main className="fade-in">
         {/* Hero Section */}
