@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import AdUnit from "@/components/AdUnit";
 import useAdScripts from "@/hooks/useAdScripts";
+import { trackEvent } from "@/utils/analytics";
 
 const SAMPLE = {
   1: {
@@ -35,6 +36,16 @@ export default function TestPage({ initialTest }) {
       });
   }, [id, def]);
 
+  // Track test start
+  useEffect(() => {
+    if (def && id) {
+      trackEvent("test_started", {
+        test_id: id,
+        test_title: def.title,
+      });
+    }
+  }, [def, id]);
+
   if (!def)
     return <div style={{ padding: 20 }}>로딩 중 또는 테스트가 없습니다.</div>;
 
@@ -43,6 +54,16 @@ export default function TestPage({ initialTest }) {
     const score = answers.reduce((s, v) => s + (v ? 1 : 0), 0);
     const threshold = Math.ceil(def.questions.length / 2);
     const result = score >= threshold ? def.results[0] : def.results[1];
+
+    // Track test completion
+    trackEvent("test_completed", {
+      test_id: id,
+      test_title: def.title,
+      score: score,
+      total_questions: def.questions.length,
+      result_key: result.key,
+    });
+
     router.push(`/result/${id}?r=${result.key}`);
   }
 

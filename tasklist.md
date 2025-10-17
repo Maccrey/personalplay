@@ -74,9 +74,19 @@
 - 커밋 메시지: `feat(consent): add CMP scaffold + ad gating verified`
 - 비고: localStorage 기반 간단한 CMP 구현, 추후 실제 CMP 벤더 연동 가능
 
-6. Analytics 및 수익 추적 파이프라인
+6. Analytics 및 수익 추적 파이프라인 — ✅ 완료 (커밋: 예정)
 
 - 목적: 광고 성능·사용자 행동 데이터 수집 및 eCPM 실험을 위한 기반 제공
+- Acceptance criteria: ✅ 모두 충족
+  - ✅ 주요 이벤트 추적 구현 (test_started, test_completed, result_viewed, result_shared)
+  - ✅ /api/track 엔드포인트 강화 (필터링, 통계 기능)
+  - ✅ 이벤트 타입별/테스트별 필터 기능
+  - ✅ 실시간 통계 (event_types, tests별 집계)
+  - ✅ dataLayer 연동 (GA4 준비)
+  - ✅ Playwright E2E 7개 테스트 케이스 모두 통과 (TC6.1~TC6.7)
+  - ✅ 테스트 파일 제거 완료
+- 커밋 메시지: `feat(analytics): add event tracking + stats api`
+- 비고: test/result 페이지에 이벤트 추적 추가, /api/track 통계 기능 구현
 
 7. 초기 콘텐츠(10개) 제작 및 CMS 입력
 

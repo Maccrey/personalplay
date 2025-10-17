@@ -18,6 +18,15 @@ export default function ResultPage() {
         const t = data.tests.find((x) => x.id === id);
         const rr = t?.results.find((x) => x.key === r);
         setRes(rr);
+
+        // Track result page view
+        if (rr) {
+          trackEvent("result_viewed", {
+            test_id: id,
+            result_key: r,
+            result_title: rr.title,
+          });
+        }
       });
   }, [id, r]);
 
@@ -124,6 +133,14 @@ export default function ResultPage() {
         <div className={styles.share}>
           <button
             onClick={() => {
+              // Track share event
+              trackEvent("result_shared", {
+                test_id: id,
+                result_key: r,
+                result_title: res?.title,
+                share_method: navigator.share ? "native_share" : "clipboard",
+              });
+
               if (navigator.share) {
                 navigator.share({
                   title: res?.title,
