@@ -4,6 +4,7 @@ import Head from "next/head";
 import Link from "next/link";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useTranslation } from "@/hooks/useTranslation";
+import { getCategoryById, getAllTests } from "@/lib/firestore-client";
 
 export default function CategoryPage() {
   const router = useRouter();
@@ -16,13 +17,12 @@ export default function CategoryPage() {
     if (!id) return;
 
     Promise.all([
-      fetch("/api/categories").then((r) => r.json()),
-      fetch("/api/tests").then((r) => r.json()),
-    ]).then(([catData, testData]) => {
-      const cat = catData.categories.find((c) => c.id === id);
+      getCategoryById(id),
+      getAllTests(),
+    ]).then(([cat, testData]) => {
       if (cat) {
         setCategory(cat);
-        const categoryTests = testData.tests.filter((t) =>
+        const categoryTests = testData.filter((t) =>
           cat.tests.includes(t.id)
         );
         setTests(categoryTests);

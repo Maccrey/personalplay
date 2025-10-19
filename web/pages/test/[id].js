@@ -7,6 +7,7 @@ import useAdScripts from "@/hooks/useAdScripts";
 import { trackEvent } from "@/utils/analytics";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useTranslation } from "@/hooks/useTranslation";
+import { getTestById } from "@/lib/firestore-client";
 
 export default function TestPage({ initialTest }) {
   const router = useRouter();
@@ -19,11 +20,9 @@ export default function TestPage({ initialTest }) {
   useEffect(() => {
     if (def) return; // server-side provided
     if (!id) return;
-    fetch("/api/tests")
-      .then((r) => r.json())
-      .then((data) => {
-        const t = data.tests.find((x) => x.id === id);
-        setDef(t);
+    getTestById(id)
+      .then((test) => {
+        setDef(test);
       });
   }, [id, def]);
 

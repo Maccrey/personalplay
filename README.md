@@ -10,8 +10,9 @@
 - **🎨 SNS 공유 최적화** - OG 태그 및 이미지 자동 생성
 - **🔍 SEO 최적화** - Multilingual SEO, hreflang 태그, sitemap
 - **💰 AdSense 준비 완료** - GDPR/CCPA 준수 쿠키 동의 관리
-- **📊 Analytics** - 사용자 행동 추적 및 통계
-- **⚡ Next.js 14** - SSG/SSR로 최적화된 성능
+- **📊 Analytics** - Firebase를 통한 사용자 행동 추적 및 통계
+- **⚡ Next.js 14** - Static Export로 최적화된 성능
+- **🔥 Firebase + GitHub Pages** - 무료 호스팅 및 데이터베이스
 
 ## 🚀 빠른 시작
 
@@ -19,6 +20,7 @@
 
 - Node.js 16.x 이상
 - npm 또는 yarn
+- Firebase 프로젝트 (무료)
 
 ### 설치
 
@@ -32,6 +34,17 @@ cd web
 npm install
 ```
 
+### Firebase 설정
+
+1. Firebase 프로젝트 생성 및 Firestore 활성화
+2. `web/lib/firebase.js`에서 Firebase 설정 업데이트
+3. 데이터 마이그레이션:
+   ```bash
+   npm run migrate
+   ```
+
+자세한 내용은 [DEPLOYMENT.md](DEPLOYMENT.md) 참조
+
 ### 개발 서버 실행
 
 ```bash
@@ -44,7 +57,7 @@ npm run dev
 
 ```bash
 npm run build
-npm start
+# 정적 파일이 out/ 디렉토리에 생성됨
 ```
 
 ## 📁 프로젝트 구조
@@ -52,18 +65,18 @@ npm start
 ```
 myself-test/
 ├── web/                          # Next.js 애플리케이션
+│   ├── lib/
+│   │   ├── firebase.js           # Firebase 클라이언트 설정
+│   │   ├── firebase-admin.js     # Firebase Admin SDK (🔐 비공개)
+│   │   └── firestore-client.js   # Firestore 유틸리티 함수
 │   ├── pages/
-│   │   ├── api/
-│   │   │   ├── tests.js          # 테스트 데이터 API
-│   │   │   ├── categories.js     # 카테고리 API
-│   │   │   ├── track.js          # Analytics API
-│   │   │   ├── sitemap.xml.js    # 다국어 Sitemap
-│   │   │   └── og/[id].js        # OG 이미지 생성
 │   │   ├── test/[id].js          # 테스트 페이지
 │   │   ├── result/[id].js        # 결과 페이지
 │   │   ├── category/[id].js      # 카테고리 페이지
 │   │   ├── _app.js               # 앱 래퍼 (LanguageProvider)
 │   │   └── index.js              # 홈페이지
+│   ├── scripts/
+│   │   └── migrate-to-firestore.js  # 데이터 마이그레이션 스크립트
 │   ├── components/
 │   │   ├── LanguageSwitcher.js   # 언어 전환 버튼
 │   │   ├── SEOHead.js            # 다국어 SEO 헤더
@@ -83,12 +96,17 @@ myself-test/
 │   │   ├── en.json               # 영어 번역 (60개 테스트 포함)
 │   │   └── ja.json               # 일본어 번역 (60개 테스트 포함)
 │   ├── data/
-│   │   ├── tests.json            # 60개 테스트 데이터
-│   │   └── categories.json       # 6개 카테고리 데이터
+│   │   ├── tests.json            # 60개 테스트 데이터 (로컬 백업)
+│   │   └── categories.json       # 6개 카테고리 데이터 (로컬 백업)
 │   ├── public/
 │   │   └── robots.txt            # 검색엔진 최적화
-│   └── styles/
-│       └── globals.css           # 글로벌 스타일
+│   ├── styles/
+│   │   └── globals.css           # 글로벌 스타일
+│   └── next.config.js            # Next.js 설정 (output: 'export')
+├── .github/
+│   └── workflows/
+│       └── deploy.yml            # GitHub Actions 배포 워크플로우
+├── DEPLOYMENT.md                 # 배포 가이드
 └── README.md                     # 이 문서
 ```
 
@@ -384,36 +402,37 @@ npx playwright test
 
 ## 🛠️ 기술 스택
 
-- **Framework**: Next.js 14
+- **Framework**: Next.js 14 (Static Export)
 - **Language**: JavaScript (React)
 - **Styling**: CSS Modules + Global CSS
 - **State Management**: React Context API
+- **Database**: Firebase Firestore
 - **i18n**: Custom hook + JSON translations
-- **Analytics**: Custom lightweight tracker
+- **Analytics**: Firebase Analytics
 - **Testing**: Playwright E2E
-- **Deployment**: Vercel (권장)
+- **Deployment**: GitHub Pages + GitHub Actions
 
 ## 🚀 배포
 
-### Vercel 배포
+### GitHub Pages 자동 배포
+
+1. `main` 브랜치에 푸시하면 자동 배포
+2. GitHub Actions에서 빌드 진행 확인
+3. 배포 완료 후 `https://<username>.github.io/<repo>/` 접속
+
+### 수동 배포
 
 ```bash
-# Vercel CLI 설치
-npm i -g vercel
-
-# 배포
 cd web
-vercel
+npm run build
+# out/ 디렉토리의 정적 파일을 호스팅
 ```
 
-### 환경 변수
+### Firebase 설정
 
-필요한 경우 `.env.local` 생성:
+Firebase 프로젝트 생성 및 설정은 [DEPLOYMENT.md](DEPLOYMENT.md) 참조
 
-```env
-NEXT_PUBLIC_SITE_URL=https://maccre.com
-NEXT_PUBLIC_ADSENSE_CLIENT=ca-pub-xxxxx
-```
+**⚠️ 보안 주의**: `lib/firebase-admin.js` 파일은 절대 Git에 커밋하지 마세요!
 
 ## 🐛 문제 해결
 

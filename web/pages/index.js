@@ -3,15 +3,15 @@ import { useEffect, useState } from "react";
 import SEOHead from "@/components/SEOHead";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useTranslation } from "@/hooks/useTranslation";
+import { getAllCategories } from "@/lib/firestore-client";
 
 export default function Home() {
   const [categories, setCategories] = useState([]);
   const { t } = useTranslation();
 
   useEffect(() => {
-    fetch("/api/categories")
-      .then((res) => res.json())
-      .then((data) => setCategories(data.categories || []))
+    getAllCategories()
+      .then((data) => setCategories(data || []))
       .catch(() => {});
   }, []);
 
