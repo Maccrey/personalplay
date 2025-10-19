@@ -5306,5 +5306,27 @@
         }
       }
     }
+  },
+  "auth": {
+    "signIn": "Google로 로그인",
+    "signOut": "로그아웃",
+    "signingIn": "로그인 중...",
+    "signInError": "로그인에 실패했습니다. 다시 시도해주세요.",
+    "signOutError": "로그아웃에 실패했습니다. 다시 시도해주세요.",
+    "myResults": "내 결과 보기",
+    "saveResult": "결과 저장",
+    "resultSaved": "결과가 저장되었습니다!",
+    "loginToSave": "결과를 저장하려면 로그인하세요"
+  },
+  "myResults": {
+    "title": "내 테스트 결과",
+    "description": "지금까지 완료한 모든 테스트 결과를 확인하세요",
+    "noResults": "아직 저장된 결과가 없습니다",
+    "takeTests": "테스트 하러 가기",
+    "viewResult": "결과 보기",
+    "delete": "삭제",
+    "confirmDelete": "정말 삭제하시겠습니까?",
+    "testTaken": "테스트 완료",
+    "result": "결과"
   }
 }

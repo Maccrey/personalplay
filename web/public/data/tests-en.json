@@ -1289,16 +1289,70 @@
       ],
       "results": {
         "A": {
-          "title": "음악 마니아",
-          "desc": "음악이 삶! 다양한 장르를 섭렵하며, 음악 없는 하루는 상상할 수 없는 진정한 멜로마니아입니다."
+          "title": "music mania",
+          "summary": "Music is life! A true melodrama that covers a variety of genres and makes it impossible to imagine a day without music...",
+          "description": "Music is life! He is a true melomaniac who enjoys a variety of genres and cannot imagine a day without music.",
+          "characteristics": [
+            "Music is life! He is a true melomaniac who enjoys a variety of genres and cannot imagine a day without music.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "B": {
-          "title": "일상의 BGM",
-          "desc": "분위기 메이커! 상황에 맞는 음악으로 일상에 활력을 더하는 센스있는 리스너입니다."
+          "title": "Daily BGM",
+          "summary": "Mood maker! I am a sensible listener who adds vitality to my daily life with music that suits the situation.",
+          "description": "Mood maker! I am a sensible listener who adds vitality to my daily life with music that suits the situation.",
+          "characteristics": [
+            "Mood maker! I am a sensible listener who adds vitality to my daily life with music that suits the situation.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         },
         "C": {
-          "title": "음악 무관심",
-          "desc": "조용이 좋아! 음악보다는 고요함이나 자연의 소리를 선호하는 평화로운 타입입니다."
+          "title": "music indifference",
+          "summary": "I like quiet! They are a peaceful type who prefers silence and the sounds of nature over music.",
+          "description": "I like quiet! They are a peaceful type who prefers silence and the sounds of nature over music.",
+          "characteristics": [
+            "I like quiet! They are a peaceful type who prefers silence and the sounds of nature over music.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         }
       }
     },
@@ -1320,16 +1374,70 @@
       ],
       "results": {
         "A": {
-          "title": "깔끔 대장",
-          "desc": "정리의 신! 항상 깨끗한 공간을 유지하며, 정돈된 환경에서 편안함을 느끼는 타입입니다."
+          "title": "neat captain",
+          "summary": "God of organizing! This type of person always maintains a clean space and feels comfortable in an organized environment.",
+          "description": "God of organizing! This type of person always maintains a clean space and feels comfortable in an organized environment.",
+          "characteristics": [
+            "God of organizing! This type of person always maintains a clean space and feels comfortable in an organized environment.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "B": {
-          "title": "평범한 청소러",
-          "desc": "적당히! 필요할 때 청소하며, 너무 지저분하지도 너무 깔끔하지도 않은 균형형입니다."
+          "title": "an ordinary cleaner",
+          "summary": "right! It cleans when needed and is a balance between being neither too messy nor too tidy.",
+          "description": "right! It cleans when needed and is a balance between being neither too messy nor too tidy.",
+          "characteristics": [
+            "right! It cleans when needed and is a balance between being neither too messy nor too tidy.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "C": {
-          "title": "자유로운 영혼",
-          "desc": "창의적 혼돈! 약간의 어질러짐 속에서도 자신만의 질서를 찾는 자유분방한 스타일입니다."
+          "title": "free spirit",
+          "summary": "Creative chaos! It is a free-spirited style that finds its own order even in the slightest mess.",
+          "description": "Creative chaos! It is a free-spirited style that finds its own order even in the slightest mess.",
+          "characteristics": [
+            "Creative chaos! It is a free-spirited style that finds its own order even in the slightest mess.",
+            "Original and innovative way of thinking",
+            "Good at coming up with new ideas",
+            "unconventional approach"
+          ],
+          "strengths": [
+            "Rich imagination and creativity",
+            "Looking at a problem from different angles",
+            "Presenting innovative solutions"
+          ],
+          "weaknesses": [
+            "Practical constraints may be overlooked",
+            "Systematic execution may be lacking",
+            "Improvement is possible by increasing self-awareness."
+          ],
+          "advice": "Be creative, but also consider feasibility. The more you develop your ability to bring your ideas to life, the more you will shine."
         }
       }
     },
@@ -1351,16 +1459,70 @@
       ],
       "results": {
         "A": {
-          "title": "집사 인생",
-          "desc": "반려동물이 최고! 반려동물을 가족처럼 아끼고, 그들의 행복을 위해 헌신하는 진정한 집사입니다."
+          "title": "Butler's life",
+          "summary": "Pets are the best! A true home that cares for pets like family and is dedicated to their happiness...",
+          "description": "Pets are the best! He is a true butler who cares for his pets like family and is devoted to their happiness.",
+          "characteristics": [
+            "Pets are the best! He is a true butler who cares for his pets like family and is devoted to their happiness.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         },
         "B": {
-          "title": "동물 애호가",
-          "desc": "동물 좋아! 동물을 좋아하지만 실제로 키우는 것과 좋아하는 것은 별개인 현실주의자입니다."
+          "title": "zoophilist",
+          "summary": "I love animals! I am a realist who likes animals, but actually raising them and liking them are two different things.",
+          "description": "I love animals! I am a realist who likes animals, but actually raising them and liking them are two different things.",
+          "characteristics": [
+            "I love animals! I am a realist who likes animals, but actually raising them and liking them are two different things.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         },
         "C": {
-          "title": "동물 중립",
-          "desc": "관심 없어! 동물에 대한 특별한 관심은 없지만, 학대나 보호에는 반대하는 중립적 입장입니다."
+          "title": "animal neutral",
+          "summary": "I'm not interested! I have no special interest in animals, but I have a neutral stance against their abuse or protection...",
+          "description": "I'm not interested! Although we have no special interest in animals, we have a neutral stance against their abuse or protection.",
+          "characteristics": [
+            "I'm not interested! Although we have no special interest in animals, we have a neutral stance against their abuse or protection.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         }
       }
     },
@@ -1382,16 +1544,70 @@
       ],
       "results": {
         "A": {
-          "title": "패셔니스타",
-          "desc": "패션이 곧 나! 최신 트렌드를 빠르게 캐치하고 자신만의 스타일을 완성하는 패션 리더입니다."
+          "title": "fashionista",
+          "summary": "Fashion is coming! He is a fashion leader who quickly catches the latest trends and creates his own style.",
+          "description": "Fashion is coming! He is a fashion leader who quickly catches the latest trends and creates his own style.",
+          "characteristics": [
+            "Fashion is coming! He is a fashion leader who quickly catches the latest trends and creates his own style.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         },
         "B": {
-          "title": "실용주의자",
-          "desc": "편한 게 최고! 유행보다는 편안함과 실용성을 중시하는 합리적인 스타일입니다."
+          "title": "pragmatist",
+          "summary": "Comfort is best! It is a reasonable style that emphasizes comfort and practicality rather than fashion.",
+          "description": "Comfort is best! It is a reasonable style that emphasizes comfort and practicality rather than fashion.",
+          "characteristics": [
+            "Comfort is best! It is a reasonable style that emphasizes comfort and practicality rather than fashion.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "C": {
-          "title": "무관심러",
-          "desc": "옷은 그냥! 패션에 크게 신경 쓰지 않고, 필요한 것만 구매하는 미니멀한 타입입니다."
+          "title": "Indifferent",
+          "summary": "Just clothes! I am a minimalist type who doesn't pay much attention to fashion and only buys what I need.",
+          "description": "Just clothes! I am a minimalist type who doesn't pay much attention to fashion and only buys what I need.",
+          "characteristics": [
+            "Just clothes! I am a minimalist type who doesn't pay much attention to fashion and only buys what I need.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         }
       }
     },
@@ -1413,16 +1629,70 @@
       ],
       "results": {
         "A": {
-          "title": "하드코어 게이머",
-          "desc": "게임이 인생! 다양한 장르를 섭렵하며, 게임을 통해 성취감과 즐거움을 얻는 진정한 게이머입니다."
+          "title": "hardcore gamer",
+          "summary": "Games are life! The real thing about learning a variety of genres and gaining a sense of accomplishment and enjoyment through games...",
+          "description": "Games are life! He is a true gamer who enjoys a variety of genres and gets a sense of accomplishment and enjoyment through games.",
+          "characteristics": [
+            "Games are life! He is a true gamer who enjoys a variety of genres and gets a sense of accomplishment and enjoyment through games.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         },
         "B": {
-          "title": "캐주얼 게이머",
-          "desc": "가볍게 즐겨! 여가 시간에 부담 없이 즐기는 라이트 유저로, 재미 위주의 게임을 선호합니다."
+          "title": "casual gamer",
+          "summary": "Have fun! I am a light user who enjoys leisure time and prefers fun-oriented games...",
+          "description": "Have fun! I am a light user who enjoys leisure time and prefers fun-oriented games.",
+          "characteristics": [
+            "Have fun! I am a light user who enjoys leisure time and prefers fun-oriented games.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         },
         "C": {
-          "title": "게임 무관심",
-          "desc": "게임보다 현실! 게임에 크게 흥미가 없고, 다른 취미 활동을 더 선호하는 타입입니다."
+          "title": "game indifference",
+          "summary": "More reality than a game! This type of person is not very interested in games and prefers other hobbies.",
+          "description": "More reality than a game! This type of person is not very interested in games and prefers other hobbies.",
+          "characteristics": [
+            "More reality than a game! This type of person is not very interested in games and prefers other hobbies.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         }
       }
     },
@@ -1444,16 +1714,70 @@
       ],
       "results": {
         "A": {
-          "title": "영화광",
-          "desc": "시네필! 다양한 장르를 섭렵하고, 영화를 통해 세상을 보는 진정한 영화 애호가입니다."
+          "title": "movie buff",
+          "summary": "Cinephile! He is a true movie lover who enjoys a variety of genres and sees the world through movies.",
+          "description": "Cinephile! He is a true movie lover who enjoys a variety of genres and sees the world through movies.",
+          "characteristics": [
+            "Cinephile! He is a true movie lover who enjoys a variety of genres and sees the world through movies.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "B": {
-          "title": "넷플릭서",
-          "desc": "집관 선호! 편하게 집에서 스트리밍으로 영화와 드라마를 즐기는 현대적 감상자입니다."
+          "title": "netflixer",
+          "summary": "Preferred by the magistrate! They are modern viewers who enjoy streaming movies and dramas from the comfort of their homes.",
+          "description": "Preferred by the magistrate! They are modern viewers who enjoy streaming movies and dramas from the comfort of their homes.",
+          "characteristics": [
+            "Preferred by the magistrate! They are modern viewers who enjoy streaming movies and dramas from the comfort of their homes.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "C": {
-          "title": "선택적 관람러",
-          "desc": "관심작만! 화제작이나 추천받은 작품 위주로 선택적으로 관람하는 타입입니다."
+          "title": "selective viewing",
+          "summary": "Only works of interest! This is a type of selective viewing that focuses on popular works or recommended works.",
+          "description": "Only works of interest! This is a type of selective viewing that focuses on popular works or recommended works.",
+          "characteristics": [
+            "Only works of interest! This is a type of selective viewing that focuses on popular works or recommended works.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         }
       }
     },
@@ -1475,16 +1799,70 @@
       ],
       "results": {
         "A": {
-          "title": "ENFP형 이상형",
-          "desc": "열정적이고 창의적인 사람! 새로운 가능성을 탐구하고 자유롭게 사랑하는 ENFP와 잘 맞습니다."
+          "title": "ENFP ideal type",
+          "summary": "A passionate and creative person! Well with ENFPs who love to explore new possibilities freely...",
+          "description": "A passionate and creative person! A good match for ENFPs who love to explore new possibilities and are free to do so.",
+          "characteristics": [
+            "A passionate and creative person! A good match for ENFPs who love to explore new possibilities and are free to do so.",
+            "Active and energetic disposition",
+            "A style that moves passionately toward a goal",
+            "Have a positive influence on those around you"
+          ],
+          "strengths": [
+            "High motivation and drive",
+            "Perseverance to not give up even in the face of difficulties",
+            "Ability to energize those around you"
+          ],
+          "weaknesses": [
+            "Sometimes there is a risk of burnout due to excessive enthusiasm.",
+            "Delicate details may be missed",
+            "Improvement is possible by increasing self-awareness."
+          ],
+          "advice": "Maintain your enthusiasm while still getting adequate rest. It is important to strike a balance over the long term."
         },
         "B": {
-          "title": "ISTJ형 이상형",
-          "desc": "신뢰할 수 있고 책임감 있는 사람! 현실적이고 체계적인 ISTJ와의 안정적인 관계가 어울립니다."
+          "title": "ISTJ type ideal type",
+          "summary": "A trustworthy and responsible person! A realistic and systematic stable relationship with an ISTJ...",
+          "description": "A trustworthy and responsible person! A stable relationship with a realistic and systematic ISTJ is suitable.",
+          "characteristics": [
+            "A trustworthy and responsible person! A stable relationship with a realistic and systematic ISTJ is suitable.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "C": {
-          "title": "균형잡힌 타입",
-          "desc": "다양한 성격과 잘 어울리는 타입! 상황에 따라 유연하게 조화를 이루는 스타일입니다."
+          "title": "balanced type",
+          "summary": "A type that goes well with a variety of personalities! It is a style that flexibly harmonizes with the situation.",
+          "description": "A type that goes well with a variety of personalities! It is a style that flexibly harmonizes with the situation.",
+          "characteristics": [
+            "A type that goes well with a variety of personalities! It is a style that flexibly harmonizes with the situation.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         }
       }
     },
@@ -1506,16 +1884,70 @@
       ],
       "results": {
         "A": {
-          "title": "시각-논리 학습자",
-          "desc": "체계적 정리와 도표가 효과적! 마인드맵, 요약 노트, 플래시카드를 활용하세요."
+          "title": "Visual-Logic Learner",
+          "summary": "Systematic organization and charts are effective! Use mind maps, summary notes, and flashcards.",
+          "description": "Systematic organization and charts are effective! Use mind maps, summary notes, and flashcards.",
+          "characteristics": [
+            "Systematic organization and charts are effective! Use mind maps, summary notes, and flashcards.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         },
         "B": {
-          "title": "청각-토론 학습자",
-          "desc": "설명하고 토론하며 학습! 그룹 스터디, 강의 듣기, 소리 내어 읽기가 효과적입니다."
+          "title": "Auditory-Discussion Learner",
+          "summary": "Learn by explaining and discussing! Group study, listening to lectures, and reading aloud are effective.",
+          "description": "Learn by explaining and discussing! Group study, listening to lectures, and reading out loud are effective.",
+          "characteristics": [
+            "Learn by explaining and discussing! Group study, listening to lectures, and reading aloud are effective.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         },
         "C": {
-          "title": "체험-실습 학습자",
-          "desc": "직접 해보며 배우는 타입! 실험, 프로젝트, 실습 위주 학습이 가장 효과적입니다."
+          "title": "experiential-practical learner",
+          "summary": "The type of person who learns by doing! Experiments, projects, and hands-on learning are most effective.",
+          "description": "The type of person who learns by doing! Experiments, projects, and hands-on learning are most effective.",
+          "characteristics": [
+            "The type of person who learns by doing! Experiments, projects, and hands-on learning are most effective.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         }
       }
     },
@@ -1537,16 +1969,70 @@
       ],
       "results": {
         "A": {
-          "title": "찰떡 궁합",
-          "desc": "90% 이상 호환! 서로를 이해하고 존중하며 균형잡힌 관계를 만들 수 있습니다."
+          "title": "Perfect match",
+          "summary": "Over 90% compatible! We can create a balanced relationship by understanding and respecting each other.",
+          "description": "Over 90% compatible! We can create a balanced relationship by understanding and respecting each other.",
+          "characteristics": [
+            "Over 90% compatible! We can create a balanced relationship by understanding and respecting each other.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         },
         "B": {
-          "title": "노력이 필요한 궁합",
-          "desc": "60-80% 호환. 차이를 인정하고 서로 노력하면 좋은 관계를 만들 수 있습니다."
+          "title": "A compatibility that requires effort",
+          "summary": "60-80% compatible. If we acknowledge differences and work together, we can create good relationships.",
+          "description": "60-80% compatible. If we acknowledge differences and work together, we can create good relationships.",
+          "characteristics": [
+            "60-80% compatible. If we acknowledge differences and work together, we can create good relationships.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         },
         "C": {
-          "title": "도전적 궁합",
-          "desc": "50% 이하 호환. 많은 이해와 소통이 필요하지만, 서로 보완하며 성장할 수 있습니다."
+          "title": "challenging compatibility",
+          "summary": "Less than 50% compatible. Although it requires a lot of understanding and communication, we can complement each other and grow.",
+          "description": "Less than 50% compatible. Although it requires a lot of understanding and communication, we can complement each other and grow.",
+          "characteristics": [
+            "Less than 50% compatible. Although it requires a lot of understanding and communication, we can complement each other and grow.",
+            "Tendency to enjoy interacting with others",
+            "Excellent empathy skills",
+            "Develop relationships through conversation"
+          ],
+          "strengths": [
+            "excellent communication skills",
+            "Gets along well with a variety of people",
+            "Teamwork and cooperation skills"
+          ],
+          "weaknesses": [
+            "You may not have enough alone time",
+            "May be excessively influenced by the opinions of others",
+            "Improvement is possible by increasing self-awareness."
+          ],
+          "advice": "It is important to establish your own opinions and values ​​while maintaining good communication skills."
         }
       }
     },
@@ -1568,20 +2054,92 @@
       ],
       "results": {
         "A": {
-          "title": "시각(Visual) 학습자",
-          "desc": "이미지와 도표로 학습! 마인드맵, 색깔 코딩, 그래프, 다이어그램을 활용하세요."
+          "title": "Visual learner",
+          "summary": "Learn with images and diagrams! Use mind maps, color coding, graphs, and diagrams.",
+          "description": "Learn with images and diagrams! Use mind maps, color coding, graphs, and diagrams.",
+          "characteristics": [
+            "Learn with images and diagrams! Use mind maps, color coding, graphs, and diagrams.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         },
         "B": {
-          "title": "청각(Auditory) 학습자",
-          "desc": "듣고 말하며 학습! 강의 듣기, 토론, 음성 녹음, 설명하기가 효과적입니다."
+          "title": "Auditory Learner",
+          "summary": "Learn by listening and speaking! Listening to lectures, discussions, recording audio, and explaining are effective.",
+          "description": "Learn by listening and speaking! Listening to lectures, discussions, recording audio, and explaining are effective.",
+          "characteristics": [
+            "Learn by listening and speaking! Listening to lectures, discussions, recording audio, and explaining are effective.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         },
         "C": {
-          "title": "읽기/쓰기(Read/Write) 학습자",
-          "desc": "텍스트로 학습! 노트 필기, 요약, 리스트 작성, 읽기가 가장 효과적입니다."
+          "title": "Read/Write Learner",
+          "summary": "Learn with text! Note-taking, summarizing, list-making, and reading are most effective.",
+          "description": "Learn with text! Note-taking, summarizing, list-making, and reading are most effective.",
+          "characteristics": [
+            "Learn with text! Note-taking, summarizing, list-making, and reading are most effective.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         },
         "D": {
-          "title": "체험(Kinesthetic) 학습자",
-          "desc": "움직이며 학습! 실험, 체험, 역할극, 실습이 가장 효과적인 방법입니다."
+          "title": "Kinesthetic learner",
+          "summary": "Learn while moving! Experiments, experiences, role-playing, and practice are the most effective methods.",
+          "description": "Learn while moving! Experiments, experiences, role-playing, and practice are the most effective methods.",
+          "characteristics": [
+            "Learn while moving! Experiments, experiences, role-playing, and practice are the most effective methods.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "끊임없이 성장하려 노력합니다."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         }
       }
     },
@@ -1603,16 +2161,70 @@
       ],
       "results": {
         "A": {
-          "title": "활동적-감각적-시각적-순차적",
-          "desc": "실습 중심, 구체적 사실, 시각 자료, 단계적 학습이 효과적입니다."
+          "title": "Active-sensory-visual-sequential",
+          "summary": "Practice-based, concrete facts, visuals, and step-by-step learning are effective.",
+          "description": "Practice-based, concrete facts, visuals, and step-by-step learning are effective.",
+          "characteristics": [
+            "Practice-based, concrete facts, visuals, and step-by-step learning are effective.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         },
         "B": {
-          "title": "성찰적-직관적-언어적-전체적",
-          "desc": "사고 중심, 이론과 개념, 텍스트, 큰 그림 파악이 효과적입니다."
+          "title": "Reflective-Intuitive-Linguistic-Holistic",
+          "summary": "Thinking-centered, understanding theories and concepts, texts, and the big picture are effective.",
+          "description": "Thinking-centered, understanding theories and concepts, texts, and the big picture are effective.",
+          "characteristics": [
+            "Thinking-centered, understanding theories and concepts, texts, and the big picture are effective.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         },
         "C": {
-          "title": "균형잡힌 학습자",
-          "desc": "다양한 학습 방법을 유연하게 활용! 상황에 맞는 전략을 선택할 수 있습니다."
+          "title": "balanced learner",
+          "summary": "Flexibly utilize various learning methods! You can choose a strategy that suits your situation.",
+          "description": "Flexibly utilize various learning methods! You can choose a strategy that suits your situation.",
+          "characteristics": [
+            "Flexibly utilize various learning methods! You can choose a strategy that suits your situation.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         }
       }
     },
@@ -1634,20 +2246,92 @@
       ],
       "results": {
         "A": {
-          "title": "확산자(Diverging)",
-          "desc": "상상력과 감수성! 다양한 관점에서 상황을 바라보고 브레인스토밍이 효과적입니다."
+          "title": "Diverging",
+          "summary": "Imagination and sensitivity! Brainstorming and looking at a situation from different perspectives are effective.",
+          "description": "Imagination and sensitivity! Brainstorming and looking at a situation from different perspectives are effective.",
+          "characteristics": [
+            "Imagination and sensitivity! Brainstorming and looking at a situation from different perspectives are effective.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         },
         "B": {
-          "title": "동화자(Assimilating)",
-          "desc": "논리와 이론! 체계적 정보 정리와 이론적 모델 구축이 강점입니다."
+          "title": "Assimilating",
+          "summary": "Logic and theory! Our strengths are organizing information systematically and building theoretical models.",
+          "description": "Logic and theory! Our strengths are organizing information systematically and building theoretical models.",
+          "characteristics": [
+            "Logic and theory! Our strengths are organizing information systematically and building theoretical models.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "C": {
-          "title": "수렴자(Converging)",
-          "desc": "문제 해결! 실용적 적용과 기술적 과제 해결에 뛰어납니다."
+          "title": "Converging",
+          "summary": "Problem solved! Excellent for practical application and solving technical challenges.",
+          "description": "Problem solved! Excellent for practical application and solving technical challenges.",
+          "characteristics": [
+            "Problem solved! Excellent for practical application and solving technical challenges.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "D": {
-          "title": "적응자(Accommodating)",
-          "desc": "실행과 경험! 새로운 기회에 적응하고 직접 경험하며 배웁니다."
+          "title": "Accommodating",
+          "summary": "Execute and experience! Adapt to new opportunities and learn through first-hand experience.",
+          "description": "Execute and Experience! Adapt to new opportunities and learn through first-hand experience.",
+          "characteristics": [
+            "Execute and Experience! Adapt to new opportunities and learn through first-hand experience.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         }
       }
     },
@@ -1669,16 +2353,70 @@
       ],
       "results": {
         "A": {
-          "title": "자기조절 전문가",
-          "desc": "뛰어난 자기조절 능력! 독립적으로 학습하고 목표를 달성하는 능력이 탁월합니다."
+          "title": "self-regulation expert",
+          "summary": "Excellent self-regulation skills! Excellent ability to learn independently and achieve goals.",
+          "description": "Excellent self-regulation skills! Excellent ability to learn independently and achieve goals.",
+          "characteristics": [
+            "Excellent self-regulation skills! Excellent ability to learn independently and achieve goals.",
+            "Self-directed and independent tendency",
+            "Attitude of making one's own decisions and taking responsibility",
+            "Pioneering your own path"
+          ],
+          "strengths": [
+            "Strong independence and independence",
+            "Creative problem solving skills",
+            "self-management skills"
+          ],
+          "weaknesses": [
+            "Sometimes it's hard to ask for help",
+            "May be evaluated as being stubborn",
+            "Improvement is possible by increasing self-awareness."
+          ],
+          "advice": "Remain independent, but be flexible enough to accept help from others when needed."
         },
         "B": {
-          "title": "발전 중인 학습자",
-          "desc": "자기조절 능력 성장 중! 몇 가지 전략을 보완하면 더 효과적으로 학습할 수 있습니다."
+          "title": "Developing Learner",
+          "summary": "Self-regulation skills are growing! A few complementary strategies can help you learn more effectively.",
+          "description": "Self-regulation skills are growing! A few complementary strategies can help you learn more effectively.",
+          "characteristics": [
+            "Self-regulation skills are growing! A few complementary strategies can help you learn more effectively.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "C": {
-          "title": "외부 지원 필요형",
-          "desc": "구조화된 환경이 도움! 멘토나 학습 그룹의 지원이 학습 효과를 높입니다."
+          "title": "External support required",
+          "summary": "A structured environment helps! Support from a mentor or study group increases learning effectiveness.",
+          "description": "A structured environment helps! Support from a mentor or study group increases learning effectiveness.",
+          "characteristics": [
+            "A structured environment helps! Support from a mentor or study group increases learning effectiveness.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         }
       }
     },
@@ -1700,16 +2438,70 @@
       ],
       "results": {
         "A": {
-          "title": "내재적 동기",
-          "desc": "순수한 학습 열정! 배움 자체의 즐거움으로 동기부여되는 이상적인 학습자입니다."
+          "title": "intrinsic motivation",
+          "summary": "Pure passion for learning! The ideal learner is motivated by the joy of learning itself.",
+          "description": "Pure passion for learning! The ideal learner is motivated by the joy of learning itself.",
+          "characteristics": [
+            "Pure passion for learning! The ideal learner is motivated by the joy of learning itself.",
+            "Active and energetic disposition",
+            "A style that moves passionately toward a goal",
+            "Have a positive influence on those around you"
+          ],
+          "strengths": [
+            "High motivation and drive",
+            "Perseverance to not give up even in the face of difficulties",
+            "Ability to energize those around you"
+          ],
+          "weaknesses": [
+            "Sometimes there is a risk of burnout due to excessive enthusiasm.",
+            "Delicate details may be missed",
+            "Improvement is possible by increasing self-awareness."
+          ],
+          "advice": "Maintain your enthusiasm while still getting adequate rest. It is important to strike a balance over the long term."
         },
         "B": {
-          "title": "외재적 동기",
-          "desc": "목표 지향적! 성적, 보상, 인정 등 외부 요인으로 동기부여됩니다."
+          "title": "extrinsic motivation",
+          "summary": "Goal-oriented! They are motivated by external factors such as grades, rewards, and recognition.",
+          "description": "Goal-oriented! They are motivated by external factors such as grades, rewards, and recognition.",
+          "characteristics": [
+            "Goal-oriented! They are motivated by external factors such as grades, rewards, and recognition.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         },
         "C": {
-          "title": "혼합 동기",
-          "desc": "균형잡힌 동기! 내재적 흥미와 외재적 목표를 함께 추구합니다."
+          "title": "mixed motive",
+          "summary": "Balanced motivation! Pursue both intrinsic interests and extrinsic goals.",
+          "description": "Balanced motivation! Pursue both intrinsic interests and extrinsic goals.",
+          "characteristics": [
+            "Balanced motivation! Pursue both intrinsic interests and extrinsic goals.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         }
       }
     },
@@ -1731,16 +2523,70 @@
       ],
       "results": {
         "A": {
-          "title": "이해(Understanding) 중심",
-          "desc": "깊이 있는 학습! 원리와 개념을 완전히 이해하고 적용하는 것을 추구합니다."
+          "title": "Understanding-centered",
+          "summary": "Deep learning! Seeks to fully understand and apply principles and concepts.",
+          "description": "Deep learning! Seeks to fully understand and apply principles and concepts.",
+          "characteristics": [
+            "Deep learning! Seeks to fully understand and apply principles and concepts.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         },
         "B": {
-          "title": "정보(Information) 중심",
-          "desc": "폭넓은 학습! 다양한 정보를 습득하고 기억하는 것에 강점이 있습니다."
+          "title": "Information-oriented",
+          "summary": "Extensive learning! I have strengths in acquiring and remembering a variety of information.",
+          "description": "Extensive learning! I have strengths in acquiring and remembering a variety of information.",
+          "characteristics": [
+            "Extensive learning! I have strengths in acquiring and remembering a variety of information.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "C": {
-          "title": "균형형",
-          "desc": "이해와 정보의 조화! 상황에 따라 깊이와 폭을 적절히 조절합니다."
+          "title": "Balanced",
+          "summary": "Harmony of understanding and information! Adjust depth and width appropriately depending on the situation.",
+          "description": "Harmony of understanding and information! Adjust depth and width appropriately depending on the situation.",
+          "characteristics": [
+            "Harmony of understanding and information! Adjust depth and width appropriately depending on the situation.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         }
       }
     },
@@ -1762,16 +2608,70 @@
       ],
       "results": {
         "A": {
-          "title": "건강한 관계",
-          "desc": "균형잡힌 친밀감! 신체적, 정서적으로 건강한 관계를 유지하고 있습니다."
+          "title": "healthy relationship",
+          "summary": "Balanced intimacy! I have a healthy relationship, both physically and emotionally.",
+          "description": "Balanced intimacy! I have a healthy relationship, both physically and emotionally.",
+          "characteristics": [
+            "Balanced intimacy! I have a healthy relationship, both physically and emotionally.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         },
         "B": {
-          "title": "주의 필요",
-          "desc": "개선이 필요한 상태. 소통을 늘리고 함께하는 시간을 의도적으로 만들어보세요."
+          "title": "need attention",
+          "summary": "Condition in need of improvement. Increase communication and be intentional about making time together.",
+          "description": "Condition in need of improvement. Increase communication and be intentional about making time together.",
+          "characteristics": [
+            "Condition in need of improvement. Increase communication and be intentional about making time together.",
+            "Tendency to enjoy interacting with others",
+            "Excellent empathy skills",
+            "Develop relationships through conversation"
+          ],
+          "strengths": [
+            "excellent communication skills",
+            "Gets along well with a variety of people",
+            "Teamwork and cooperation skills"
+          ],
+          "weaknesses": [
+            "You may not have enough alone time",
+            "May be excessively influenced by the opinions of others",
+            "Improvement is possible by increasing self-awareness."
+          ],
+          "advice": "It is important to establish your own opinions and values ​​while maintaining good communication skills."
         },
         "C": {
-          "title": "전문가 상담 권장",
-          "desc": "심각한 단절 상태. 커플 상담 등 전문적인 도움이 관계 회복에 도움될 수 있습니다."
+          "title": "Expert consultation recommended",
+          "summary": "Serious disconnection. Professional help, such as couples counseling, can help restore your relationship.",
+          "description": "Serious disconnection. Professional help, such as couples counseling, can help restore your relationship.",
+          "characteristics": [
+            "Serious disconnection. Professional help, such as couples counseling, can help restore your relationship.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         }
       }
     },
@@ -1793,28 +2693,136 @@
       ],
       "results": {
         "A": {
-          "title": "에로스(Eros) - 열정적 사랑",
-          "desc": "강렬하고 로맨틱! 신체적 매력과 열정을 중시하는 이상적 사랑을 추구합니다."
+          "title": "Eros - Passionate Love",
+          "summary": "Intense and romantic! We pursue an ideal love that values ​​physical attractiveness and passion.",
+          "description": "Intense and romantic! We pursue an ideal love that values ​​physical attractiveness and passion.",
+          "characteristics": [
+            "Intense and romantic! We pursue an ideal love that values ​​physical attractiveness and passion.",
+            "Active and energetic disposition",
+            "A style that moves passionately toward a goal",
+            "Have a positive influence on those around you"
+          ],
+          "strengths": [
+            "High motivation and drive",
+            "Perseverance to not give up even in the face of difficulties",
+            "Ability to energize those around you"
+          ],
+          "weaknesses": [
+            "Sometimes there is a risk of burnout due to excessive enthusiasm.",
+            "Detailed details may be missed",
+            "Improvement is possible by increasing self-awareness."
+          ],
+          "advice": "Maintain your enthusiasm while still getting adequate rest. It is important to strike a balance over the long term."
         },
         "B": {
-          "title": "스토르게(Storge) - 우정적 사랑",
-          "desc": "편안하고 안정적! 우정을 바탕으로 천천히 발전하는 사랑을 선호합니다."
+          "title": "Storge - friendly love",
+          "summary": "Comfortable and stable! They prefer love that develops slowly, based on friendship.",
+          "description": "Comfortable and stable! They prefer love that develops slowly, based on friendship.",
+          "characteristics": [
+            "Comfortable and stable! They prefer love that develops slowly, based on friendship.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "C": {
-          "title": "루두스(Ludus) - 유희적 사랑",
-          "desc": "자유롭고 가벼운! 즐거움과 재미를 추구하는 가벼운 사랑을 즐깁니다."
+          "title": "Ludus - playful love",
+          "summary": "Free and light! I enjoy light-hearted love that seeks pleasure and fun.",
+          "description": "Free and light! I enjoy light-hearted love that seeks pleasure and fun.",
+          "characteristics": [
+            "Free and light! I enjoy light-hearted love that seeks pleasure and fun.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "D": {
-          "title": "프라그마(Pragma) - 실용적 사랑",
-          "desc": "현실적이고 이성적! 조건과 호환성을 고려한 실용적 사랑을 추구합니다."
+          "title": "Pragma - Practical Love",
+          "summary": "Realistic and rational! We pursue practical love that considers conditions and compatibility.",
+          "description": "Realistic and rational! We pursue practical love that considers conditions and compatibility.",
+          "characteristics": [
+            "Realistic and rational! We pursue practical love that considers conditions and compatibility.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "E": {
-          "title": "마니아(Mania) - 집착적 사랑",
-          "desc": "강렬하고 불안정! 소유욕과 질투가 강한 열정적이지만 불안한 사랑입니다."
+          "title": "Mania - Obsessive Love",
+          "summary": "Intense and unstable! It is a passionate but anxious love with strong possessiveness and jealousy.",
+          "description": "Intense and unstable! It is a passionate but anxious love with strong possessiveness and jealousy.",
+          "characteristics": [
+            "Intense and unstable! It is a passionate but anxious love with strong possessiveness and jealousy.",
+            "Active and energetic disposition",
+            "A style that moves passionately toward a goal",
+            "Have a positive influence on those around you"
+          ],
+          "strengths": [
+            "High motivation and drive",
+            "Perseverance to not give up even in the face of difficulties",
+            "Ability to energize those around you"
+          ],
+          "weaknesses": [
+            "Sometimes there is a risk of burnout due to excessive enthusiasm.",
+            "Detailed details may be missed",
+            "Improvement is possible by increasing self-awareness."
+          ],
+          "advice": "Maintain your enthusiasm while still getting adequate rest. It is important to strike a balance over the long term."
         },
         "F": {
-          "title": "아가페(Agape) - 헌신적 사랑",
-          "desc": "무조건적이고 이타적! 희생과 봉사를 아끼지 않는 헌신적 사랑입니다."
+          "title": "Agape - devoted love",
+          "summary": "Unconditional and selfless! It is a devoted love that spares no sacrifice and service.",
+          "description": "Unconditional and selfless! It is a devoted love that spares no sacrifice and service.",
+          "characteristics": [
+            "Unconditional and selfless! It is a devoted love that spares no sacrifice and service.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         }
       }
     },
@@ -1836,20 +2844,92 @@
       ],
       "results": {
         "A": {
-          "title": "안정 애착",
-          "desc": "건강한 관계 형성! 친밀함과 독립성의 균형을 유지하며 안정적인 관계를 맺습니다."
+          "title": "secure attachment",
+          "summary": "Build healthy relationships! Build stable relationships that balance intimacy and independence.",
+          "description": "Build healthy relationships! Build stable relationships that balance intimacy and independence.",
+          "characteristics": [
+            "Build healthy relationships! Build stable relationships that balance intimacy and independence.",
+            "Self-directed and independent tendency",
+            "Attitude of making one's own decisions and taking responsibility",
+            "Pioneering your own path"
+          ],
+          "strengths": [
+            "Strong independence and independence",
+            "Creative problem solving skills",
+            "self-management skills"
+          ],
+          "weaknesses": [
+            "Sometimes it's hard to ask for help",
+            "May be evaluated as being stubborn",
+            "Improvement is possible by increasing self-awareness."
+          ],
+          "advice": "Remain independent, but be flexible enough to accept help from others when needed."
         },
         "B": {
-          "title": "불안 애착",
-          "desc": "관계에 대한 불안! 버림받을까 봐 걱정하고 지나친 확인을 추구합니다. 자기 가치감을 높이는 것이 도움됩니다."
+          "title": "anxious attachment",
+          "summary": "Anxiety about relationships! They worry about abandonment and seek excessive confirmation. A sense of self-worth...",
+          "description": "Anxiety about relationships! They worry about abandonment and seek excessive confirmation. It helps to increase your sense of self-worth.",
+          "characteristics": [
+            "Anxiety about relationships! They worry about abandonment and seek excessive confirmation. It is helpful to increase your sense of self-worth.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "C": {
-          "title": "회피 애착",
-          "desc": "친밀감 회피! 가까워지는 것이 불편하고 독립성을 중시합니다. 안전한 환경에서 천천히 신뢰를 쌓는 것이 중요합니다."
+          "title": "avoidant attachment",
+          "summary": "Avoid intimacy! They are uncomfortable with being close and value independence. Slowly in a safe environment...",
+          "description": "Avoid intimacy! They are uncomfortable with being close and value independence. It is important to build trust slowly in a safe environment.",
+          "characteristics": [
+            "Avoid intimacy! They are uncomfortable with being close and value independence. It is important to build trust slowly in a safe environment.",
+            "Self-directed and independent tendency",
+            "Attitude of making one's own decisions and taking responsibility",
+            "Pioneering your own path"
+          ],
+          "strengths": [
+            "Strong independence and independence",
+            "Creative problem solving skills",
+            "self-management skills"
+          ],
+          "weaknesses": [
+            "Sometimes it's hard to ask for help",
+            "May be evaluated as being stubborn",
+            "Improvement is possible by increasing self-awareness."
+          ],
+          "advice": "Be flexible enough to accept help from others when necessary, while remaining independent."
         },
         "D": {
-          "title": "혼란 애착",
-          "desc": "불안과 회피 혼재! 가까워지고 싶지만 동시에 두려워하는 복잡한 패턴입니다. 전문가 상담이 도움될 수 있습니다."
+          "title": "confused attachment",
+          "summary": "A mixture of anxiety and avoidance! It's a complex pattern of wanting to get closer but being afraid at the same time. Expert Award...",
+          "description": "A mixture of anxiety and avoidance! It's a complex pattern of wanting to get closer but being afraid at the same time. Professional counseling may be helpful.",
+          "characteristics": [
+            "A mixture of anxiety and avoidance! It's a complex pattern of wanting to get closer but being afraid at the same time. Professional counseling may be helpful.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         }
       }
     },
@@ -1871,20 +2951,92 @@
       ],
       "results": {
         "A": {
-          "title": "성취 지향형",
-          "desc": "목표와 성공을 추구! 계획적이고 책임감 있으며, 자기계발에 열심인 타입입니다."
+          "title": "Achievement-oriented",
+          "summary": "Pursue your goals and success! This type of person is well-planned, responsible, and passionate about self-development.",
+          "description": "Pursue your goals and success! This type of person is well-planned, responsible, and passionate about self-development.",
+          "characteristics": [
+            "Pursue your goals and success! This type of person is well-planned, responsible, and passionate about self-development.",
+            "Systematic and organized tendency",
+            "Establish a well-established roadmap to achieve your goals",
+            "thorough preparation"
+          ],
+          "strengths": [
+            "Excellent planning skills",
+            "Good at time management and setting priorities.",
+            "High goal achievement rate"
+          ],
+          "weaknesses": [
+            "Can be confused by unexpected variables",
+            "Perfectionism can cause stress",
+            "Improvement is possible by increasing self-awareness."
+          ],
+          "advice": "Maintain planning, but also increase flexibility to respond to changes. Take the time to enjoy spontaneous moments sometimes."
         },
         "B": {
-          "title": "관계 지향형",
-          "desc": "사람과 연결을 중시! 타인과의 관계와 소속감을 가장 중요하게 여깁니다."
+          "title": "relationship oriented",
+          "summary": "Focus on connecting with people! Relationships with others and belonging are of utmost importance.",
+          "description": "Focus on connecting with people! Relationships with others and belonging are of utmost importance.",
+          "characteristics": [
+            "Focus on connecting with people! Relationships with others and belonging are of utmost importance.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         },
         "C": {
-          "title": "탐색 지향형",
-          "desc": "새로움을 추구! 호기심이 많고 다양한 경험을 통해 자아를 발견하는 타입입니다."
+          "title": "Navigation-oriented",
+          "summary": "새로움을 추구! This type of person is very curious and discovers themselves through various experiences.",
+          "description": "Seek newness! This type of person is very curious and discovers themselves through various experiences.",
+          "characteristics": [
+            "Seek newness! This type of person is very curious and discovers themselves through various experiences.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         },
         "D": {
-          "title": "안정 지향형",
-          "desc": "안전과 예측 가능성! 변화보다는 안정적이고 확실한 것을 선호합니다."
+          "title": "stability oriented",
+          "summary": "Safety and predictability! I prefer stability and certainty to change.",
+          "description": "Safety and predictability! I prefer stability and certainty to change.",
+          "characteristics": [
+            "Safety and predictability! I prefer stability and certainty to change.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         }
       }
     },
@@ -1906,16 +3058,70 @@
       ],
       "results": {
         "A": {
-          "title": "정상 범위",
-          "desc": "심리적으로 안정적! 일상적인 스트레스를 잘 관리하며 균형잡힌 성격입니다."
+          "title": "normal range",
+          "summary": "Psychologically stable! You manage your daily stress well and have a balanced personality.",
+          "description": "Psychologically stable! You manage your daily stress well and have a balanced personality.",
+          "characteristics": [
+            "Psychologically stable! You manage your daily stress well and have a balanced personality.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         },
         "B": {
-          "title": "경미한 주의",
-          "desc": "일부 영역에서 스트레스 징후. 자기관리와 스트레스 해소 방법을 찾는 것이 도움됩니다."
+          "title": "slight caution",
+          "summary": "Signs of stress in some areas. Self-care and finding ways to relieve stress can be helpful.",
+          "description": "Signs of stress in some areas. Self-care and finding ways to relieve stress can be helpful.",
+          "characteristics": [
+            "Signs of stress in some areas. Self-care and finding ways to relieve stress can be helpful.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "C": {
-          "title": "전문가 상담 권장",
-          "desc": "여러 영역에서 어려움 경험. 심리 전문가와의 상담이 도움될 수 있습니다."
+          "title": "Expert consultation recommended",
+          "summary": "Experienced difficulties in several areas. Consultation with a psychologist may be helpful.",
+          "description": "Experienced difficulties in several areas. Consultation with a psychologist may be helpful.",
+          "characteristics": [
+            "Experienced difficulties in several areas. Consultation with a psychologist may be helpful.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         }
       }
     },
@@ -1937,20 +3143,92 @@
       ],
       "results": {
         "A": {
-          "title": "탐험가형 (높은 자극 추구)",
-          "desc": "새로운 경험을 추구하고 모험을 즐기는 탐험가! 호기심이 많고 충동적이며 에너지가 넘칩니다."
+          "title": "Explorer type (seeking high stimulation)",
+          "summary": "An explorer who seeks new experiences and enjoys adventure! Curious, impulsive and energetic.",
+          "description": "An explorer who seeks new experiences and enjoys adventure! Curious, impulsive and energetic.",
+          "characteristics": [
+            "An explorer who seeks new experiences and enjoys adventure! Curious, impulsive and energetic.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "B": {
-          "title": "조화추구형 (높은 사회적 민감성)",
-          "desc": "타인과의 관계를 중시하고 공감 능력이 뛰어난 타입! 사회적으로 민감하고 협력적입니다."
+          "title": "Harmony-seeking type (high social sensitivity)",
+          "summary": "A type that values ​​relationships with others and has excellent empathy! Socially sensitive and cooperative.",
+          "description": "A type that values ​​relationships with others and has excellent empathy! Socially sensitive and cooperative.",
+          "characteristics": [
+            "A type that values ​​relationships with others and has excellent empathy! Socially sensitive and cooperative.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "C": {
-          "title": "목표달성형 (높은 인내력)",
-          "desc": "끈기 있고 성실한 목표 달성가! 어려움 속에서도 포기하지 않고 계속 나아갑니다."
+          "title": "Goal achievement type (high perseverance)",
+          "summary": "A persistent and diligent goal achiever! Even in the face of difficulties, we do not give up and keep moving forward.",
+          "description": "A persistent and diligent goal achiever! Even in the face of difficulties, we do not give up and keep moving forward.",
+          "characteristics": [
+            "A persistent and diligent goal achiever! Even in the face of difficulties, we do not give up and keep moving forward.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         },
         "D": {
-          "title": "균형형",
-          "desc": "다양한 기질이 균형잡힌 타입! 상황에 따라 유연하게 대처하며 적응력이 뛰어납니다."
+          "title": "Balanced",
+          "summary": "A type with a variety of temperaments balanced! They respond flexibly to situations and are highly adaptable.",
+          "description": "A type with a variety of temperaments balanced! They respond flexibly to situations and are highly adaptable.",
+          "characteristics": [
+            "A type with a variety of temperaments balanced! We respond flexibly to situations and are highly adaptable.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         }
       }
     },
@@ -1984,16 +3262,70 @@
       ],
       "results": {
         "A": {
-          "title": "헤어질 확률 85% - 위험",
-          "desc": "관계에 심각한 위기가 감지됩니다. 많은 신호들이 이별을 암시하고 있어요. 솔직한 대화가 필요하고, 관계를 회복하려면 상당한 노력과 변화가 필요합니다. 두 사람의 진심을 확인할 시간입니다."
+          "title": "85% chance of breaking up - dangerous",
+          "summary": "A serious crisis is felt in the relationship. Many signs are hinting at a breakup. Honest conversation...",
+          "description": "A serious crisis is felt in the relationship. Many signs are hinting at a breakup. It takes honest conversation, and it takes a lot of effort and change to repair the relationship. It's time to check the sincerity of the two people.",
+          "characteristics": [
+            "A serious crisis is felt in the relationship. Many signs are hinting at a breakup. It takes honest conversation, and it takes a lot of effort and change to repair the relationship. It's time to check the sincerity of the two people.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "B": {
-          "title": "헤어질 확률 50% - 주의",
-          "desc": "관계가 불안정한 상태입니다. 몇 가지 경고 신호가 보이지만 아직 회복 가능한 단계예요. 서로의 감정을 확인하고 소통을 강화한다면 관계를 개선할 수 있습니다. 지금부터라도 노력이 필요합니다."
+          "title": "50% chance of breaking up - be careful",
+          "summary": "The relationship is unstable. There are some warning signs, but recovery is still possible...",
+          "description": "The relationship is unstable. There are some warning signs, but recovery is still possible. You can improve your relationship by acknowledging each other's feelings and strengthening communication. Effort is needed starting now.",
+          "characteristics": [
+            "The relationship is unstable. There are some warning signs, but recovery is still possible. You can improve your relationship by acknowledging each other's feelings and strengthening communication. Effort is needed starting now.",
+            "Tendency to enjoy interacting with others",
+            "Excellent empathy skills",
+            "Develop relationships through conversation"
+          ],
+          "strengths": [
+            "excellent communication skills",
+            "Gets along well with a variety of people",
+            "Teamwork and cooperation skills"
+          ],
+          "weaknesses": [
+            "You may not have enough alone time",
+            "May be excessively influenced by the opinions of others",
+            "Improvement is possible by increasing self-awareness."
+          ],
+          "advice": "It is important to establish your own opinions and values ​​while maintaining good communication skills."
         },
         "C": {
-          "title": "헤어질 확률 20% - 안정",
-          "desc": "비교적 건강한 관계를 유지하고 있습니다. 약간의 문제가 있을 수 있지만 일시적인 것으로 보여요. 계속해서 서로를 배려하고 사랑을 표현한다면 오래 지속될 수 있는 관계입니다."
+          "title": "20% chance of breaking up - stable",
+          "summary": "I have a relatively healthy relationship. There may be some problems, but they are temporary...",
+          "description": "We have a relatively healthy relationship. There may be some issues, but they appear to be temporary. This is a relationship that can last for a long time if you continue to show consideration and love for each other.",
+          "characteristics": [
+            "We have a relatively healthy relationship. There may be some issues, but they appear to be temporary. This is a relationship that can last for a long time if you continue to show consideration and love for each other.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         }
       }
     },
@@ -2027,16 +3359,70 @@
       ],
       "results": {
         "A": {
-          "title": "헤어질 확률 85% - 위험",
-          "desc": "관계가 매우 위태로운 상태입니다. 대부분의 신호가 이별을 향하고 있어요. 빠른 시일 내에 진솔한 대화를 나누고, 관계를 지속할 의지가 서로에게 있는지 확인해야 합니다."
+          "title": "85% chance of breaking up - dangerous",
+          "summary": "The relationship is in a very precarious state. Most signs are pointing towards a breakup. Soon...",
+          "description": "The relationship is in a very precarious state. Most signs are pointing towards a breakup. You need to have an honest conversation as soon as possible and make sure that you both have the will to continue the relationship.",
+          "characteristics": [
+            "The relationship is in a very precarious state. Most signs point to a breakup. You need to have an honest conversation as soon as possible and make sure that you both have the will to continue the relationship.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         },
         "B": {
-          "title": "헤어질 확률 50% - 주의",
-          "desc": "관계에 적신호가 켜졌습니다. 여러 문제점이 보이지만 아직 개선의 여지가 있어요. 서로의 마음을 솔직하게 나누고, 관계 회복을 위한 구체적인 노력이 필요한 시점입니다."
+          "title": "50% chance of breaking up - be careful",
+          "summary": "A red flag has come on in your relationship. Although many problems are visible, there is still room for improvement. each other...",
+          "description": "A red flag has come on in your relationship. Although many problems are visible, there is still room for improvement. This is a time when we need to honestly share our feelings with each other and make concrete efforts to restore relationships.",
+          "characteristics": [
+            "A red flag has come on in your relationship. Although many problems are visible, there is still room for improvement. This is a time when we need to honestly share our feelings with each other and make concrete efforts to restore relationships.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "C": {
-          "title": "헤어질 확률 20% - 안정",
-          "desc": "큰 문제 없이 관계를 잘 유지하고 있습니다. 일부 개선할 점이 있을 수 있지만 전반적으로 안정적이에요. 지금처럼 서로를 아끼고 존중한다면 좋은 관계가 오래 갈 것입니다."
+          "title": "20% chance of breaking up - stable",
+          "summary": "We are maintaining our relationship well without any major problems. There may be some improvements, but overall...",
+          "description": "We are maintaining our relationship well without any major problems. There may be some areas for improvement, but overall it is stable. If you care for and respect each other like you do now, your good relationship will last a long time.",
+          "characteristics": [
+            "We are maintaining our relationship well without any major problems. There may be some areas for improvement, but overall it is stable. If you care for and respect each other like you do now, your good relationship will last a long time.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         }
       }
     },
@@ -2058,16 +3444,70 @@
       ],
       "results": {
         "A": {
-          "title": "에겐남/에겐녀 (에너지 주는 사람)",
-          "desc": "당신은 연애에서 먼저 다가가고 베푸는 타입! 사랑을 표현하는 데 적극적이고, 상대방을 행복하게 만드는 것에서 기쁨을 느낍니다. 주도적이고 헌신적인 당신은 상대방에게 에너지를 주는 사람입니다."
+          "title": "Egen man/Egen woman (person who gives energy)",
+          "summary": "In a relationship, you are the type of person who approaches and gives first! Be proactive in expressing love and...",
+          "description": "In a relationship, you are the type of person who approaches and gives first! They are active in expressing love and find joy in making the other person happy. Driven and dedicated, you are someone who gives energy to others.",
+          "characteristics": [
+            "In a relationship, you are the type of person who approaches and gives first! They are active in expressing love and find joy in making the other person happy. Driven and dedicated, you are someone who gives energy to others.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "B": {
-          "title": "테토남/테토녀 (에너지 받는 사람)",
-          "desc": "당신은 연애에서 사랑받고 싶은 욕구가 강한 타입! 상대방의 관심과 애정 표현을 중요하게 여기며, 받는 사랑에서 안정감을 느낍니다. 상대방이 먼저 다가와주기를 바라는 당신은 에너지를 받는 사람입니다."
+          "title": "Tetonam/Tetonnyeo (person who receives energy)",
+          "summary": "You are the type of person who has a strong desire to be loved in a relationship! It is important to express the other person's interest and affection...",
+          "description": "You are the type of person who has a strong desire to be loved in a relationship! They value other people's attention and expressions of affection, and feel secure in the love they receive. You are a recipient of energy who wants the other person to approach you first.",
+          "characteristics": [
+            "You are the type of person who has a strong desire to be loved in a relationship! They value other people's attention and expressions of affection, and feel secure in the love they receive. You are a recipient of energy who wants the other person to approach you first.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         },
         "C": {
-          "title": "균형형 (Give & Take)",
-          "desc": "당신은 주고받는 것의 균형을 잘 맞추는 타입! 때로는 에너지를 주고, 때로는 받으면서 건강한 관계를 유지합니다. 상황에 따라 유연하게 대처하는 이상적인 연애 스타일입니다."
+          "title": "Balanced (Give & Take)",
+          "summary": "You are the type of person who is good at balancing giving and receiving! Sometimes I give energy, sometimes I receive it...",
+          "description": "You are the type of person who is good at balancing giving and receiving! We maintain healthy relationships by sometimes giving energy and sometimes receiving it. This is an ideal dating style that responds flexibly to different situations.",
+          "characteristics": [
+            "You are the type of person who is good at balancing giving and receiving! We maintain healthy relationships by sometimes giving energy and sometimes receiving it. This is an ideal dating style that responds flexibly to different situations.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         }
       }
     },
@@ -2089,16 +3529,70 @@
       ],
       "results": {
         "A": {
-          "title": "유행어 마스터",
-          "desc": "찐 트렌드세터! 최신 유행어를 누구보다 빠르게 습득하고 활용하는 당신은 언어 감각이 뛰어난 디지털 네이티브입니다."
+          "title": "buzzword master",
+          "summary": "True trendsetter! You have a good sense of language and can learn and use the latest buzzwords faster than anyone else...",
+          "description": "True trendsetter! You are a digital native with excellent language sense who learns and utilizes the latest buzzwords faster than anyone else.",
+          "characteristics": [
+            "True trendsetter! You are a digital native with excellent language sense who learns and utilizes the latest buzzwords faster than anyone else.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         },
         "B": {
-          "title": "평범한 팔로워",
-          "desc": "적당히 따라가는 스타일! 유행어를 알고는 있지만 과하게 사용하지는 않는 균형잡힌 타입입니다."
+          "title": "ordinary follower",
+          "summary": "A style that follows suit! A balanced type who knows buzzwords but doesn't use them excessively...",
+          "description": "A style that follows suit! I am a balanced type who knows buzzwords but does not use them excessively.",
+          "characteristics": [
+            "A style that follows suit! I am a balanced type who knows buzzwords but does not use them excessively.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         },
         "C": {
-          "title": "유행어 문외한",
-          "desc": "클래식한 화법! 유행어보다는 정확한 표현을 선호하는 진지한 타입입니다."
+          "title": "illiterate buzzword",
+          "summary": "Classic way of speaking! I am a serious type who prefers accurate expressions rather than buzzwords.",
+          "description": "Classic way of speaking! I am a serious type who prefers accurate expressions rather than buzzwords.",
+          "characteristics": [
+            "Classic way of speaking! I am a serious type who prefers accurate expressions rather than buzzwords.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         }
       }
     },
@@ -2120,16 +3614,70 @@
       ],
       "results": {
         "A": {
-          "title": "챌린지 인플루언서",
-          "desc": "트렌드의 중심! 모든 챌린지에 적극 참여하며 바이럴을 만들어내는 진정한 인플루언서입니다."
+          "title": "Challenge Influencer",
+          "summary": "The center of trends! He is a true influencer who actively participates in all challenges and creates virality.",
+          "description": "The center of trends! He is a true influencer who actively participates in all challenges and creates virality.",
+          "characteristics": [
+            "The center of trends! He is a true influencer who actively participates in all challenges and creates virality.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         },
         "B": {
-          "title": "가끔 참여러",
-          "desc": "선택적 참여! 재미있어 보이는 챌린지만 골라서 하는 현실적인 타입입니다."
+          "title": "Sometimes I come to participate",
+          "summary": "Optional participation! I am the realistic type who only chooses challenges that seem fun.",
+          "description": "Optional participation! I am the realistic type who only chooses challenges that seem fun.",
+          "characteristics": [
+            "Optional participation! I am the realistic type who only chooses challenges that seem fun.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         },
         "C": {
-          "title": "챌린지 관망러",
-          "desc": "구경만 해요! 챌린지는 보기만 하고 직접 참여는 부담스러운 관찰자형입니다."
+          "title": "challenge watcher",
+          "summary": "Just watch! It is an observer-type challenge where you only watch the challenge, but participating directly is burdensome.",
+          "description": "Just watch! It is an observer-type challenge where you only watch the challenge and feel that direct participation is burdensome.",
+          "characteristics": [
+            "Just watch! It is an observer-type challenge where you only watch the challenge, but participating directly is burdensome.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         }
       }
     },
@@ -2151,16 +3699,70 @@
       ],
       "results": {
         "A": {
-          "title": "숏폼 헤비유저",
-          "desc": "완전 중독! 숏폼이 일상의 큰 부분을 차지하고 있어요. 가끔은 디지털 디톡스가 필요할 수 있습니다."
+          "title": "Short form heavy user",
+          "summary": "Totally addicted! Short form is a big part of my daily life. Sometimes you need a digital detox...",
+          "description": "Totally addicted! Short form is a big part of my daily life. Sometimes you may need a digital detox.",
+          "characteristics": [
+            "Totally addicted! Short form is a big part of my daily life. Sometimes you may need a digital detox.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "B": {
-          "title": "적당한 애호가",
-          "desc": "건강한 소비! 숏폼을 즐기지만 시간 관리는 하는 균형잡힌 타입입니다."
+          "title": "suitable enthusiast",
+          "summary": "Healthy consumption! I am a balanced type who enjoys short-form work but manages my time well.",
+          "description": "Healthy consumption! I am a balanced type who enjoys short-form work but manages my time well.",
+          "characteristics": [
+            "Healthy consumption! I am a balanced type who enjoys short-form work but manages my time well.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         },
         "C": {
-          "title": "라이트 유저",
-          "desc": "가끔만 봐요! 숏폼보다 다른 콘텐츠나 활동을 더 선호하는 타입입니다."
+          "title": "light user",
+          "summary": "I only see you sometimes! This is the type that prefers other content or activities over short form.",
+          "description": "I only see you sometimes! This is the type that prefers other content or activities over short form.",
+          "characteristics": [
+            "I only see you sometimes! This is the type that prefers other content or activities over short form.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         }
       }
     },
@@ -2182,16 +3784,70 @@
       ],
       "results": {
         "A": {
-          "title": "커뮤니티 파워유저",
-          "desc": "핵심 멤버! 커뮤니티에서 활발하게 활동하며 영향력을 가진 파워유저입니다."
+          "title": "Community Power User",
+          "summary": "Core member! He is an active and influential power user in the community.",
+          "description": "Core member! He is an active and influential power user in the community.",
+          "characteristics": [
+            "Core member! He is an active and influential power user in the community.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         },
         "B": {
-          "title": "일반 회원",
-          "desc": "적당히 활동! 정보는 얻지만 적극적인 참여는 하지 않는 일반 회원형입니다."
+          "title": "general member",
+          "summary": "Moderately active! This is a general membership type that gets information but does not actively participate.",
+          "description": "Moderately active! This is a general membership type that gets information but does not actively participate.",
+          "characteristics": [
+            "Moderately active! This is a general membership type that gets information but does not actively participate.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         },
         "C": {
-          "title": "잠수 타는 유령",
-          "desc": "조용한 관찰자! 보기만 하고 거의 활동하지 않는 lurker 스타일입니다."
+          "title": "diving ghost",
+          "summary": "Quiet observer! This is a lurker style where you just watch and do little.",
+          "description": "Quiet observer! This is a lurker style where you just watch and do little.",
+          "characteristics": [
+            "Quiet observer! It's a lurker style where you just watch and do little.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         }
       }
     },
@@ -2213,16 +3869,70 @@
       ],
       "results": {
         "A": {
-          "title": "이모티콘 콜렉터",
-          "desc": "이모티콘 덕후! 다양한 이모티콘을 수집하고 활용하는 것을 즐기는 표현의 달인입니다."
+          "title": "emoticon collector",
+          "summary": "Emoticon lover! He is a master of expression who enjoys collecting and using various emoticons.",
+          "description": "Emoticon lover! He is a master of expression who enjoys collecting and using various emoticons.",
+          "characteristics": [
+            "Emoticon lover! He is a master of expression who enjoys collecting and using various emoticons.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         },
         "B": {
-          "title": "선택적 사용자",
-          "desc": "필요할 때만! 몇 개의 애용 이모티콘만 사용하는 실용적인 타입입니다."
+          "title": "optional user",
+          "summary": "Only when needed! This is a practical type that uses only a few popular emoticons.",
+          "description": "Only when needed! This is a practical type that uses only a few popular emoticons.",
+          "characteristics": [
+            "Only when needed! This is a practical type that uses only a few popular emoticons.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         },
         "C": {
-          "title": "텍스트 순수주의자",
-          "desc": "글로 표현! 이모티콘보다 텍스트로 감정을 전달하는 것을 선호하는 클래식 스타일입니다."
+          "title": "text purist",
+          "summary": "Express yourself in writing! This is a classic style that prefers to convey emotions through text rather than emojis.",
+          "description": "Express yourself in writing! This is a classic style that prefers to convey emotions through text rather than emojis.",
+          "characteristics": [
+            "Express yourself in writing! This is a classic style that prefers to convey emotions through text rather than emojis.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         }
       }
     },
@@ -2244,16 +3954,70 @@
       ],
       "results": {
         "A": {
-          "title": "스트리밍 헤비워처",
-          "desc": "열혈 시청자! 스트리밍이 일상의 큰 즐거움이며, 적극적으로 참여하는 팬입니다."
+          "title": "Streaming Heavy Watcher",
+          "summary": "Avid viewers! Streaming is a big part of my daily life, and I am an active fan.",
+          "description": "Avid viewers! Streaming is a big part of my daily life, and I am an active fan.",
+          "characteristics": [
+            "Avid viewers! Streaming is a big part of my daily life, and I am an active fan.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         },
         "B": {
-          "title": "캐주얼 뷰어",
-          "desc": "가끔 시청! 재미있는 콘텐츠를 발견하면 보는 가벼운 시청자입니다."
+          "title": "casual viewer",
+          "summary": "Watch it sometimes! These are casual viewers who watch content when they find it interesting.",
+          "description": "Watch it sometimes! These are casual viewers who watch content when they find it interesting.",
+          "characteristics": [
+            "Watch it sometimes! These are casual viewers who watch content when they find it interesting.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         },
         "C": {
-          "title": "스트리밍 무관심",
-          "desc": "VOD 선호! 라이브보다는 편집된 영상이나 다른 콘텐츠를 선호합니다."
+          "title": "streaming indifference",
+          "summary": "VOD preferred! I prefer edited videos or other content rather than live.",
+          "description": "VOD preferred! I prefer edited videos or other content rather than live.",
+          "characteristics": [
+            "VOD preferred! I prefer edited videos or other content rather than live.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         }
       }
     },
@@ -2275,16 +4039,70 @@
       ],
       "results": {
         "A": {
-          "title": "밈 크리에이터",
-          "desc": "타고난 재능! 밈을 만들고 공유하는 것에 소질이 있는 크리에이터 DNA를 가졌습니다."
+          "title": "meme creator",
+          "summary": "Natural talent! I have the DNA of a creator with a knack for creating and sharing memes.",
+          "description": "Natural talent! I have the DNA of a creator with a knack for creating and sharing memes.",
+          "characteristics": [
+            "Natural talent! I have the DNA of a creator with a knack for creating and sharing memes.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         },
         "B": {
-          "title": "밈 애호가",
-          "desc": "감상자 타입! 밈을 즐기고 이해하지만 직접 만들기보다는 공유하는 것을 선호합니다."
+          "title": "meme lovers",
+          "summary": "Appreciator type! I enjoy and understand memes, but I prefer to share them rather than create them myself.",
+          "description": "Appreciator type! I enjoy and understand memes, but I prefer to share them rather than create them myself.",
+          "characteristics": [
+            "Appreciator type! I enjoy and understand memes, but I prefer to share them rather than create them myself.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "C": {
-          "title": "밈 입문자",
-          "desc": "배우는 중! 밈 문화에 흥미는 있지만 아직 익숙하지 않은 초보 단계입니다."
+          "title": "meme beginner",
+          "summary": "Learning! I'm interested in meme culture, but I'm still unfamiliar with it and am still a beginner.",
+          "description": "Learning! I'm interested in meme culture, but I'm still unfamiliar with it and am still a beginner.",
+          "characteristics": [
+            "Learning! I'm interested in meme culture, but I'm still unfamiliar with it and am still a beginner.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         }
       }
     },
@@ -2306,16 +4124,70 @@
       ],
       "results": {
         "A": {
-          "title": "트렌드 얼리어답터",
-          "desc": "선구자! 최신 트렌드를 가장 먼저 발견하고 시도하는 쇼핑 인플루언서 스타일입니다."
+          "title": "Early adopter of trends",
+          "summary": "precursor! This is the style of a shopping influencer who is the first to discover and try the latest trends.",
+          "description": "precursor! This is the style of a shopping influencer who is the first to discover and try the latest trends.",
+          "characteristics": [
+            "precursor! This is the style of a shopping influencer who is the first to discover and try the latest trends.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         },
         "B": {
-          "title": "팔로워형 쇼퍼",
-          "desc": "트렌드 추종! 검증된 인기 아이템을 구매하는 안전한 쇼핑 스타일입니다."
+          "title": "follower type shopper",
+          "summary": "Follow the trend! This is a safe shopping style that purchases proven, popular items.",
+          "description": "Follow the trend! This is a safe shopping style that purchases proven, popular items.",
+          "characteristics": [
+            "Follow the trend! This is a safe shopping style that purchases proven, popular items.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         },
         "C": {
-          "title": "실용주의 구매자",
-          "desc": "필요 중심! 트렌드보다는 실용성과 가성비를 우선시하는 합리적 소비자입니다."
+          "title": "pragmatic buyer",
+          "summary": "Need centered! They are rational consumers who prioritize practicality and cost-effectiveness over trends.",
+          "description": "Need centered! They are rational consumers who prioritize practicality and cost-effectiveness over trends.",
+          "characteristics": [
+            "Need centered! They are rational consumers who prioritize practicality and cost-effectiveness over trends.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         }
       }
     },
@@ -2337,16 +4209,70 @@
       ],
       "results": {
         "A": {
-          "title": "디지털 노마드 적합",
-          "desc": "완벽한 매치! 장소에 구애받지 않고 자유롭게 일하는 디지털 노마드 라이프스타일에 최적화되어 있습니다."
+          "title": "Suitable for digital nomads",
+          "summary": "Perfect match! Perfect for the digital nomad lifestyle of working freely regardless of location...",
+          "description": "Perfect match! It is optimized for the digital nomad lifestyle of working freely regardless of location.",
+          "characteristics": [
+            "Perfect match! It is optimized for the digital nomad lifestyle of working freely regardless of location.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         },
         "B": {
-          "title": "하이브리드형",
-          "desc": "균형 추구! 자유로운 업무 방식과 안정적인 환경을 적절히 섞는 것을 선호합니다."
+          "title": "Hybrid type",
+          "summary": "Seek balance! I prefer a good mix of a free working style and a stable environment.",
+          "description": "Seek balance! I prefer a good mix of a free working style and a stable environment.",
+          "characteristics": [
+            "Seek balance! I prefer a good mix of a free working style and a stable environment.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "C": {
-          "title": "오피스형 인간",
-          "desc": "전통적 스타일! 정해진 공간과 시간에서 일하는 것이 더 효율적이고 편안합니다."
+          "title": "office type person",
+          "summary": "Traditional style! Working in a set space and time is more efficient and comfortable.",
+          "description": "Traditional style! Working in a set space and time is more efficient and comfortable.",
+          "characteristics": [
+            "Traditional style! Working in a set space and time is more efficient and comfortable.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         }
       }
     },
@@ -2368,16 +4294,70 @@
       ],
       "results": {
         "A": {
-          "title": "찐 Z세대",
-          "desc": "완벽한 이해! Z세대 문화와 트렌드를 완전히 체화한 진정한 디지털 네이티브입니다."
+          "title": "Rich Generation Z",
+          "summary": "Perfect understanding! They are true digital natives who fully embody Generation Z culture and trends.",
+          "description": "Perfect understanding! They are true digital natives who fully embody Generation Z culture and trends.",
+          "characteristics": [
+            "Perfect understanding! They are true digital natives who fully embody Generation Z culture and trends.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "B": {
-          "title": "Z세대 친화형",
-          "desc": "노력파! 세대는 다를 수 있지만 Z세대 문화를 이해하고 존중하는 열린 마인드를 가졌습니다."
+          "title": "Generation Z friendly",
+          "summary": "Hard work! Although the generations may be different, we have an open mind to understand and respect Generation Z culture.",
+          "description": "Hard work! Although the generations may be different, we have an open mind to understand and respect Generation Z culture.",
+          "characteristics": [
+            "Hard work! Although the generations may be different, we have an open mind to understand and respect Generation Z culture.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         },
         "C": {
-          "title": "세대차이 느끼는 타입",
-          "desc": "다른 세대! Z세대 트렌드와는 거리가 있지만, 그것도 괜찮습니다. 각자의 문화가 있으니까요."
+          "title": "Type that feels generation gap",
+          "summary": "Another generation! It's a bit far from Gen Z trends, but that's okay. Everyone has their own culture...",
+          "description": "Another generation! It's a bit far from Gen Z trends, but that's okay. Because each person has their own culture.",
+          "characteristics": [
+            "Another generation! It's a bit far from Gen Z trends, but that's okay. Because each person has their own culture.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         }
       }
     },
@@ -2399,16 +4379,70 @@
       ],
       "results": {
         "A": {
-          "title": "찐팬 (하드코어 덕후)",
-          "desc": "완벽한 팬! K-POP이 삶의 중심이며, 최애를 위해서라면 뭐든지 하는 열정적인 팬입니다."
+          "title": "True fan (hardcore fanatic)",
+          "summary": "Perfect fan! K-POP is the center of my life, and I am a passionate fan who will do anything for my favorite.",
+          "description": "Perfect fan! K-POP is the center of my life, and I am a passionate fan who will do anything for my favorite.",
+          "characteristics": [
+            "Perfect fan! K-POP is the center of my life, and I am a passionate fan who will do anything for my favorite.",
+            "Active and energetic disposition",
+            "A style that moves passionately toward a goal",
+            "Have a positive influence on those around you"
+          ],
+          "strengths": [
+            "High motivation and drive",
+            "Perseverance to not give up even in the face of difficulties",
+            "Ability to energize those around you"
+          ],
+          "weaknesses": [
+            "Sometimes there is a risk of burnout due to excessive enthusiasm.",
+            "Detailed details may be missed",
+            "Improvement is possible by increasing self-awareness."
+          ],
+          "advice": "Maintain your enthusiasm while still getting adequate rest. It is important to strike a balance over the long term."
         },
         "B": {
-          "title": "일반팬 (라이트 덕후)",
-          "desc": "적당히 즐겨요! 음악을 좋아하고 응원하지만 과도한 덕질은 하지 않는 균형형입니다."
+          "title": "General fan (light fanatic)",
+          "summary": "Enjoy it in moderation! I am a balanced person who likes and supports music, but does not indulge in excessive fanfare.",
+          "description": "Enjoy it in moderation! I am a balanced person who likes and supports music, but does not indulge in excessive fanfare.",
+          "characteristics": [
+            "Enjoy it in moderation! I am a balanced person who likes and supports music, but does not indulge in excessive fanfare.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         },
         "C": {
-          "title": "캐주얼 리스너",
-          "desc": "음악만 들어요! 노래는 좋아하지만 아이돌 활동이나 팬덤 문화에는 관심이 적은 타입입니다."
+          "title": "casual listener",
+          "summary": "Just listen to music! I am the type of person who likes singing, but has little interest in idol activities or fandom culture.",
+          "description": "Just listen to music! I am the type of person who likes singing, but has little interest in idol activities or fandom culture.",
+          "characteristics": [
+            "Just listen to music! I am the type of person who likes singing, but has little interest in idol activities or fandom culture.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         }
       }
     },
@@ -2430,16 +4464,70 @@
       ],
       "results": {
         "A": {
-          "title": "마라톤 중독자",
-          "desc": "완벽한 몰입! 드라마를 시작하면 끝을 봐야 하는 정주행의 달인입니다."
+          "title": "marathon addict",
+          "summary": "Perfect immersion! He is a master of binge-watching and has to watch the drama end once he starts it.",
+          "description": "Perfect immersion! He is a master of binge-watching and has to watch the drama end once he starts it.",
+          "characteristics": [
+            "Perfect immersion! He is a master of binge-watching and has to watch the drama end once he starts it.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         },
         "B": {
-          "title": "주말 몰아보기",
-          "desc": "계획적 시청! 주말에 모아뒀다가 한꺼번에 보는 효율적인 스타일입니다."
+          "title": "Weekend binge-watching",
+          "summary": "Planned viewing! It's an efficient style to save up over the weekend and watch them all at once.",
+          "description": "Planned viewing! It's an efficient style to save up over the weekend and watch them all at once.",
+          "characteristics": [
+            "Planned viewing! It's an efficient style to save up over the weekend and watch them all at once.",
+            "Systematic and organized tendency",
+            "Establish a well-established roadmap to achieve your goals",
+            "thorough preparation"
+          ],
+          "strengths": [
+            "Excellent planning skills",
+            "Good at time management and setting priorities.",
+            "High goal achievement rate"
+          ],
+          "weaknesses": [
+            "Can be confused by unexpected variables",
+            "Perfectionism can cause stress",
+            "Improvement is possible by increasing self-awareness."
+          ],
+          "advice": "Maintain planning, but also increase flexibility to respond to changes. Take the time to enjoy spontaneous moments sometimes."
         },
         "C": {
-          "title": "여유로운 시청자",
-          "desc": "천천히 즐겨요! 한 회씩 여유롭게 보며 드라마를 음미하는 타입입니다."
+          "title": "a leisurely viewer",
+          "summary": "Take your time and enjoy it! I am the type of person who watches a drama leisurely and savors it one episode at a time.",
+          "description": "Take your time and enjoy it! I am the type of person who watches a drama leisurely and savors it one episode at a time.",
+          "characteristics": [
+            "Take your time and enjoy it! I am the type of person who watches a drama leisurely and savors it one episode at a time.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         }
       }
     },
@@ -2461,16 +4549,70 @@
       ],
       "results": {
         "A": {
-          "title": "홈쿡 마스터",
-          "desc": "요리 전문가! 다양한 요리를 능숙하게 만들며, 요리에 진심인 쿡방 크리에이터 스타일입니다."
+          "title": "Home Cook Master",
+          "summary": "Cooking expert! He is a cook-bang creator who is skilled at cooking a variety of dishes and is sincere about his cooking.",
+          "description": "Cooking expert! He is a cook-bang creator who is skilled at cooking a variety of dishes and is sincere about his cooking.",
+          "characteristics": [
+            "Cooking expert! He is a cook-bang creator who is skilled at cooking a variety of dishes and is sincere about his cooking.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "B": {
-          "title": "일상 쿡",
-          "desc": "기본은 해요! 간단한 요리는 할 줄 알지만 복잡한 건 패스하는 실용적 타입입니다."
+          "title": "everyday cook",
+          "summary": "Do the basics! I am a practical type who knows how to cook simple dishes, but passes over complicated ones.",
+          "description": "Do the basics! I am a practical type who knows how to cook simple dishes, but passes over complicated ones.",
+          "characteristics": [
+            "Do the basics! I am a practical type who knows how to cook simple dishes, but passes over complicated ones.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         },
         "C": {
-          "title": "요리 초보",
-          "desc": "배달이 짱! 요리보다는 외식이나 배달을 선호하는 편의주의자입니다."
+          "title": "beginner in cooking",
+          "summary": "Delivery is great! I am a convenience person who prefers eating out or delivery rather than cooking.",
+          "description": "Delivery is great! I am a convenience person who prefers eating out or delivery rather than cooking.",
+          "characteristics": [
+            "Delivery is great! I am a convenience person who prefers eating out or delivery rather than cooking.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         }
       }
     },
@@ -2492,16 +4634,70 @@
       ],
       "results": {
         "A": {
-          "title": "비주얼 크리에이터",
-          "desc": "예술가 기질! 사진과 영상을 통해 순간을 예술로 승화시키는 크리에이터입니다."
+          "title": "visual creator",
+          "summary": "Artistic temperament! I am a creator who turns moments into art through photos and videos.",
+          "description": "Artistic temperament! I am a creator who turns moments into art through photos and videos.",
+          "characteristics": [
+            "Artistic temperament! I am a creator who turns moments into art through photos and videos.",
+            "Active and energetic disposition",
+            "A style that moves passionately toward a goal",
+            "Have a positive influence on those around you"
+          ],
+          "strengths": [
+            "High motivation and drive",
+            "Perseverance to not give up even in the face of difficulties",
+            "Ability to energize those around you"
+          ],
+          "weaknesses": [
+            "Sometimes there is a risk of burnout due to excessive enthusiasm.",
+            "Delicate details may be missed",
+            "Improvement is possible by increasing self-awareness."
+          ],
+          "advice": "Maintain your enthusiasm while still getting adequate rest. It is important to strike a balance over the long term."
         },
         "B": {
-          "title": "추억 기록러",
-          "desc": "기록의 달인! 일상의 소중한 순간을 담아내는 것을 좋아하는 감성파입니다."
+          "title": "Memories recorder",
+          "summary": "Master of records! I am an emotional person who likes to capture precious moments of everyday life.",
+          "description": "Master of records! I am an emotional person who likes to capture precious moments of everyday life.",
+          "characteristics": [
+            "Master of records! I am an emotional person who likes to capture precious moments of everyday life.",
+            "Active and energetic disposition",
+            "A style that moves passionately toward a goal",
+            "Have a positive influence on those around you"
+          ],
+          "strengths": [
+            "High motivation and drive",
+            "Perseverance to not give up even in the face of difficulties",
+            "Ability to energize those around you"
+          ],
+          "weaknesses": [
+            "Sometimes there is a risk of burnout due to excessive enthusiasm.",
+            "Delicate details may be missed",
+            "Improvement is possible by increasing self-awareness."
+          ],
+          "advice": "Maintain your enthusiasm while still getting adequate rest. It is important to strike a balance over the long term."
         },
         "C": {
-          "title": "눈으로만 감상",
-          "desc": "현장 감상러! 찍는 것보다 그 순간을 직접 눈으로 즐기는 것을 선호합니다."
+          "title": "Appreciate only with your eyes",
+          "summary": "Come see the scene! I prefer to enjoy the moment with my own eyes rather than taking pictures.",
+          "description": "Come see the scene! I prefer to enjoy the moment with my own eyes rather than taking pictures.",
+          "characteristics": [
+            "Come see the scene! I prefer to enjoy the moment with my own eyes rather than taking pictures.",
+            "Active and energetic disposition",
+            "A style that moves passionately toward a goal",
+            "Have a positive influence on those around you"
+          ],
+          "strengths": [
+            "High motivation and drive",
+            "Perseverance to not give up even in the face of difficulties",
+            "Ability to energize those around you"
+          ],
+          "weaknesses": [
+            "Sometimes there is a risk of burnout due to excessive enthusiasm.",
+            "Delicate details may be missed",
+            "Improvement is possible by increasing self-awareness."
+          ],
+          "advice": "Maintain your enthusiasm while still getting adequate rest. It is important to strike a balance over the long term."
         }
       }
     },
@@ -2523,16 +4719,70 @@
       ],
       "results": {
         "A": {
-          "title": "게임 매니아",
-          "desc": "진정한 게이머! 전략과 협력을 즐기며, 다양한 보드게임과 방탈출을 섭렵한 전문가입니다."
+          "title": "game mania",
+          "summary": "A true gamer! He enjoys strategy and cooperation, and is an expert in various board games and escape rooms.",
+          "description": "A true gamer! He enjoys strategy and cooperation, and is an expert in various board games and escape rooms.",
+          "characteristics": [
+            "A true gamer! He enjoys strategy and cooperation, and is an expert in various board games and escape rooms.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         },
         "B": {
-          "title": "가끔 즐기는 플레이어",
-          "desc": "소셜 게이머! 친구들과 어울릴 때 즐기는 라이트 유저입니다."
+          "title": "occasional player",
+          "summary": "Social Gamer! I am a light user who enjoys hanging out with friends.",
+          "description": "Social Gamer! I am a light user who enjoys hanging out with friends.",
+          "characteristics": [
+            "Social Gamer! I am a light user who enjoys hanging out with friends.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "C": {
-          "title": "관심 없음",
-          "desc": "다른 취미! 보드게임보다 다른 활동을 더 선호하는 타입입니다."
+          "title": "not interested",
+          "summary": "Another hobby! This is the type that prefers other activities to board games.",
+          "description": "Another hobby! This is the type that prefers other activities to board games.",
+          "characteristics": [
+            "Another hobby! This is the type that prefers other activities to board games.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         }
       }
     },
@@ -2554,16 +4804,70 @@
       ],
       "results": {
         "A": {
-          "title": "문화생활 애호가",
-          "desc": "예술 감성! 다양한 문화 콘텐츠를 즐기며 삶의 질을 높이는 문화인입니다."
+          "title": "cultural life lover",
+          "summary": "Artistic sensibility! We are cultural people who enjoy a variety of cultural contents and improve the quality of life.",
+          "description": "Artistic sensibility! We are cultural people who enjoy a variety of cultural contents and improve the quality of life.",
+          "characteristics": [
+            "Artistic sensibility! We are cultural people who enjoy a variety of cultural contents and improve the quality of life.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         },
         "B": {
-          "title": "가끔 관람러",
-          "desc": "선택적 관람! 관심 있는 분야나 화제작 위주로 관람하는 타입입니다."
+          "title": "Sometimes I go see the show",
+          "summary": "Optional viewing! I am the type of person who mainly watches movies in areas of interest or topical works.",
+          "description": "Optional viewing! I am the type of person who mainly watches movies in areas of interest or topical works.",
+          "characteristics": [
+            "Optional viewing! I am the type of person who mainly watches movies in areas of interest or topical works.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         },
         "C": {
-          "title": "문화생활 무관심",
-          "desc": "다른 즐거움! 공연이나 전시보다 다른 활동을 선호하는 스타일입니다."
+          "title": "Indifference to cultural life",
+          "summary": "Different fun! This is a style that prefers other activities rather than performances or exhibitions.",
+          "description": "Different fun! This is a style that prefers other activities rather than performances or exhibitions.",
+          "characteristics": [
+            "Different fun! This is a style that prefers other activities rather than performances or exhibitions.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         }
       }
     },
@@ -2585,16 +4889,70 @@
       ],
       "results": {
         "A": {
-          "title": "진성 오타쿠",
-          "desc": "애니 전문가! 애니메이션이 삶의 큰 부분을 차지하는 진정한 오타쿠입니다."
+          "title": "True otaku",
+          "summary": "Animation expert! I am a true otaku for whom anime is a big part of my life.",
+          "description": "Animation expert! I am a true otaku for whom anime is a big part of my life.",
+          "characteristics": [
+            "Animation expert! I am a true otaku for whom anime is a big part of my life.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         },
         "B": {
-          "title": "일반 애니 팬",
-          "desc": "적당히 즐겨요! 좋아하는 작품은 챙겨보지만 과도하게 빠지지는 않는 타입입니다."
+          "title": "General anime fan",
+          "summary": "Enjoy it in moderation! I'm the type of person who watches the works I like but doesn't indulge in them excessively.",
+          "description": "Enjoy it in moderation! I'm the type of person who watches the works I like but doesn't indulge in them excessively.",
+          "characteristics": [
+            "Enjoy it in moderation! I'm the type of person who watches the works I like but doesn't indulge in them excessively.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "C": {
-          "title": "라이트 뷰어",
-          "desc": "가끔 봐요! 화제작이나 추천받은 작품만 보는 캐주얼 시청자입니다."
+          "title": "light viewer",
+          "summary": "See you sometimes! I am a casual viewer who only watches popular or recommended works.",
+          "description": "See you sometimes! I am a casual viewer who only watches popular or recommended works.",
+          "characteristics": [
+            "See you sometimes! I am a casual viewer who only watches popular or recommended works.",
+            "This type has a unique personality.",
+            "We respond flexibly to the situation.",
+            "I have a heart that is considerate of others."
+          ],
+          "strengths": [
+            "Overcome difficulties with a positive mindset.",
+            "Gain trust in relationships with others.",
+            "I am very interested in self-development."
+          ],
+          "weaknesses": [
+            "Sometimes you may have trouble expressing your feelings.",
+            "The pursuit of perfection can be exhausting.",
+            "Change can be difficult to accept."
+          ],
+          "advice": "Develop your strengths and improve your weaknesses. Balanced growth is important."
         }
       }
     },
@@ -2616,16 +4974,70 @@
       ],
       "results": {
         "A": {
-          "title": "핸드메이드 장인",
-          "desc": "창작의 달인! 손재주가 뛰어나고 창의적인 작품을 만들어내는 크래프터입니다."
+          "title": "handmade artisan",
+          "summary": "A master of creation! He is a crafter who is very dexterous and creates creative works.",
+          "description": "A master of creation! He is a crafter who is very dexterous and creates creative works.",
+          "characteristics": [
+            "A master of creation! He is a crafter who is very dexterous and creates creative works.",
+            "Active and energetic disposition",
+            "A style that moves passionately toward a goal",
+            "Have a positive influence on those around you"
+          ],
+          "strengths": [
+            "High motivation and drive",
+            "Perseverance to not give up even in the face of difficulties",
+            "Ability to energize those around you"
+          ],
+          "weaknesses": [
+            "Sometimes there is a risk of burnout due to excessive enthusiasm.",
+            "Delicate details may be missed",
+            "Improvement is possible by increasing self-awareness."
+          ],
+          "advice": "Maintain your enthusiasm while still getting adequate rest. It is important to strike a balance over the long term."
         },
         "B": {
-          "title": "취미 공예가",
-          "desc": "가끔 만들어요! 관심 있는 분야의 DIY를 시도하는 실용적 타입입니다."
+          "title": "hobby craftsman",
+          "summary": "I make it sometimes! I am a practical type who tries DIY in areas of interest.",
+          "description": "I make it sometimes! I am a practical type who tries DIY in areas of interest.",
+          "characteristics": [
+            "I make it sometimes! I am a practical type who tries DIY in areas of interest.",
+            "Active and energetic disposition",
+            "A style that moves passionately toward a goal",
+            "Have a positive influence on those around you"
+          ],
+          "strengths": [
+            "High motivation and drive",
+            "Perseverance to not give up even in the face of difficulties",
+            "Ability to energize those around you"
+          ],
+          "weaknesses": [
+            "Sometimes there is a risk of burnout due to excessive enthusiasm.",
+            "Detailed details may be missed",
+            "Improvement is possible by increasing self-awareness."
+          ],
+          "advice": "Maintain your enthusiasm while still getting adequate rest. It is important to strike a balance over the long term."
         },
         "C": {
-          "title": "구매파",
-          "desc": "만드는 것보다 사는 게 빨라요! 수공예보다는 완제품 구매를 선호합니다."
+          "title": "Buyer",
+          "summary": "Buying is faster than making! I prefer buying finished products rather than handcrafting them.",
+          "description": "Buying is faster than making! I prefer buying finished products rather than handcrafting them.",
+          "characteristics": [
+            "Buying is faster than making! I prefer buying finished products rather than handcrafting them.",
+            "Active and energetic disposition",
+            "A style that moves passionately toward a goal",
+            "Have a positive influence on those around you"
+          ],
+          "strengths": [
+            "High motivation and drive",
+            "Perseverance to not give up even in the face of difficulties",
+            "Ability to energize those around you"
+          ],
+          "weaknesses": [
+            "Sometimes there is a risk of burnout due to excessive enthusiasm.",
+            "Detailed details may be missed",
+            "Improvement is possible by increasing self-awareness."
+          ],
+          "advice": "Maintain your enthusiasm while still getting adequate rest. It is important to strike a balance over the long term."
         }
       }
     },
@@ -2647,16 +5059,70 @@
       ],
       "results": {
         "A": {
-          "title": "열혈 팬",
-          "desc": "진성 팬! 팀과 선수를 열정적으로 응원하며, 스포츠가 삶의 활력소인 타입입니다."
+          "title": "big fan",
+          "summary": "True fan! I am the type of person who passionately supports teams and players, and for whom sports are the source of energy in my life.",
+          "description": "True fan! I am the type of person who passionately supports teams and players, and for whom sports are the source of energy in my life.",
+          "characteristics": [
+            "True fan! I am the type of person who passionately supports teams and players, and for whom sports are the source of energy in my life.",
+            "Active and energetic disposition",
+            "A style that moves passionately toward a goal",
+            "Have a positive influence on those around you"
+          ],
+          "strengths": [
+            "High motivation and drive",
+            "Perseverance to not give up even in the face of difficulties",
+            "Ability to energize those around you"
+          ],
+          "weaknesses": [
+            "Sometimes there is a risk of burnout due to excessive enthusiasm.",
+            "Delicate details may be missed",
+            "Improvement is possible by increasing self-awareness."
+          ],
+          "advice": "Maintain your enthusiasm while still getting adequate rest. It is important to strike a balance over the long term."
         },
         "B": {
-          "title": "일반 관람러",
-          "desc": "가끔 봐요! 중요한 경기나 관심 있는 종목만 챙겨보는 선택적 팬입니다."
+          "title": "general audience",
+          "summary": "See you sometimes! They are selective fans who only watch important games or sports of interest.",
+          "description": "See you sometimes! They are selective fans who only watch important games or sports of interest.",
+          "characteristics": [
+            "See you sometimes! They are selective fans who only watch important games or sports of interest.",
+            "Active and energetic disposition",
+            "A style that moves passionately toward a goal",
+            "Have a positive influence on those around you"
+          ],
+          "strengths": [
+            "High motivation and drive",
+            "Perseverance to not give up even in the face of difficulties",
+            "Ability to energize those around you"
+          ],
+          "weaknesses": [
+            "Sometimes there is a risk of burnout due to excessive enthusiasm.",
+            "Delicate details may be missed",
+            "Improvement is possible by increasing self-awareness."
+          ],
+          "advice": "Maintain your enthusiasm while still getting adequate rest. It is important to strike a balance over the long term."
         },
         "C": {
-          "title": "스포츠 무관심",
-          "desc": "관심 없어요! 스포츠보다 다른 취미나 활동을 더 선호하는 타입입니다."
+          "title": "sports indifference",
+          "summary": "I'm not interested! This type of person prefers other hobbies or activities over sports.",
+          "description": "I'm not interested! This type of person prefers other hobbies or activities over sports.",
+          "characteristics": [
+            "I'm not interested! This type of person prefers other hobbies or activities over sports.",
+            "Active and energetic disposition",
+            "A style that moves passionately toward a goal",
+            "Have a positive influence on those around you"
+          ],
+          "strengths": [
+            "High motivation and drive",
+            "Perseverance to not give up even in the face of difficulties",
+            "Ability to energize those around you"
+          ],
+          "weaknesses": [
+            "Sometimes there is a risk of burnout due to excessive enthusiasm.",
+            "Delicate details may be missed",
+            "Improvement is possible by increasing self-awareness."
+          ],
+          "advice": "Maintain your enthusiasm while still getting adequate rest. It is important to strike a balance over the long term."
         }
       }
     },
@@ -2678,16 +5144,70 @@
       ],
       "results": {
         "A": {
-          "title": "뮤지션",
-          "desc": "음악 창작자! 악기 연주와 음악 창작에 열정을 가진 진정한 뮤지션입니다."
+          "title": "musician",
+          "summary": "Music Creator! He is a true musician with a passion for playing instruments and creating music.",
+          "description": "Music creator! He is a true musician with a passion for playing instruments and creating music.",
+          "characteristics": [
+            "Music Creator! He is a true musician with a passion for playing instruments and creating music.",
+            "Active and energetic disposition",
+            "A style that moves passionately toward a goal",
+            "Have a positive influence on those around you"
+          ],
+          "strengths": [
+            "High motivation and drive",
+            "Perseverance to not give up even in the face of difficulties",
+            "Ability to energize those around you"
+          ],
+          "weaknesses": [
+            "Sometimes there is a risk of burnout due to excessive enthusiasm.",
+            "Detailed details may be missed",
+            "Improvement is possible by increasing self-awareness."
+          ],
+          "advice": "Maintain your enthusiasm while still getting adequate rest. It is important to strike a balance over the long term."
         },
         "B": {
-          "title": "취미 연주자",
-          "desc": "여가의 즐거움! 취미로 악기를 다루며 음악을 즐기는 아마추어 연주자입니다."
+          "title": "hobbyist",
+          "summary": "Leisure fun! I am an amateur musician who plays instruments and enjoys music as a hobby.",
+          "description": "Leisure fun! I am an amateur musician who plays instruments and enjoys music as a hobby.",
+          "characteristics": [
+            "Leisure fun! I am an amateur musician who plays instruments and enjoys music as a hobby.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "C": {
-          "title": "감상 전문",
-          "desc": "듣는 게 좋아요! 연주보다는 음악 감상을 선호하는 청취자 타입입니다."
+          "title": "expert in appreciation",
+          "summary": "I love hearing it! This type of listener prefers listening to music rather than playing it.",
+          "description": "I love hearing it! This type of listener prefers listening to music rather than playing it.",
+          "characteristics": [
+            "I love hearing it! This type of listener prefers listening to music rather than playing it.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         }
       }
     },
@@ -2715,18 +5235,94 @@
       ],
       "results": {
         "A": {
-          "title": "High ADHD Risk",
-          "desc": "Multiple ADHD symptoms are present. You frequently experience difficulties with attention deficit, hyperactivity, and impulsivity in daily life. Professional consultation for accurate diagnosis and appropriate treatment is recommended. ADHD can be significantly improved with proper treatment and management."
+          "title": "ADHD high risk group",
+          "summary": "There are many symptoms of ADHD. Inattention deficit, hyperactivity, impulsivity in daily life...",
+          "description": "There are many symptoms of ADHD. Problems with attention deficit, hyperactivity, and impulsivity appear to occur frequently in everyday life. We recommend accurate diagnosis and appropriate treatment through consultation with a specialist. ADHD can be sufficiently improved with appropriate treatment and management.",
+          "characteristics": [
+            "There are many symptoms of ADHD. Problems with attention deficit, hyperactivity, and impulsivity appear to occur frequently in everyday life. We recommend accurate diagnosis and appropriate treatment through consultation with a specialist. ADHD can be sufficiently improved with appropriate treatment and management.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         },
         "B": {
-          "title": "Moderate ADHD Risk",
-          "desc": "Some ADHD symptoms are present. You may experience difficulties with attention or impulse control when stressed or tired. If symptoms persist or affect your daily life, consulting a professional is advisable. Regular lifestyle habits and adequate rest can be helpful."
+          "title": "ADHD attention group",
+          "summary": "Some ADHD symptoms are present. When you're stressed or tired, your attention or impulses...",
+          "description": "Some ADHD symptoms are present. When you're stressed or tired, you may have trouble paying attention or impulse control. If symptoms persist or affect your daily life, it is recommended that you consult a professional. Regular lifestyle habits and sufficient rest can help.",
+          "characteristics": [
+            "Some ADHD symptoms are present. When you're stressed or tired, you may have trouble paying attention or impulse control. If symptoms persist or affect your daily life, it is recommended that you consult a professional. Regular lifestyle habits and sufficient rest can help.",
+            "Pursue your own style.",
+            "Shows consistent behavior patterns.",
+            "Your values ​​are clear."
+          ],
+          "strengths": [
+            "Possesses practical problem-solving skills.",
+            "I enjoy new experiences.",
+            "Have balanced judgment."
+          ],
+          "weaknesses": [
+            "Stress management may be necessary.",
+            "It may take time to make a decision.",
+            "You may be concerned about setting priorities."
+          ],
+          "advice": "Go at your own pace, but sometimes listen to the advice of those around you. Growing together is also valuable."
         },
         "C": {
-          "title": "Low ADHD Risk",
-          "desc": "ADHD symptoms are minimal. Your attention and impulse control abilities are good, and you manage daily life well. Maintain your current healthy lifestyle habits. However, this is a self-assessment tool; if you have concerning symptoms, please consult a medical professional."
+          "title": "ADHD low risk group",
+          "summary": "ADHD symptoms rarely appear. Good attention and impulse control skills, daily life...",
+          "description": "ADHD symptoms rarely appear. He has good attention and impulse control and is managing his daily life well. We encourage you to maintain your current healthy lifestyle habits. However, this test is only a self-diagnosis tool, and if you have any symptoms that concern you, please consult a specialist.",
+          "characteristics": [
+            "ADHD symptoms rarely appear. He has good attention and impulse control and is managing his daily life well. We encourage you to maintain your current healthy lifestyle habits. However, this test is only a self-diagnosis tool, and if you have any symptoms that concern you, please consult a specialist.",
+            "Have a balanced mindset.",
+            "They adapt well to new environments.",
+            "We strive to constantly grow."
+          ],
+          "strengths": [
+            "Demonstrates a goal-oriented attitude.",
+            "I have a strong sense of responsibility.",
+            "Demonstrate a sincere attitude."
+          ],
+          "weaknesses": [
+            "You can be conscious of the gaze of others.",
+            "You may be too hard on yourself.",
+            "You may try to do everything on your own."
+          ],
+          "advice": "The way you are is good enough, but enjoy the process of working towards becoming a better version of yourself. Small changes add up to create big growth."
         }
       }
     }
+  },
+  "auth": {
+    "signIn": "Sign in with Google",
+    "signOut": "Sign Out",
+    "signingIn": "Signing in...",
+    "signInError": "Sign in failed. Please try again.",
+    "signOutError": "Sign out failed. Please try again.",
+    "myResults": "My Results",
+    "saveResult": "Save Result",
+    "resultSaved": "Result saved!",
+    "loginToSave": "Sign in to save your results"
+  },
+  "myResults": {
+    "title": "My Test Results",
+    "description": "View all your completed test results",
+    "noResults": "No saved results yet",
+    "takeTests": "Take Tests",
+    "viewResult": "View Result",
+    "delete": "Delete",
+    "confirmDelete": "Are you sure you want to delete this?",
+    "testTaken": "Completed",
+    "result": "Result"
   }
 }

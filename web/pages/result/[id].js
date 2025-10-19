@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { trackEvent } from "../../utils/analytics";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import AuthButton from "@/components/AuthButton";
+import SaveResultButton from "@/components/SaveResultButton";
 import { useTranslation } from "@/hooks/useTranslation";
 import { getTestById } from "../../lib/tests-data";
 
@@ -120,15 +122,19 @@ export default function ResultPage() {
       </Head>
 
       <main className="fade-in">
-        {/* Language Switcher */}
+        {/* Top Navigation */}
         <div
           style={{
             position: 'fixed',
             top: '20px',
             right: '20px',
             zIndex: 100,
+            display: 'flex',
+            gap: '12px',
+            alignItems: 'center'
           }}
         >
+          <AuthButton />
           <LanguageSwitcher />
         </div>
 
@@ -408,6 +414,14 @@ export default function ResultPage() {
                 </p>
               </div>
             )}
+
+            {/* Save Result Button */}
+            <SaveResultButton
+              testId={id}
+              resultKey={r}
+              testTitle={testTitle}
+              resultTitle={resultTitle}
+            />
 
             {/* In-Article Ad */}
             <div style={{ marginBottom: 'var(--spacing-xl)' }} data-ad-slot="in-article">
