@@ -709,18 +709,18 @@
     "21": {
       "title": "Your Movie Preference",
       "questions": [
-        "Do you often 보 영화?",
-        "Do you often 영화관 가?",
-        "Do you 매일 보 넷플릭스?",
-        "Do you 읽 영화 리뷰?",
-        "Do you 정주행하 시리즈물?",
-        "Do you 미리 보 예고편?",
-        "Do you 팝콘은 필수?",
-        "Do you 자막 vs 더빙 중 자막 선호하?",
-        "Do you well 받 영화 추천?",
-        "Do you 여러 번 보 같은 영화?",
-        "Do you 듣 영화 ost?",
-        "Do you 관심 영화제 있?"
+        "Do you often watch movies?",
+        "Do you often go to the movies?",
+        "Do you watch Netflix every day?",
+        "Do you read movie reviews?",
+        "Do you watch the series regularly?",
+        "Do you preview the trailer?",
+        "Is popcorn essential?",
+        "Do you prefer subtitles vs dubbing?",
+        "Are you good at getting movie recommendations?",
+        "Do you watch the same movie multiple times?",
+        "Do you listen to movie OSTs?",
+        "Are you interested in film festivals?"
       ],
       "results": {
         "A": {
@@ -740,18 +740,18 @@
     "22": {
       "title": "MBTI Ideal Type Test",
       "questions": [
-        "Is 외향적이고 사교적인 사람 좋?",
-        "Is 즉흥적이고 자유로운 사람 매력적?",
-        "Is 선호하 감정 표현 풍부한 사람?",
-        "Is 논리적이고 이성적인 사람 좋?",
-        "Do you like 계획적이고 체계적인 사람?",
-        "Is 즐기는 사람 좋 새로운 경험?",
-        "Is 신중하고 안정적인 사람 매력적?",
-        "Is 선호하 창의적이고 상상력 풍부한 사람?",
-        "Is 현실적이고 실용적인 사람 좋?",
-        "Is 유연하고 적응력이 좋은 사람 좋?",
-        "Is 중요시하는 사람 매력적 원칙?",
-        "Do you 선호하 대화 주도하는 사람?"
+        "Do you like people who are extroverted and sociable?",
+        "Are spontaneous and free people attractive?",
+        "Do you prefer people who are expressive of their emotions?",
+        "Do you like logical and rational people?",
+        "Do you like people who are planned and organized?",
+        "Do you like people who enjoy new experiences?",
+        "Are cautious and stable people attractive?",
+        "Do you prefer people who are creative and imaginative?",
+        "Do you like someone who is realistic and practical?",
+        "Do you like someone who is flexible and adaptable?",
+        "Are people who value principles attractive?",
+        "Do you prefer someone who dominates the conversation?"
       ],
       "results": {
         "A": {
@@ -771,18 +771,18 @@
     "23": {
       "title": "MBTI Effective Learning Methods",
       "questions": [
-        "Is 그룹 스터디 혼자 공부보다 효과적?",
-        "Do you 공부하 전체 개념을 first 파악하고 세부 사항?",
-        "Do you 이론보다 실제 예시로 배우는 게 좋?",
-        "Do you 세워서 공부하 계획표?",
-        "Do you often 시도하 새로운 학습 방법?",
-        "Is 논리적 설명 감각적 경험보다 이해가 well 되?",
-        "Is 집중력 마감 직전 높아지?",
-        "Do you 동시 편한 공부하는 게 여러 과목?",
-        "Do you 선호하 실험이나 체험 학습?",
-        "Do you 소리 내어 읽거나 설명하면서 공부하?",
-        "Is 조용한 환경 필수?",
-        "Do you 구체적으로 설정하 학습 목표?"
+        "Is group study more effective than studying alone?",
+        "Do you understand the overall concept first and then study the details?",
+        "Is it better to learn from real-life examples rather than theory?",
+        "Do you study by making a schedule?",
+        "Do you often try new learning methods?",
+        "Does a logical explanation make more sense than a sensory experience?",
+        "Do you feel more focused right before a deadline?",
+        "Are you comfortable studying multiple subjects at the same time?",
+        "Do you prefer experiments or experiential learning?",
+        "Do you study by reading out loud or explaining things?",
+        "Is a quiet environment essential?",
+        "Do you set specific learning goals?"
       ],
       "results": {
         "A": {
@@ -802,18 +802,18 @@
     "24": {
       "title": "MBTI Compatibility Test",
       "questions": [
-        "Do you 외향성(e)과 내향성(i) 중 나는?",
-        "Do you 감각(s)과 직관(n) 중 나는?",
-        "Do you 사고(t)와 감정(f) 중 나는?",
-        "Do you 판단(j)과 인식(p) 중 나는?",
-        "Is 상대방이 말 많은 편이길 원하?",
-        "Is 상대방 계획적이길 원하?",
-        "Is 상대방 논리적이길 원하?",
-        "Is 상대방 현실적이길 원하?",
-        "Is 비슷한 성격이 좋나요, 보완적 성격 좋?",
-        "Do you 갈등 시 대화로 해결하?",
-        "Do you date는 즉흥적으로 하는 게 좋?",
-        "Do you often 하는 편 감정 표현?"
+        "Are you extrovert (E) or introvert (I)?",
+        "Between Sensing (S) and Intuition (N)?",
+        "Am I better at thinking (T) or feeling (F)?",
+        "Judgment (J) or Perception (P)?",
+        "Do you want your partner to talk a lot?",
+        "Do you want your partner to be intentional?",
+        "Do you want the other person to be logical?",
+        "Do you want your partner to be realistic?",
+        "Do you like similar personalities or complementary personalities?",
+        "Are conflicts resolved through dialogue?",
+        "Do you like spontaneous dates?",
+        "Do you tend to express your emotions often?"
       ],
       "results": {
         "A": {
@@ -833,18 +833,18 @@
     "25": {
       "title": "VARK Learning Styles Test",
       "questions": [
-        "Is 배울 때 그림이나 도표가 도움 되 새로운 정보?",
-        "Is 듣는 것 읽는 것보다 이해가 well 되 강의?",
-        "Do you 선호하 메모하며 공부하는 것?",
-        "Is 실제로 해보면서 배우는 것 가장 효과적?",
-        "Do you 색깔 펜으로 하이라이트하며 공부하?",
-        "Do you 즐겨 듣 팟캐스트나 오디오북?",
-        "Do you like 리스트 만들어 정리하는 것?",
-        "Is 선호하 시뮬레이션이나 실습 있는 수업?",
-        "Is 영상 자료 텍스트보다 이해하기 쉬운?",
-        "Do you 이해하 토론하면서 개념?",
-        "Do you 외울 때 쓰면서 외우 단어의 철자?",
-        "Is 통한 학습 재미있 역할극이나 활동?"
+        "Do pictures or diagrams help you learn new information?",
+        "Do you understand better by listening to a lecture than by reading it?",
+        "Do you prefer studying by taking notes?",
+        "Is learning by doing the most effective?",
+        "Do you study by highlighting with colored pens?",
+        "Do you enjoy listening to podcasts or audiobooks?",
+        "Do you like making lists and organizing them?",
+        "Do you prefer classes with simulations or hands-on practice?",
+        "Are video materials easier to understand than text?",
+        "Do you understand the concepts as we discuss them?",
+        "When you memorize the spelling of a word, do you memorize it as you write it?",
+        "Is learning through role-playing or activities fun?"
       ],
       "results": {
         "A": {
