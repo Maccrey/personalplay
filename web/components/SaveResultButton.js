@@ -17,13 +17,15 @@ export default function SaveResultButton({ testId, resultKey, testTitle, resultT
 
   // Auto-save when user is logged in
   useEffect(() => {
-    if (user && testId && resultKey && !saved) {
+    // Only attempt to save if user is authenticated and all required data is present
+    if (user && user.uid && testId && resultKey && !saved && !saving) {
       handleSave();
     }
   }, [user, testId, resultKey]);
 
   const handleSave = async () => {
-    if (saving || saved) return;
+    // Guard: Don't proceed if not logged in or already saving/saved
+    if (!user || !user.uid || saving || saved) return;
 
     setSaving(true);
     try {
@@ -43,7 +45,10 @@ export default function SaveResultButton({ testId, resultKey, testTitle, resultT
       }, 3000);
     } catch (error) {
       console.error('Error saving result:', error);
-      alert(t('auth.saveError') || 'Failed to save result');
+      // Only show alert if user is still logged in
+      if (user && user.uid) {
+        alert(t('auth.saveError') || 'Failed to save result');
+      }
     } finally {
       setSaving(false);
     }
