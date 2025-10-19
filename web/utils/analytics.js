@@ -1,21 +1,19 @@
-import { trackEvent as trackToFirestore } from "@/lib/firestore-client";
+// Analytics tracking - currently using only dataLayer (Google Analytics)
+// Firestore analytics disabled to avoid permission errors
 
 export function trackEvent(name, payload = {}) {
-  // Firebase + dataLayer 기반 추적
+  // dataLayer 기반 추적 (Google Analytics)
   if (typeof window !== "undefined") {
     try {
       console.log("[analytics] event", name, payload);
-      // window.dataLayer push
+      // window.dataLayer push for Google Analytics
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({ event: name, ...payload });
 
-      // Firebase로 이벤트 전송 (비동기)
-      trackToFirestore({
-        event: name,
-        ...payload
-      }).catch(() => {});
+      // NOTE: Firestore analytics tracking is disabled
+      // Can be re-enabled later if needed with proper Firestore rules
     } catch (e) {
-      // noop
+      // Silent fail - analytics should not break the app
     }
   }
 }

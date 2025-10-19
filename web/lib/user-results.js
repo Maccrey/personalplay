@@ -84,10 +84,10 @@ export async function saveUserResult(userId, resultData) {
  */
 export async function getUserResults(userId) {
   try {
+    // Query without orderBy to avoid requiring a composite index
     const q = query(
       collection(db, 'userResults'),
-      where('userId', '==', userId),
-      orderBy('createdAt', 'desc')
+      where('userId', '==', userId)
     );
 
     const querySnapshot = await getDocs(q);
@@ -100,6 +100,13 @@ export async function getUserResults(userId) {
         createdAt: doc.data().createdAt?.toDate(),
         updatedAt: doc.data().updatedAt?.toDate()
       });
+    });
+
+    // Sort by createdAt on the client side
+    results.sort((a, b) => {
+      const timeA = a.createdAt ? a.createdAt.getTime() : 0;
+      const timeB = b.createdAt ? b.createdAt.getTime() : 0;
+      return timeB - timeA; // Descending order (newest first)
     });
 
     return results;
