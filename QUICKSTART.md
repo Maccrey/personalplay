@@ -38,6 +38,10 @@ service cloud.firestore {
       allow read: if false;
       allow write: if true;
     }
+    match /visitors/{visitorId} {
+      allow read: if true;
+      allow write: if true;
+    }
   }
 }
 ```

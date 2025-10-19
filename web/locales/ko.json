@@ -19,7 +19,11 @@
     "testTypes": "MBTI, ADHD, 학습 유형, 애착 유형, 사랑 유형, 트렌드, 취미 등",
     "testTypesDesc": "전문적인 심리 검사를 경험해보세요",
     "testsCount": "{{count}}개 검사",
-    "footer": "© 2024 PersonaPlay. All rights reserved."
+    "footer": "© 2025 PersonaPlay. All rights reserved."
+  },
+  "visitor": {
+    "today": "오늘 방문자",
+    "total": "전체 방문자"
   },
   "categories": {
     "love": {

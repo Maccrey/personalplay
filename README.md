@@ -11,6 +11,7 @@
 - **🔍 SEO 최적화** - Multilingual SEO, hreflang 태그, sitemap
 - **💰 AdSense 준비 완료** - GDPR/CCPA 준수 쿠키 동의 관리
 - **📊 Analytics** - Firebase를 통한 사용자 행동 추적 및 통계
+- **👥 실시간 방문자 카운터** - 오늘/전체 방문자 수 실시간 표시
 - **⚡ Next.js 14** - Static Export로 최적화된 성능
 - **🔥 Firebase + GitHub Pages** - 무료 호스팅 및 데이터베이스
 

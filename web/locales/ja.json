@@ -10,6 +10,10 @@
     "home": "ホーム",
     "loading": "読み込み中..."
   },
+  "visitor": {
+    "today": "今日の訪問者",
+    "total": "総訪問者"
+  },
   "home": {
     "title": "PersonaPlay",
     "subtitle": "自分を知る楽しい性格診断",
@@ -19,7 +23,7 @@
     "testTypes": "MBTI、ADHD、学習スタイル、愛着タイプ、恋愛タイプ、トレンド、趣味など",
     "testTypesDesc": "専門的な心理診断を体験してください",
     "testsCount": "{{count}}個の診断",
-    "footer": "© 2024 PersonaPlay. All rights reserved."
+    "footer": "© 2025 PersonaPlay. All rights reserved."
   },
   "categories": {
     "love": {

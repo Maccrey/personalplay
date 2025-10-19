@@ -87,6 +87,12 @@ service cloud.firestore {
       allow read: if false;
       allow write: if true;
     }
+
+    // 방문자 통계: 읽기/쓰기 모두 가능 (익명)
+    match /visitors/{visitorId} {
+      allow read: if true;
+      allow write: if true;
+    }
   }
 }
 ```

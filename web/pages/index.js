@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import SEOHead from "@/components/SEOHead";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import VisitorCounter from "@/components/VisitorCounter";
 import { useTranslation } from "@/hooks/useTranslation";
 import { getAllCategories } from "@/lib/firestore-client";
 
@@ -236,6 +237,9 @@ export default function Home() {
           }}
         >
           <div className="container">
+            {/* Visitor Counter */}
+            <VisitorCounter />
+
             <p
               style={{
                 color: "var(--color-text-tertiary)",

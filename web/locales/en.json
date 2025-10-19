@@ -10,6 +10,10 @@
     "home": "Home",
     "loading": "Loading..."
   },
+  "visitor": {
+    "today": "Today's Visitors",
+    "total": "Total Visitors"
+  },
   "home": {
     "title": "PersonaPlay",
     "subtitle": "Fun personality tests to discover yourself",
@@ -19,7 +23,7 @@
     "testTypes": "MBTI, ADHD, Learning Styles, Attachment Types, Love Styles, Trends, Hobbies and more",
     "testTypesDesc": "Experience professional psychological tests",
     "testsCount": "{{count}} tests",
-    "footer": "© 2024 PersonaPlay. All rights reserved."
+    "footer": "© 2025 PersonaPlay. All rights reserved."
   },
   "categories": {
     "love": {
