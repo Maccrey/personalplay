@@ -254,6 +254,26 @@ export default function CategoryPage() {
   );
 }
 
+// Static Site Generation - 빌드 시 모든 카테고리 페이지 생성
+export async function getStaticPaths() {
+  const categories = ['love', 'personality', 'learning', 'lifestyle', 'meme-trend', 'hobby-entertainment'];
+
+  return {
+    paths: categories.map((id) => ({
+      params: { id },
+    })),
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params }) {
+  return {
+    props: {
+      categoryId: params.id,
+    },
+  };
+}
+
 function getTestIcon(id) {
   const icons = {
     1: "💕", 2: "👥", 3: "💼", 4: "🌴", 5: "😂", 6: "🐾", 7: "📱", 8: "😌",

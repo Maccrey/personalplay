@@ -336,3 +336,24 @@ export default function ResultPage() {
     </>
   );
 }
+
+// Static Site Generation - 빌드 시 모든 결과 페이지 생성
+export async function getStaticPaths() {
+  // 1-60번 테스트 ID
+  const testIds = Array.from({ length: 60 }, (_, i) => String(i + 1));
+
+  return {
+    paths: testIds.map((id) => ({
+      params: { id },
+    })),
+    fallback: 'blocking', // 새로운 테스트가 추가되면 동적으로 생성
+  };
+}
+
+export async function getStaticProps({ params }) {
+  return {
+    props: {
+      testId: params.id,
+    },
+  };
+}
