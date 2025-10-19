@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { trackEvent } from "../../utils/analytics";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useTranslation } from "@/hooks/useTranslation";
+import { getTestById } from "../../lib/firestore-client";
 
 export default function ResultPage() {
   const router = useRouter();
@@ -16,23 +17,26 @@ export default function ResultPage() {
 
   useEffect(() => {
     if (!id || !r) return;
-    fetch("/api/tests")
-      .then((r) => r.json())
-      .then((data) => {
-        const t = data.tests.find((x) => x.id === id);
-        setTestInfo(t);
-        const rr = t?.results.find((x) => x.key === r);
-        setRes(rr);
+
+    // Fetch test data from Firestore
+    getTestById(id).then((testData) => {
+      if (testData) {
+        setTestInfo(testData);
+        const result = testData.results?.find((x) => x.key === r);
+        setRes(result);
 
         // Track result page view
-        if (rr) {
+        if (result) {
           trackEvent("result_viewed", {
             test_id: id,
             result_key: r,
-            result_title: rr.title,
+            result_title: result.title,
           });
         }
-      });
+      }
+    }).catch((error) => {
+      console.error("Error fetching test:", error);
+    });
   }, [id, r]);
 
   useEffect(() => {

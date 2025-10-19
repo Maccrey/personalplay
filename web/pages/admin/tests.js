@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
+import { getAllTests } from "../../lib/firestore-client";
 
 // 코드 에디터를 dynamic import로 클라이언트 사이드에서만 로드
 const JsonEditor = dynamic(() => import("../../components/JsonEditor"), {
@@ -11,9 +12,8 @@ export default function TestsAdmin() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("/api/tests")
-      .then((res) => res.json())
-      .then((data) => setTests(data))
+    getAllTests()
+      .then((testsData) => setTests({ tests: testsData }))
       .catch((err) => setError(err.message));
   }, []);
 
