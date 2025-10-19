@@ -4,6 +4,7 @@
  */
 
 import { getCategoryForTest } from './category-mapping';
+import { getCategoryData } from './category-data';
 
 let cachedTests = null;
 
@@ -118,8 +119,12 @@ export async function getAllCategories(locale = 'ko') {
     const category = test.category || 'other';
 
     if (!categoryMap[category]) {
+      const categoryData = getCategoryData(category);
       categoryMap[category] = {
         id: category,
+        icon: categoryData.icon,
+        color: categoryData.color,
+        gradient: categoryData.gradient,
         tests: []
       };
     }
