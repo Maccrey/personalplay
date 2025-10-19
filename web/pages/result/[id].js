@@ -5,12 +5,12 @@ import { useEffect, useState } from "react";
 import { trackEvent } from "../../utils/analytics";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useTranslation } from "@/hooks/useTranslation";
-import { getTestById } from "../../lib/firestore-client";
+import { getTestById } from "../../lib/tests-data";
 
 export default function ResultPage() {
   const router = useRouter();
   const { id, r } = router.query;
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const [res, setRes] = useState(null);
   const [testInfo, setTestInfo] = useState(null);
   const [adsEnabled, setAdsEnabled] = useState(false);
@@ -18,15 +18,17 @@ export default function ResultPage() {
   useEffect(() => {
     if (!id || !r) return;
 
-    // Fetch test data from Firestore
-    getTestById(id).then((testData) => {
+    // Fetch test data from JSON files
+    getTestById(id, locale).then((testData) => {
       if (testData) {
         setTestInfo(testData);
-        const result = testData.results?.find((x) => x.key === r);
-        setRes(result);
 
-        // Track result page view
+        // Results are now an object, not an array
+        const result = testData.results?.[r];
         if (result) {
+          setRes({ ...result, key: r });
+
+          // Track result page view
           trackEvent("result_viewed", {
             test_id: id,
             result_key: r,
@@ -37,7 +39,7 @@ export default function ResultPage() {
     }).catch((error) => {
       console.error("Error fetching test:", error);
     });
-  }, [id, r]);
+  }, [id, r, locale]);
 
   useEffect(() => {
     // A/B 토글 쿼리 파라미터 처리: ?ab=A 또는 ?ab=B
@@ -87,18 +89,23 @@ export default function ResultPage() {
   // Get translated content
   const testTitle = t(`tests.${id}.title`);
   const resultTitle = t(`tests.${id}.results.${r}.title`);
-  const resultDesc = t(`tests.${id}.results.${r}.desc`);
+  const resultSummary = t(`tests.${id}.results.${r}.summary`);
+  const resultDesc = t(`tests.${id}.results.${r}.description`);
+  const characteristics = t(`tests.${id}.results.${r}.characteristics`) || [];
+  const strengths = t(`tests.${id}.results.${r}.strengths`) || [];
+  const weaknesses = t(`tests.${id}.results.${r}.weaknesses`) || [];
+  const advice = t(`tests.${id}.results.${r}.advice`);
 
   const ogImageUrl = `/api/og/${id}?title=${encodeURIComponent(
     resultTitle || ""
-  )}&desc=${encodeURIComponent(resultDesc || "")}`;
+  )}&desc=${encodeURIComponent(resultSummary || "")}`;
 
   return (
     <>
       <Head>
         <title>{resultTitle} - PersonaPlay</title>
         <meta property="og:title" content={resultTitle} />
-        <meta property="og:description" content={resultDesc} />
+        <meta property="og:description" content={resultSummary} />
         <meta property="og:image" content={ogImageUrl} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -216,17 +223,191 @@ export default function ResultPage() {
               {resultTitle}
             </h1>
 
-            {/* Result Description */}
+            {/* Result Summary */}
             <p style={{
               fontSize: '1.125rem',
               lineHeight: '1.8',
               color: 'var(--color-text-secondary)',
-              marginBottom: 'var(--spacing-xl)',
+              marginBottom: 'var(--spacing-md)',
               maxWidth: '500px',
+              margin: '0 auto var(--spacing-md)',
+              fontWeight: '600'
+            }}>
+              {resultSummary}
+            </p>
+
+            {/* Result Description */}
+            <p style={{
+              fontSize: '1rem',
+              lineHeight: '1.8',
+              color: 'var(--color-text-secondary)',
+              marginBottom: 'var(--spacing-xl)',
+              maxWidth: '600px',
               margin: '0 auto var(--spacing-xl)'
             }}>
               {resultDesc}
             </p>
+
+            {/* Characteristics Section */}
+            {Array.isArray(characteristics) && characteristics.length > 0 && (
+              <div style={{
+                textAlign: 'left',
+                maxWidth: '600px',
+                margin: '0 auto var(--spacing-xl)',
+                padding: 'var(--spacing-lg)',
+                background: 'rgba(102, 126, 234, 0.05)',
+                borderRadius: 'var(--radius-lg)',
+                border: '1px solid rgba(102, 126, 234, 0.1)'
+              }}>
+                <h3 style={{
+                  fontSize: '1.125rem',
+                  fontWeight: '700',
+                  marginBottom: 'var(--spacing-md)',
+                  color: 'var(--color-primary)'
+                }}>
+                  {t('result.characteristics')}
+                </h3>
+                <ul style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0
+                }}>
+                  {characteristics.map((char, idx) => (
+                    <li key={idx} style={{
+                      marginBottom: 'var(--spacing-sm)',
+                      paddingLeft: 'var(--spacing-md)',
+                      position: 'relative',
+                      color: 'var(--color-text-secondary)',
+                      lineHeight: '1.6'
+                    }}>
+                      <span style={{
+                        position: 'absolute',
+                        left: 0,
+                        color: 'var(--color-primary)'
+                      }}>✓</span>
+                      {char}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Strengths Section */}
+            {Array.isArray(strengths) && strengths.length > 0 && (
+              <div style={{
+                textAlign: 'left',
+                maxWidth: '600px',
+                margin: '0 auto var(--spacing-xl)',
+                padding: 'var(--spacing-lg)',
+                background: 'rgba(76, 175, 80, 0.05)',
+                borderRadius: 'var(--radius-lg)',
+                border: '1px solid rgba(76, 175, 80, 0.1)'
+              }}>
+                <h3 style={{
+                  fontSize: '1.125rem',
+                  fontWeight: '700',
+                  marginBottom: 'var(--spacing-md)',
+                  color: '#4CAF50'
+                }}>
+                  {t('result.strengths')}
+                </h3>
+                <ul style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0
+                }}>
+                  {strengths.map((strength, idx) => (
+                    <li key={idx} style={{
+                      marginBottom: 'var(--spacing-sm)',
+                      paddingLeft: 'var(--spacing-md)',
+                      position: 'relative',
+                      color: 'var(--color-text-secondary)',
+                      lineHeight: '1.6'
+                    }}>
+                      <span style={{
+                        position: 'absolute',
+                        left: 0,
+                        color: '#4CAF50'
+                      }}>💪</span>
+                      {strength}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Weaknesses Section */}
+            {Array.isArray(weaknesses) && weaknesses.length > 0 && (
+              <div style={{
+                textAlign: 'left',
+                maxWidth: '600px',
+                margin: '0 auto var(--spacing-xl)',
+                padding: 'var(--spacing-lg)',
+                background: 'rgba(255, 152, 0, 0.05)',
+                borderRadius: 'var(--radius-lg)',
+                border: '1px solid rgba(255, 152, 0, 0.1)'
+              }}>
+                <h3 style={{
+                  fontSize: '1.125rem',
+                  fontWeight: '700',
+                  marginBottom: 'var(--spacing-md)',
+                  color: '#FF9800'
+                }}>
+                  {t('result.weaknesses')}
+                </h3>
+                <ul style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0
+                }}>
+                  {weaknesses.map((weakness, idx) => (
+                    <li key={idx} style={{
+                      marginBottom: 'var(--spacing-sm)',
+                      paddingLeft: 'var(--spacing-md)',
+                      position: 'relative',
+                      color: 'var(--color-text-secondary)',
+                      lineHeight: '1.6'
+                    }}>
+                      <span style={{
+                        position: 'absolute',
+                        left: 0,
+                        color: '#FF9800'
+                      }}>⚠️</span>
+                      {weakness}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Advice Section */}
+            {advice && (
+              <div style={{
+                textAlign: 'left',
+                maxWidth: '600px',
+                margin: '0 auto var(--spacing-xl)',
+                padding: 'var(--spacing-lg)',
+                background: 'rgba(156, 39, 176, 0.05)',
+                borderRadius: 'var(--radius-lg)',
+                border: '1px solid rgba(156, 39, 176, 0.1)'
+              }}>
+                <h3 style={{
+                  fontSize: '1.125rem',
+                  fontWeight: '700',
+                  marginBottom: 'var(--spacing-md)',
+                  color: '#9C27B0'
+                }}>
+                  {t('result.advice')}
+                </h3>
+                <p style={{
+                  margin: 0,
+                  color: 'var(--color-text-secondary)',
+                  lineHeight: '1.8'
+                }}>
+                  {advice}
+                </p>
+              </div>
+            )}
 
             {/* In-Article Ad */}
             <div style={{ marginBottom: 'var(--spacing-xl)' }} data-ad-slot="in-article">

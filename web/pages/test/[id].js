@@ -7,7 +7,7 @@ import useAdScripts from "@/hooks/useAdScripts";
 import { trackEvent } from "@/utils/analytics";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useTranslation } from "@/hooks/useTranslation";
-import { getTestById } from "@/lib/firestore-client";
+import { getTestById } from "@/lib/tests-data";
 
 export default function TestPage({ initialTest }) {
   const router = useRouter();

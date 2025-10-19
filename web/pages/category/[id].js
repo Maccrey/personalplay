@@ -4,7 +4,7 @@ import Head from "next/head";
 import Link from "next/link";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useTranslation } from "@/hooks/useTranslation";
-import { getCategoryById, getAllTests } from "@/lib/firestore-client";
+import { getCategoryById, getAllTests } from "@/lib/tests-data";
 
 export default function CategoryPage() {
   const router = useRouter();

@@ -4,17 +4,17 @@ import SEOHead from "@/components/SEOHead";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import VisitorCounter from "@/components/VisitorCounter";
 import { useTranslation } from "@/hooks/useTranslation";
-import { getAllCategories } from "@/lib/firestore-client";
+import { getAllCategories } from "@/lib/tests-data";
 
 export default function Home() {
   const [categories, setCategories] = useState([]);
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
 
   useEffect(() => {
-    getAllCategories()
+    getAllCategories(locale)
       .then((data) => setCategories(data || []))
       .catch(() => {});
-  }, []);
+  }, [locale]);
 
   return (
     <>
