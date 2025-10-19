@@ -4,7 +4,7 @@
  */
 
 import { createContext, useContext, useEffect, useState } from 'react';
-import { onAuthChange, signInWithGoogle, signOut } from '@/lib/firebase-auth';
+import { onAuthChange, signInWithGoogle, signOut, handleRedirectResult } from '@/lib/firebase-auth';
 
 const AuthContext = createContext({
   user: null,
@@ -18,6 +18,11 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Handle redirect result on mount
+    handleRedirectResult().catch(err => {
+      // Ignore errors from redirect result (e.g., no redirect)
+    });
+
     // Listen to auth state changes
     const unsubscribe = onAuthChange((user) => {
       setUser(user);
@@ -29,8 +34,8 @@ export function AuthProvider({ children }) {
 
   const handleSignIn = async () => {
     try {
-      const result = await signInWithGoogle();
-      return result.user;
+      // This will redirect the user, no return value
+      await signInWithGoogle();
     } catch (error) {
       console.error('Sign in error:', error);
       throw error;

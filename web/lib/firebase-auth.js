@@ -6,6 +6,8 @@ import { initializeApp, getApps } from 'firebase/app';
 import {
   getAuth,
   signInWithPopup,
+  signInWithRedirect,
+  getRedirectResult,
   GoogleAuthProvider,
   signOut as firebaseSignOut,
   onAuthStateChanged
@@ -36,15 +38,30 @@ export const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
 
 /**
- * Sign in with Google
+ * Sign in with Google (uses redirect to avoid COOP issues)
  * @returns {Promise<UserCredential>}
  */
 export async function signInWithGoogle() {
   try {
-    const result = await signInWithPopup(auth, googleProvider);
-    return result;
+    // Use redirect instead of popup to avoid COOP warnings
+    await signInWithRedirect(auth, googleProvider);
+    // User will be redirected, no return value
   } catch (error) {
     console.error('Error signing in with Google:', error);
+    throw error;
+  }
+}
+
+/**
+ * Get redirect result after sign-in redirect
+ * @returns {Promise<UserCredential|null>}
+ */
+export async function handleRedirectResult() {
+  try {
+    const result = await getRedirectResult(auth);
+    return result;
+  } catch (error) {
+    console.error('Error handling redirect result:', error);
     throw error;
   }
 }
