@@ -5,10 +5,13 @@ import Link from "next/link";
 import AdUnit from "@/components/AdUnit";
 import useAdScripts from "@/hooks/useAdScripts";
 import { trackEvent } from "@/utils/analytics";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function TestPage({ initialTest }) {
   const router = useRouter();
   const { id } = router.query;
+  const { t } = useTranslation();
   const [def, setDef] = useState(initialTest || null);
   const [answers, setAnswers] = useState([]);
   const [currentQ, setCurrentQ] = useState(0);
@@ -37,10 +40,15 @@ export default function TestPage({ initialTest }) {
   if (!def) {
     return (
       <div className="container" style={{ padding: "var(--spacing-2xl)", textAlign: "center" }}>
-        <p>로딩 중 또는 테스트가 없습니다.</p>
+        <p>{t('common.loading')}</p>
       </div>
     );
   }
+
+  // Get translated test content
+  const testTitle = t(`tests.${id}.title`);
+  const testQuestions = def.questions?.map((_, idx) => t(`tests.${id}.questions.${idx}`)) || [];
+  const currentQuestion = testQuestions[currentQ] || def.questions?.[currentQ] || "";
 
   function handleAnswer(value) {
     const newAnswers = [...answers, value];
@@ -73,11 +81,23 @@ export default function TestPage({ initialTest }) {
   return (
     <>
       <Head>
-        <title>{def.title} - PersonaPlay</title>
-        <meta name="description" content={`${def.title} - 나를 알아가는 재미있는 심리테스트`} />
+        <title>{testTitle} - PersonaPlay</title>
+        <meta name="description" content={`${testTitle} - ${t('home.subtitle')}`} />
       </Head>
 
       <main className="fade-in">
+        {/* Language Switcher */}
+        <div
+          style={{
+            position: 'fixed',
+            top: '20px',
+            right: '20px',
+            zIndex: 100,
+          }}
+        >
+          <LanguageSwitcher />
+        </div>
+
         {/* Header */}
         <header style={{
           background: 'var(--color-bg)',
@@ -129,7 +149,7 @@ export default function TestPage({ initialTest }) {
                 fontSize: '1.5rem',
                 margin: 0
               }}>
-                {def.title}
+                {testTitle}
               </h1>
               <span style={{
                 fontSize: '0.875rem',
@@ -171,7 +191,7 @@ export default function TestPage({ initialTest }) {
               marginBottom: 0,
               fontWeight: '500'
             }}>
-              {def.questions[currentQ]}
+              {currentQuestion}
             </p>
           </div>
 
@@ -209,7 +229,7 @@ export default function TestPage({ initialTest }) {
                 e.target.style.boxShadow = 'none';
               }}
             >
-              예
+              {t('common.yes')}
             </button>
             <button
               className="btn"
@@ -238,7 +258,7 @@ export default function TestPage({ initialTest }) {
                 e.target.style.boxShadow = 'none';
               }}
             >
-              아니오
+              {t('common.no')}
             </button>
           </div>
 

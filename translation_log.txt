@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/maccrey/Development/myself-test/translate_tests.py", line 3, in <module>
+    import anthropic
+ModuleNotFoundError: No module named 'anthropic'

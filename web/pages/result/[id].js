@@ -3,10 +3,13 @@ import Head from "next/head";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { trackEvent } from "../../utils/analytics";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function ResultPage() {
   const router = useRouter();
   const { id, r } = router.query;
+  const { t } = useTranslation();
   const [res, setRes] = useState(null);
   const [testInfo, setTestInfo] = useState(null);
   const [adsEnabled, setAdsEnabled] = useState(false);
@@ -72,21 +75,26 @@ export default function ResultPage() {
   if (!res) {
     return (
       <div className="container" style={{ padding: "var(--spacing-2xl)", textAlign: "center" }}>
-        <p>결과 로딩 중...</p>
+        <p>{t('common.loading')}</p>
       </div>
     );
   }
 
+  // Get translated content
+  const testTitle = t(`tests.${id}.title`);
+  const resultTitle = t(`tests.${id}.results.${r}.title`);
+  const resultDesc = t(`tests.${id}.results.${r}.desc`);
+
   const ogImageUrl = `/api/og/${id}?title=${encodeURIComponent(
-    res?.title || ""
-  )}&desc=${encodeURIComponent(res?.desc || "")}`;
+    resultTitle || ""
+  )}&desc=${encodeURIComponent(resultDesc || "")}`;
 
   return (
     <>
       <Head>
-        <title>{res?.title || "결과"} - PersonaPlay</title>
-        <meta property="og:title" content={res?.title || "PersonaPlay 결과"} />
-        <meta property="og:description" content={res?.desc || ""} />
+        <title>{resultTitle} - PersonaPlay</title>
+        <meta property="og:title" content={resultTitle} />
+        <meta property="og:description" content={resultDesc} />
         <meta property="og:image" content={ogImageUrl} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -101,6 +109,18 @@ export default function ResultPage() {
       </Head>
 
       <main className="fade-in">
+        {/* Language Switcher */}
+        <div
+          style={{
+            position: 'fixed',
+            top: '20px',
+            right: '20px',
+            zIndex: 100,
+          }}
+        >
+          <LanguageSwitcher />
+        </div>
+
         {/* Header */}
         <header style={{
           background: 'var(--color-bg)',
@@ -140,7 +160,7 @@ export default function ResultPage() {
               data-ad-visible="true"
             />
           ) : (
-            <div className="ads-disabled">광고 동의 필요</div>
+            <div className="ads-disabled">{t('result.adsConsent')}</div>
           )}
         </div>
 
@@ -163,7 +183,7 @@ export default function ResultPage() {
               marginBottom: 'var(--spacing-md)',
               fontWeight: '600'
             }}>
-              {testInfo?.title || '테스트 결과'}
+              {testTitle}
             </div>
 
             {/* Result Icon/Badge */}
@@ -189,7 +209,7 @@ export default function ResultPage() {
               color: 'var(--color-text)',
               fontWeight: '700'
             }}>
-              {res?.title}
+              {resultTitle}
             </h1>
 
             {/* Result Description */}
@@ -201,7 +221,7 @@ export default function ResultPage() {
               maxWidth: '500px',
               margin: '0 auto var(--spacing-xl)'
             }}>
-              {res?.desc}
+              {resultDesc}
             </p>
 
             {/* In-Article Ad */}
@@ -218,7 +238,7 @@ export default function ResultPage() {
                   data-ad-visible="true"
                 />
               ) : (
-                <div className="ads-disabled">광고 동의 필요</div>
+                <div className="ads-disabled">{t('result.adsConsent')}</div>
               )}
             </div>
 
@@ -235,21 +255,21 @@ export default function ResultPage() {
                   trackEvent("result_shared", {
                     test_id: id,
                     result_key: r,
-                    result_title: res?.title,
+                    result_title: resultTitle,
                     share_method: navigator.share ? "native_share" : "clipboard",
                   });
 
                   if (navigator.share) {
                     navigator.share({
-                      title: res?.title,
-                      text: res?.desc,
+                      title: resultTitle,
+                      text: resultDesc,
                       url: window.location.href,
                     });
                   } else {
                     navigator.clipboard
                       .writeText(window.location.href)
-                      .then(() => alert("링크가 복사되었습니다!"))
-                      .catch(() => alert("링크 복사에 실패했습니다."));
+                      .then(() => alert(t('result.shareResult')))
+                      .catch(() => alert("Failed to copy link"));
                   }
                 }}
                 className="btn btn-primary"
@@ -257,7 +277,7 @@ export default function ResultPage() {
                   padding: 'var(--spacing-md) var(--spacing-xl)'
                 }}
               >
-                결과 공유하기 🔗
+                {t('result.shareResult')}
               </button>
 
               <Link href="/" className="btn btn-secondary" style={{
@@ -266,7 +286,7 @@ export default function ResultPage() {
                 display: 'inline-flex',
                 alignItems: 'center'
               }}>
-                다른 테스트 하기
+                {t('common.home')}
               </Link>
             </div>
           </div>
@@ -286,7 +306,7 @@ export default function ResultPage() {
               data-ad-visible="true"
             />
           ) : (
-            <div className="ads-disabled">광고 동의 필요</div>
+            <div className="ads-disabled">{t('result.adsConsent')}</div>
           )}
         </div>
 
@@ -309,7 +329,7 @@ export default function ResultPage() {
               data-ad-visible="true"
             />
           ) : (
-            <div className="ads-disabled">광고 동의 필요</div>
+            <div className="ads-disabled">{t('result.adsConsent')}</div>
           )}
         </div>
       </main>

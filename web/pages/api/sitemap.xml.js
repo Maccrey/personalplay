@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 
 export default function handler(req, res) {
-  const baseUrl = "https://personaplay.com";
+  const baseUrl = "https://maccre.com";
   const currentDate = new Date().toISOString();
 
   // Read tests and categories
@@ -27,6 +27,10 @@ export default function handler(req, res) {
     <lastmod>${currentDate}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="${baseUrl}/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="${baseUrl}/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="${baseUrl}/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/" />
   </url>
 
   <!-- Categories -->
@@ -38,6 +42,10 @@ export default function handler(req, res) {
     <lastmod>${currentDate}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="${baseUrl}/category/${cat.id}" />
+    <xhtml:link rel="alternate" hreflang="ko" href="${baseUrl}/category/${cat.id}" />
+    <xhtml:link rel="alternate" hreflang="ja" href="${baseUrl}/category/${cat.id}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/category/${cat.id}" />
   </url>`
     )
     .join("")}
@@ -51,6 +59,10 @@ export default function handler(req, res) {
     <lastmod>${currentDate}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="${baseUrl}/test/${test.id}" />
+    <xhtml:link rel="alternate" hreflang="ko" href="${baseUrl}/test/${test.id}" />
+    <xhtml:link rel="alternate" hreflang="ja" href="${baseUrl}/test/${test.id}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/test/${test.id}" />
   </url>`
     )
     .join("")}

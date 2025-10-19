@@ -1,15 +1,33 @@
 import Head from "next/head";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function SEOHead({
-  title = "PersonaPlay - 나를 알아가는 재미있는 심리테스트",
-  description = "MBTI, 학습 유형, 애착 유형, 사랑 유형 등 36가지 전문 심리 검사로 나를 발견하세요. 연애, 성격, 학습, 라이프스타일 카테고리별 다양한 테스트.",
-  keywords = "심리테스트, MBTI, 성격테스트, 학습유형, 애착유형, 사랑유형, 연애테스트, 성격검사, 심리검사, PersonaPlay",
-  ogImage = "https://personaplay.com/og-image.png",
+  title,
+  description,
+  keywords,
+  ogImage = "https://maccre.com/og-image.png",
   ogType = "website",
   canonical,
 }) {
-  const siteUrl = "https://personaplay.com";
-  const fullTitle = title.includes("PersonaPlay") ? title : `${title} - PersonaPlay`;
+  const { language } = useLanguage();
+  const siteUrl = "https://maccre.com";
+  const fullTitle = title?.includes("PersonaPlay") ? title : `${title} - PersonaPlay`;
+
+  // Language to locale mapping
+  const localeMap = {
+    en: "en_US",
+    ko: "ko_KR",
+    ja: "ja_JP"
+  };
+
+  const currentLocale = localeMap[language] || "en_US";
+
+  // Language names for meta tags
+  const languageNames = {
+    en: "English",
+    ko: "Korean",
+    ja: "Japanese"
+  };
 
   return (
     <Head>
@@ -27,6 +45,16 @@ export default function SEOHead({
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={`${siteUrl}${canonical}`} />}
 
+      {/* Hreflang tags for multilingual SEO */}
+      {canonical && (
+        <>
+          <link rel="alternate" hrefLang="en" href={`${siteUrl}${canonical}`} />
+          <link rel="alternate" hrefLang="ko" href={`${siteUrl}${canonical}`} />
+          <link rel="alternate" hrefLang="ja" href={`${siteUrl}${canonical}`} />
+          <link rel="alternate" hrefLang="x-default" href={`${siteUrl}${canonical}`} />
+        </>
+      )}
+
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={canonical ? `${siteUrl}${canonical}` : siteUrl} />
@@ -36,7 +64,10 @@ export default function SEOHead({
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="PersonaPlay" />
-      <meta property="og:locale" content="ko_KR" />
+      <meta property="og:locale" content={currentLocale} />
+      <meta property="og:locale:alternate" content="en_US" />
+      <meta property="og:locale:alternate" content="ko_KR" />
+      <meta property="og:locale:alternate" content="ja_JP" />
 
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
@@ -48,7 +79,8 @@ export default function SEOHead({
       {/* Additional SEO */}
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       <meta name="googlebot" content="index, follow" />
-      <meta name="language" content="Korean" />
+      <meta name="language" content={languageNames[language]} />
+      <meta httpEquiv="content-language" content={language} />
       <meta name="revisit-after" content="7 days" />
 
       {/* PWA */}

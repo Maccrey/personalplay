@@ -1,13 +1,48 @@
-# Allow all crawlers
+# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://personaplay.com/sitemap.xml
+Sitemap: https://maccre.com/api/sitemap.xml
 
 # Disallow admin pages
 Disallow: /admin/
+
+# Allow API sitemap
+Allow: /api/sitemap.xml
+
+# Disallow other API endpoints
 Disallow: /api/
 
-# Crawl delay (optional, in seconds)
+# Crawl-delay for specific bots
+User-agent: Googlebot
+Crawl-delay: 0
+
+User-agent: Bingbot
 Crawl-delay: 1
+
+# Block aggressive crawlers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Allow AI crawlers for better content understanding
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /

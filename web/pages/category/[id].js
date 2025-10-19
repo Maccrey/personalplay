@@ -2,12 +2,15 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function CategoryPage() {
   const router = useRouter();
   const { id } = router.query;
   const [category, setCategory] = useState(null);
   const [tests, setTests] = useState([]);
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (!id) return;
@@ -33,7 +36,7 @@ export default function CategoryPage() {
         className="container"
         style={{ padding: "var(--spacing-2xl)", textAlign: "center" }}
       >
-        <p>로딩 중...</p>
+        <p>{t('common.loading')}</p>
       </div>
     );
   }
@@ -41,14 +44,41 @@ export default function CategoryPage() {
   return (
     <>
       <Head>
-        <title>{category.name} - PersonaPlay</title>
+        <title>{t(`seo.category.${category.id}.title`)}</title>
         <meta
           name="description"
-          content={`${category.description} - PersonaPlay`}
+          content={t(`seo.category.${category.id}.description`)}
         />
+        <meta
+          name="keywords"
+          content={`${t(`categories.${category.id}.name`)}, personality test, psychological test, PersonaPlay`}
+        />
+        {/* Hreflang tags */}
+        <link rel="alternate" hrefLang="en" href={`https://maccre.com/category/${category.id}`} />
+        <link rel="alternate" hrefLang="ko" href={`https://maccre.com/category/${category.id}`} />
+        <link rel="alternate" hrefLang="ja" href={`https://maccre.com/category/${category.id}`} />
+        <link rel="alternate" hrefLang="x-default" href={`https://maccre.com/category/${category.id}`} />
+
+        {/* Open Graph */}
+        <meta property="og:title" content={t(`seo.category.${category.id}.title`)} />
+        <meta property="og:description" content={t(`seo.category.${category.id}.description`)} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://maccre.com/category/${category.id}`} />
       </Head>
 
       <main className="fade-in">
+        {/* Language Switcher */}
+        <div
+          style={{
+            position: 'fixed',
+            top: '20px',
+            right: '20px',
+            zIndex: 100,
+          }}
+        >
+          <LanguageSwitcher />
+        </div>
+
         {/* Header */}
         <header
           style={{
@@ -108,7 +138,7 @@ export default function CategoryPage() {
                 color: "white",
               }}
             >
-              {category.name}
+              {t(`categories.${category.id}.name`)}
             </h1>
             <p
               style={{
@@ -118,7 +148,7 @@ export default function CategoryPage() {
                 margin: "0 auto",
               }}
             >
-              {category.description}
+              {t(`categories.${category.id}.description`)}
             </p>
           </div>
         </section>
@@ -175,7 +205,7 @@ export default function CategoryPage() {
                       color: "var(--color-text)",
                     }}
                   >
-                    {test.title}
+                    {t(`tests.${test.id}.title`)}
                   </h3>
 
                   <div
@@ -194,7 +224,7 @@ export default function CategoryPage() {
                         color: "var(--color-text-tertiary)",
                       }}
                     >
-                      {test.questions?.length || 0}개 질문
+                      {test.questions?.length || 0}{t('test.questions')}
                     </span>
                     <span
                       style={{
@@ -204,7 +234,7 @@ export default function CategoryPage() {
                         marginLeft: "auto",
                       }}
                     >
-                      시작하기 →
+                      {t('test.startTest')}
                     </span>
                   </div>
                 </div>
@@ -215,7 +245,7 @@ export default function CategoryPage() {
           {/* Back Button */}
           <div style={{ textAlign: "center", marginTop: "var(--spacing-2xl)" }}>
             <Link href="/" className="btn btn-secondary">
-              다른 카테고리 보기
+              {t('test.viewOtherCategories')}
             </Link>
           </div>
         </section>
@@ -226,42 +256,14 @@ export default function CategoryPage() {
 
 function getTestIcon(id) {
   const icons = {
-    1: "💕",
-    2: "👥",
-    3: "💼",
-    4: "🌴",
-    5: "😂",
-    6: "🐾",
-    7: "📱",
-    8: "😌",
-    9: "☕",
-    10: "✈️",
-    11: "💰",
-    12: "🍽️",
-    13: "💪",
-    14: "😴",
-    15: "📚",
-    16: "🎵",
-    17: "🧹",
-    18: "🐶",
-    19: "👗",
-    20: "🎮",
-    21: "🎬",
-    22: "💝",
-    23: "📖",
-    24: "💑",
-    25: "🎓",
-    26: "🧠",
-    27: "🔄",
-    28: "📊",
-    29: "🎯",
-    30: "💡",
-    31: "💔",
-    32: "❤️",
-    33: "🤝",
-    34: "✍️",
-    35: "🧬",
-    36: "🌟",
+    1: "💕", 2: "👥", 3: "💼", 4: "🌴", 5: "😂", 6: "🐾", 7: "📱", 8: "😌",
+    9: "☕", 10: "✈️", 11: "💰", 12: "🍽️", 13: "💪", 14: "😴", 15: "📚", 16: "🎵",
+    17: "🧹", 18: "🐶", 19: "👗", 20: "🎮", 21: "🎬", 22: "💝", 23: "📖", 24: "💑",
+    25: "🎓", 26: "🧠", 27: "🔄", 28: "📊", 29: "🎯", 30: "💡", 31: "💔", 32: "❤️",
+    33: "🤝", 34: "✍️", 35: "🧬", 36: "🌟", 37: "💘", 38: "💞", 39: "⚡",
+    40: "🗣️", 41: "🏃", 42: "📺", 43: "💬", 44: "😊", 45: "🎙️", 46: "🎨", 47: "🛍️",
+    48: "💻", 49: "🔥", 50: "🎤", 51: "📹", 52: "👨‍🍳", 53: "📷", 54: "🎲", 55: "🎭",
+    56: "📺", 57: "🛠️", 58: "⚽", 59: "🎸", 60: "🧩",
   };
   return icons[id] || "✨";
 }

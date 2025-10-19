@@ -1,9 +1,12 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import SEOHead from "@/components/SEOHead";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function Home() {
   const [categories, setCategories] = useState([]);
+  const { t } = useTranslation();
 
   useEffect(() => {
     fetch("/api/categories")
@@ -15,11 +18,26 @@ export default function Home() {
   return (
     <>
       <SEOHead
+        title={t('seo.home.title')}
+        description={t('seo.home.description')}
+        keywords={t('seo.home.keywords')}
         canonical="/"
         ogType="website"
       />
 
       <main className="fade-in">
+        {/* Language Switcher */}
+        <div
+          style={{
+            position: 'fixed',
+            top: '20px',
+            right: '20px',
+            zIndex: 100,
+          }}
+        >
+          <LanguageSwitcher />
+        </div>
+
         {/* Hero Section */}
         <section
           style={{
@@ -39,7 +57,7 @@ export default function Home() {
                 color: "white",
               }}
             >
-              PersonaPlay
+              {t('home.title')}
             </h1>
             <p
               style={{
@@ -50,9 +68,9 @@ export default function Home() {
                 margin: "0 auto",
               }}
             >
-              나를 알아가는 재미있는 심리테스트
+              {t('home.subtitle')}
               <br />
-              카테고리별로 다양한 검사를 경험해보세요!
+              {t('home.description')}
             </p>
           </div>
         </section>
@@ -69,7 +87,7 @@ export default function Home() {
               fontSize: "2rem",
             }}
           >
-            카테고리
+            {t('home.categories')}
           </h2>
 
           <div
@@ -135,7 +153,7 @@ export default function Home() {
                       fontWeight: "700",
                     }}
                   >
-                    {category.name}
+                    {t(`categories.${category.id}.name`)}
                   </h3>
 
                   <p
@@ -146,7 +164,7 @@ export default function Home() {
                       flex: 1,
                     }}
                   >
-                    {category.description}
+                    {t(`categories.${category.id}.description`)}
                   </p>
 
                   <div
@@ -166,7 +184,7 @@ export default function Home() {
                         color: "var(--color-text-tertiary)",
                       }}
                     >
-                      {category.tests.length}개 검사
+                      {t('home.testsCount', { count: category.tests.length })}
                     </span>
                     <span
                       style={{
@@ -199,11 +217,11 @@ export default function Home() {
                 marginBottom: "var(--spacing-md)",
               }}
             >
-              총 36개의 다양한 심리검사
+              {t('home.totalTests')}
             </h3>
             <p style={{ color: "var(--color-text-secondary)" }}>
-              MBTI, 학습 유형, 애착 유형, 사랑 유형 등<br />
-              전문적인 심리 검사를 경험해보세요
+              {t('home.testTypes')}<br />
+              {t('home.testTypesDesc')}
             </p>
           </div>
         </section>
@@ -225,7 +243,7 @@ export default function Home() {
                 marginBottom: "0",
               }}
             >
-              © 2024 PersonaPlay. All rights reserved.
+              {t('home.footer')}
             </p>
           </div>
         </footer>
