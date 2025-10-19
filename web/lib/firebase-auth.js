@@ -23,12 +23,27 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
+// Debug: Check if Firebase config is loaded
+console.log('Firebase config loaded:', {
+  hasApiKey: !!firebaseConfig.apiKey,
+  hasAuthDomain: !!firebaseConfig.authDomain,
+  projectId: firebaseConfig.projectId,
+  authDomain: firebaseConfig.authDomain
+});
+
 // Initialize Firebase
 let app;
 if (!getApps().length) {
-  app = initializeApp(firebaseConfig);
+  try {
+    app = initializeApp(firebaseConfig);
+    console.log('Firebase initialized successfully');
+  } catch (error) {
+    console.error('Firebase initialization error:', error);
+    throw error;
+  }
 } else {
   app = getApps()[0];
+  console.log('Using existing Firebase app');
 }
 
 // Get Auth instance
@@ -38,17 +53,32 @@ export const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
 
 /**
- * Sign in with Google (uses redirect to avoid COOP issues)
- * @returns {Promise<UserCredential>}
+ * Sign in with Google (tries popup first, falls back to redirect)
+ * @returns {Promise<UserCredential|void>}
  */
 export async function signInWithGoogle() {
   try {
-    // Use redirect instead of popup to avoid COOP warnings
-    await signInWithRedirect(auth, googleProvider);
-    // User will be redirected, no return value
+    // Try popup first (works better on GitHub Pages)
+    console.log('Attempting Google sign-in with popup...');
+    const result = await signInWithPopup(auth, googleProvider);
+    console.log('Sign-in successful:', result.user.email);
+    return result;
   } catch (error) {
-    console.error('Error signing in with Google:', error);
-    throw error;
+    console.error('Error signing in with Google popup:', error);
+
+    // If popup fails, try redirect as fallback
+    if (error.code === 'auth/popup-blocked' || error.code === 'auth/popup-closed-by-user') {
+      console.log('Popup blocked, trying redirect...');
+      try {
+        await signInWithRedirect(auth, googleProvider);
+        // User will be redirected, no return value
+      } catch (redirectError) {
+        console.error('Error signing in with redirect:', redirectError);
+        throw redirectError;
+      }
+    } else {
+      throw error;
+    }
   }
 }
 

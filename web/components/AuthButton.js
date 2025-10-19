@@ -17,9 +17,25 @@ export default function AuthButton() {
   const handleSignIn = async () => {
     setIsSigningIn(true);
     try {
+      console.log('Sign in button clicked');
       await signIn();
+      console.log('Sign in completed');
     } catch (error) {
-      alert(t('auth.signInError') || 'Sign in failed. Please try again.');
+      console.error('Sign in error in AuthButton:', error);
+      let errorMessage = t('auth.signInError') || 'Sign in failed. Please try again.';
+
+      // Provide specific error messages
+      if (error.code === 'auth/popup-blocked') {
+        errorMessage = '팝업이 차단되었습니다. 브라우저 설정에서 팝업을 허용해주세요.';
+      } else if (error.code === 'auth/unauthorized-domain') {
+        errorMessage = 'Firebase Console에서 도메인을 인증해주세요: maccrey.github.io';
+      } else if (error.code === 'auth/operation-not-allowed') {
+        errorMessage = 'Firebase Console에서 Google 로그인을 활성화해주세요.';
+      } else if (error.message) {
+        errorMessage += '\n\n' + error.message;
+      }
+
+      alert(errorMessage);
     } finally {
       setIsSigningIn(false);
     }

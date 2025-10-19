@@ -19,12 +19,22 @@ export function AuthProvider({ children }) {
 
   useEffect(() => {
     // Handle redirect result on mount
-    handleRedirectResult().catch(err => {
-      // Ignore errors from redirect result (e.g., no redirect)
-    });
+    handleRedirectResult()
+      .then((result) => {
+        if (result) {
+          console.log('Redirect sign-in successful:', result.user.email);
+        }
+      })
+      .catch(err => {
+        // Ignore errors from redirect result (e.g., no redirect)
+        if (err.code && err.code !== 'auth/no-redirect') {
+          console.error('Redirect result error:', err);
+        }
+      });
 
     // Listen to auth state changes
     const unsubscribe = onAuthChange((user) => {
+      console.log('Auth state changed:', user ? user.email : 'No user');
       setUser(user);
       setLoading(false);
     });
