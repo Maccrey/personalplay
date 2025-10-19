@@ -38,7 +38,12 @@ npm install
 ### Firebase 설정
 
 1. Firebase 프로젝트 생성 및 Firestore 활성화
-2. `web/lib/firebase.js`에서 Firebase 설정 업데이트
+2. `.env.local` 파일 생성:
+   ```bash
+   cd web
+   cp .env.example .env.local
+   # .env.local 파일을 편집하여 Firebase 설정 입력
+   ```
 3. 데이터 마이그레이션:
    ```bash
    npm run migrate
