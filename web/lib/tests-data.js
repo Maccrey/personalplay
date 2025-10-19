@@ -149,8 +149,13 @@ export async function getCategoryById(categoryId, locale = 'ko') {
     return null;
   }
 
+  const categoryData = getCategoryData(categoryId);
+
   return {
     id: categoryId,
+    icon: categoryData.icon,
+    color: categoryData.color,
+    gradient: categoryData.gradient,
     tests
   };
 }

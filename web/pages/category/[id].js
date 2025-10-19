@@ -11,24 +11,18 @@ export default function CategoryPage() {
   const { id } = router.query;
   const [category, setCategory] = useState(null);
   const [tests, setTests] = useState([]);
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
 
   useEffect(() => {
     if (!id) return;
 
-    Promise.all([
-      getCategoryById(id),
-      getAllTests(),
-    ]).then(([cat, testData]) => {
+    getCategoryById(id, locale).then((cat) => {
       if (cat) {
         setCategory(cat);
-        const categoryTests = testData.filter((t) =>
-          cat.tests.includes(t.id)
-        );
-        setTests(categoryTests);
+        setTests(cat.tests || []);
       }
     });
-  }, [id]);
+  }, [id, locale]);
 
   if (!category) {
     return (
