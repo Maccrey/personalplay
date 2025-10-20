@@ -120,10 +120,9 @@ export default function TestPage({ initialTest }) {
             gap: '12px',
             alignItems: 'center'
           }}
-        >
-          <AuthButton />
-          <LanguageSwitcher />
-        </div>
+              >
+                {/* <AuthButton /> */}
+                <LanguageSwitcher />        </div>
 
         {/* Header */}
         <header style={{

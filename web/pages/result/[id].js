@@ -133,10 +133,9 @@ export default function ResultPage() {
             gap: '12px',
             alignItems: 'center'
           }}
-        >
-          <AuthButton />
-          <LanguageSwitcher />
-        </div>
+              >
+                {/* <AuthButton /> */}
+                <LanguageSwitcher />        </div>
 
         {/* Header */}
         <header style={{

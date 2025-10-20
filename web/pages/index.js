@@ -40,7 +40,7 @@ export default function Home() {
             alignItems: 'center'
           }}
         >
-          <AuthButton />
+          {/* <AuthButton /> */}
           <LanguageSwitcher />
         </div>
 

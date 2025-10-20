@@ -73,10 +73,9 @@ export default function CategoryPage() {
             gap: '12px',
             alignItems: 'center'
           }}
-        >
-          <AuthButton />
-          <LanguageSwitcher />
-        </div>
+              >
+                {/* <AuthButton /> */}
+                <LanguageSwitcher />        </div>
 
         {/* Header */}
         <header

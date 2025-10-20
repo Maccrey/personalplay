@@ -62,7 +62,7 @@ export default function MyResultsPage() {
         <p style={{ marginBottom: 'var(--spacing-xl)', color: 'var(--color-text-secondary)' }}>
           {t('auth.loginToSave')}
         </p>
-        <AuthButton />
+        {/* <AuthButton /> */}
       </div>
     );
   }
@@ -78,7 +78,7 @@ export default function MyResultsPage() {
         gap: '12px',
         alignItems: 'center'
       }}>
-        <AuthButton />
+        {/* <AuthButton /> */}
         <LanguageSwitcher />
       </div>
 
