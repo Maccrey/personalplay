@@ -101,10 +101,10 @@ export default function TestPage({ initialTest }) {
       <Head>
         <title>{testTitle} - PersonaPlay</title>
         <meta name="description" content={`${testTitle} - ${t('home.subtitle')}`} />
-        <meta name="adtest" content="on" />
         <script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9128371394963939"
+          crossOrigin="anonymous"
         />
       </Head>
 
@@ -156,11 +156,9 @@ export default function TestPage({ initialTest }) {
             <ins
               className="adsbygoogle"
               style={{ display: "block" }}
-              data-ad-client="ca-pub-TEST"
-              data-ad-slot="TEST-TOP"
+              data-ad-client="ca-pub-9128371394963939"
               data-ad-format="auto"
               data-full-width-responsive="true"
-              data-test="true"
             />
           ) : (
             <div className="ads-disabled" style={{
@@ -315,11 +313,9 @@ export default function TestPage({ initialTest }) {
               <ins
                 className="adsbygoogle"
                 style={{ display: "block", textAlign: "center" }}
-                data-ad-client="ca-pub-TEST"
-                data-ad-slot="TEST-IN-ARTICLE"
+                data-ad-client="ca-pub-9128371394963939"
                 data-ad-format="fluid"
                 data-ad-layout="in-article"
-                data-test="true"
               />
             ) : (
               <div className="ads-disabled" style={{
@@ -342,11 +338,9 @@ export default function TestPage({ initialTest }) {
             <ins
               className="adsbygoogle"
               style={{ display: "block" }}
-              data-ad-client="ca-pub-TEST"
-              data-ad-slot="TEST-BOTTOM"
+              data-ad-client="ca-pub-9128371394963939"
               data-ad-format="auto"
               data-full-width-responsive="true"
-              data-test="true"
             />
           ) : (
             <div className="ads-disabled" style={{
