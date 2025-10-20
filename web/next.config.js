@@ -2,8 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
-  basePath: '/personalplay',
-  assetPrefix: '/personalplay',
   images: {
     unoptimized: true,
   },

@@ -15,8 +15,7 @@ let cachedTests = null;
  */
 export async function loadTestsData(locale = 'ko') {
   try {
-    const basePath = process.env.NODE_ENV === 'production' ? '/personalplay' : '';
-    const response = await fetch(`${basePath}/data/tests-${locale}.json`);
+    const response = await fetch(`/data/tests-${locale}.json`);
 
     if (!response.ok) {
       throw new Error(`Failed to load tests data: ${response.status}`);
