@@ -20,7 +20,7 @@ export default function TopNavigation() {
       }}
       className="top-navigation"
     >
-      <AuthButton />
+      {/* <AuthButton /> */}
       <LanguageSwitcher />
 
       <style jsx>{`
