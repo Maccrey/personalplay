@@ -60,6 +60,7 @@ export default function AuthButton() {
       <button
         onClick={handleSignIn}
         disabled={isSigningIn}
+        className="auth-button"
         style={{
           display: 'flex',
           alignItems: 'center',
@@ -89,7 +90,7 @@ export default function AuthButton() {
           e.currentTarget.style.borderColor = 'var(--color-border)';
         }}
       >
-        <svg width="16" height="16" viewBox="0 0 18 18" style={{ flexShrink: 0 }}>
+        <svg width="16" height="16" viewBox="0 0 18 18" style={{ flexShrink: 0 }} className="auth-icon">
           <path
             fill="#4285F4"
             d="M16.51 8H8.98v3h4.3c-.18 1-.74 1.48-1.6 2.04v2.01h2.6a7.8 7.8 0 0 0 2.38-5.88c0-.57-.05-.66-.15-1.18z"
@@ -107,9 +108,40 @@ export default function AuthButton() {
             d="M8.98 4.18c1.17 0 2.23.4 3.06 1.2l2.3-2.3A8 8 0 0 0 1.83 5.4L4.5 7.49a4.77 4.77 0 0 1 4.48-3.3z"
           />
         </svg>
-        <span style={{ fontSize: '14px', lineHeight: '1' }}>
+        <span style={{ fontSize: '14px', lineHeight: '1' }} className="auth-text">
           {isSigningIn ? (t('auth.signingIn') || '로그인 중...') : (t('auth.signIn') || '로그인')}
         </span>
+
+        <style jsx>{`
+          /* Mobile optimizations */
+          @media (max-width: 768px) {
+            .auth-button {
+              padding: 7px 12px !important;
+              min-width: 70px !important;
+              height: 36px !important;
+              font-size: 13px !important;
+            }
+            .auth-text {
+              font-size: 13px !important;
+            }
+          }
+
+          @media (max-width: 480px) {
+            .auth-button {
+              padding: 6px 10px !important;
+              min-width: 60px !important;
+              height: 34px !important;
+              gap: 4px !important;
+            }
+            .auth-icon {
+              width: 14px !important;
+              height: 14px !important;
+            }
+            .auth-text {
+              font-size: 12px !important;
+            }
+          }
+        `}</style>
       </button>
     );
   }
@@ -119,6 +151,7 @@ export default function AuthButton() {
     <div style={{ position: 'relative' }}>
       <button
         onClick={() => setShowMenu(!showMenu)}
+        className="auth-user-button"
         style={{
           display: 'flex',
           alignItems: 'center',
@@ -149,6 +182,7 @@ export default function AuthButton() {
           <img
             src={user.photoURL}
             alt={user.displayName || 'User'}
+            className="user-avatar"
             style={{
               width: '24px',
               height: '24px',
@@ -156,7 +190,45 @@ export default function AuthButton() {
             }}
           />
         )}
-        <span>{user.displayName || user.email}</span>
+        <span className="user-name">{user.displayName || user.email}</span>
+
+        <style jsx>{`
+          /* Mobile optimizations */
+          @media (max-width: 768px) {
+            .auth-user-button {
+              padding: 7px 10px !important;
+              min-width: 70px !important;
+              height: 36px !important;
+              font-size: 13px !important;
+            }
+            .user-name {
+              font-size: 13px !important;
+            }
+            .user-avatar {
+              width: 22px !important;
+              height: 22px !important;
+            }
+          }
+
+          @media (max-width: 480px) {
+            .auth-user-button {
+              padding: 6px 8px !important;
+              min-width: 60px !important;
+              height: 34px !important;
+              gap: 6px !important;
+            }
+            .user-name {
+              font-size: 12px !important;
+              max-width: 80px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+            .user-avatar {
+              width: 20px !important;
+              height: 20px !important;
+            }
+          }
+        `}</style>
       </button>
 
       {showMenu && (

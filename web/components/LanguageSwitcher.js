@@ -37,6 +37,7 @@ export default function LanguageSwitcher() {
     <div style={{ position: 'relative' }} ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
+        className="lang-switcher-button"
         style={{
           background: 'var(--color-bg-secondary)',
           border: '1px solid var(--color-border)',
@@ -63,11 +64,47 @@ export default function LanguageSwitcher() {
           e.currentTarget.style.borderColor = 'var(--color-border)';
         }}
       >
-        <span style={{ fontSize: '16px', lineHeight: '1', flexShrink: 0 }}>🌐</span>
-        <span style={{ lineHeight: '1' }}>{languageNames[language]}</span>
-        <span style={{ fontSize: '10px', marginLeft: '2px', lineHeight: '1' }}>
+        <span style={{ fontSize: '16px', lineHeight: '1', flexShrink: 0 }} className="lang-icon">🌐</span>
+        <span style={{ lineHeight: '1' }} className="lang-name">{languageNames[language]}</span>
+        <span style={{ fontSize: '10px', marginLeft: '2px', lineHeight: '1' }} className="lang-arrow">
           {isOpen ? '▲' : '▼'}
         </span>
+
+        <style jsx>{`
+          /* Mobile optimizations */
+          @media (max-width: 768px) {
+            .lang-switcher-button {
+              padding: 7px 12px !important;
+              min-width: 70px !important;
+              height: 36px !important;
+              font-size: 13px !important;
+            }
+            .lang-icon {
+              font-size: 14px !important;
+            }
+            .lang-name {
+              font-size: 13px !important;
+            }
+          }
+
+          @media (max-width: 480px) {
+            .lang-switcher-button {
+              padding: 6px 10px !important;
+              min-width: 60px !important;
+              height: 34px !important;
+              gap: 4px !important;
+            }
+            .lang-icon {
+              font-size: 13px !important;
+            }
+            .lang-name {
+              font-size: 12px !important;
+            }
+            .lang-arrow {
+              font-size: 9px !important;
+            }
+          }
+        `}</style>
       </button>
 
       {isOpen && (
