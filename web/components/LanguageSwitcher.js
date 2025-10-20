@@ -51,6 +51,7 @@ export default function LanguageSwitcher() {
           gap: '6px',
           transition: 'all 0.2s ease',
           minWidth: '80px',
+          height: '38px',
           whiteSpace: 'nowrap',
         }}
         onMouseEnter={(e) => {
@@ -62,9 +63,9 @@ export default function LanguageSwitcher() {
           e.currentTarget.style.borderColor = 'var(--color-border)';
         }}
       >
-        <span style={{ fontSize: '16px' }}>🌐</span>
-        <span>{languageNames[language]}</span>
-        <span style={{ fontSize: '10px', marginLeft: '2px' }}>
+        <span style={{ fontSize: '16px', lineHeight: '1', flexShrink: 0 }}>🌐</span>
+        <span style={{ lineHeight: '1' }}>{languageNames[language]}</span>
+        <span style={{ fontSize: '10px', marginLeft: '2px', lineHeight: '1' }}>
           {isOpen ? '▲' : '▼'}
         </span>
       </button>
