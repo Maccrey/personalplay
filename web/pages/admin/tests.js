@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
-import { getAllTests } from "../../lib/firestore-client";
+import { getAllTests } from "../../lib/tests-data";
 
 // 코드 에디터를 dynamic import로 클라이언트 사이드에서만 로드
 const JsonEditor = dynamic(() => import("../../components/JsonEditor"), {
