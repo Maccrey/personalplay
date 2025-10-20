@@ -39,7 +39,41 @@ if (!getApps().length) {
 const db = getFirestore(app);
 
 /**
+ * Check if user has an existing result for a specific test and result key
+ * @param {string} userId - User ID
+ * @param {string} testId - Test ID
+ * @param {string} resultKey - Result key
+ * @returns {Promise<Object|null>} Existing result or null
+ */
+async function getExistingResult(userId, testId, resultKey) {
+  try {
+    const q = query(
+      collection(db, 'userResults'),
+      where('userId', '==', userId),
+      where('testId', '==', testId),
+      where('resultKey', '==', resultKey)
+    );
+
+    const querySnapshot = await getDocs(q);
+
+    if (!querySnapshot.empty) {
+      const doc = querySnapshot.docs[0];
+      return {
+        id: doc.id,
+        ...doc.data()
+      };
+    }
+
+    return null;
+  } catch (error) {
+    console.error('Error checking existing result:', error);
+    return null;
+  }
+}
+
+/**
  * Save user test result to Firestore
+ * Updates existing result if same test/result combination exists
  * @param {string} userId - User ID
  * @param {Object} resultData - Result data
  * @returns {Promise<string>} Result ID
@@ -54,19 +88,39 @@ export async function saveUserResult(userId, resultData) {
       locale = 'ko'
     } = resultData;
 
-    // Create unique result ID based on user and test
-    const resultId = `${userId}_${testId}_${Date.now()}`;
+    // Check if this exact result already exists
+    const existingResult = await getExistingResult(userId, testId, resultKey);
 
-    const userResult = {
-      userId,
-      testId,
-      resultKey,
-      testTitle,
-      resultTitle,
-      locale,
-      createdAt: serverTimestamp(),
-      updatedAt: serverTimestamp()
-    };
+    let resultId;
+    let userResult;
+
+    if (existingResult) {
+      // Update existing result
+      resultId = existingResult.id;
+      userResult = {
+        userId,
+        testId,
+        resultKey,
+        testTitle,
+        resultTitle,
+        locale,
+        createdAt: existingResult.createdAt || serverTimestamp(),
+        updatedAt: serverTimestamp()
+      };
+    } else {
+      // Create new result with consistent ID (no timestamp)
+      resultId = `${userId}_${testId}_${resultKey}`;
+      userResult = {
+        userId,
+        testId,
+        resultKey,
+        testTitle,
+        resultTitle,
+        locale,
+        createdAt: serverTimestamp(),
+        updatedAt: serverTimestamp()
+      };
+    }
 
     await setDoc(doc(db, 'userResults', resultId), userResult);
 
