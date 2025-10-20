@@ -2,8 +2,6 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import AdUnit from "@/components/AdUnit";
-import useAdScripts from "@/hooks/useAdScripts";
 import { trackEvent } from "@/utils/analytics";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import AuthButton from "@/components/AuthButton";
@@ -17,6 +15,7 @@ export default function TestPage({ initialTest }) {
   const [def, setDef] = useState(initialTest || null);
   const [answers, setAnswers] = useState([]);
   const [currentQ, setCurrentQ] = useState(0);
+  const [adsEnabled, setAdsEnabled] = useState(false);
 
   useEffect(() => {
     if (def) return; // server-side provided
@@ -36,6 +35,26 @@ export default function TestPage({ initialTest }) {
       });
     }
   }, [def, id]);
+
+  // Consent state management
+  useEffect(() => {
+    function onConsentChange(e) {
+      const c = e?.detail;
+      const enabled = c?.ads === true;
+      setAdsEnabled(enabled === true);
+    }
+
+    // Initial state
+    try {
+      const raw = localStorage.getItem("pp_consent");
+      const obj = raw ? JSON.parse(raw) : null;
+      const enabled = obj?.ads === true;
+      setAdsEnabled(enabled === true);
+    } catch (e) {}
+
+    window.addEventListener("pp:consent:changed", onConsentChange);
+    return () => window.removeEventListener("pp:consent:changed", onConsentChange);
+  }, []);
 
   if (!def) {
     return (
@@ -75,7 +94,6 @@ export default function TestPage({ initialTest }) {
     }
   }
 
-  const isAdsReady = useAdScripts();
   const progress = ((currentQ + 1) / def.questions.length) * 100;
 
   return (
@@ -83,6 +101,11 @@ export default function TestPage({ initialTest }) {
       <Head>
         <title>{testTitle} - PersonaPlay</title>
         <meta name="description" content={`${testTitle} - ${t('home.subtitle')}`} />
+        <meta name="adtest" content="on" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        />
       </Head>
 
       <main className="fade-in">
@@ -127,11 +150,31 @@ export default function TestPage({ initialTest }) {
           </div>
         </header>
 
-        {isAdsReady && (
-          <div className="container" style={{ marginTop: 'var(--spacing-lg)' }}>
-            <AdUnit unitId="TOP_BANNER" />
-          </div>
-        )}
+        {/* Top Ad */}
+        <div className="container" style={{ marginTop: 'var(--spacing-lg)' }}>
+          {adsEnabled ? (
+            <ins
+              className="adsbygoogle"
+              style={{ display: "block" }}
+              data-ad-client="ca-pub-TEST"
+              data-ad-slot="TEST-TOP"
+              data-ad-format="auto"
+              data-full-width-responsive="true"
+              data-test="true"
+            />
+          ) : (
+            <div className="ads-disabled" style={{
+              padding: 'var(--spacing-md)',
+              textAlign: 'center',
+              background: 'var(--color-bg-secondary)',
+              borderRadius: 'var(--radius-md)',
+              color: 'var(--color-text-tertiary)',
+              fontSize: '0.875rem'
+            }}>
+              {t('result.adsConsent')}
+            </div>
+          )}
+        </div>
 
         {/* Test Container */}
         <div className="container" style={{
@@ -266,19 +309,58 @@ export default function TestPage({ initialTest }) {
             </button>
           </div>
 
-          {isAdsReady && (
-            <div style={{ marginTop: 'var(--spacing-xl)' }}>
-              <AdUnit unitId="IN_ARTICLE" />
+          {/* In-Article Ad Below Answer Buttons */}
+          <div style={{ marginTop: 'var(--spacing-xl)' }}>
+            {adsEnabled ? (
+              <ins
+                className="adsbygoogle"
+                style={{ display: "block", textAlign: "center" }}
+                data-ad-client="ca-pub-TEST"
+                data-ad-slot="TEST-IN-ARTICLE"
+                data-ad-format="fluid"
+                data-ad-layout="in-article"
+                data-test="true"
+              />
+            ) : (
+              <div className="ads-disabled" style={{
+                padding: 'var(--spacing-md)',
+                textAlign: 'center',
+                background: 'var(--color-bg-secondary)',
+                borderRadius: 'var(--radius-md)',
+                color: 'var(--color-text-tertiary)',
+                fontSize: '0.875rem'
+              }}>
+                {t('result.adsConsent')}
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Bottom Ad */}
+        <div className="container" style={{ marginBottom: 'var(--spacing-xl)' }}>
+          {adsEnabled ? (
+            <ins
+              className="adsbygoogle"
+              style={{ display: "block" }}
+              data-ad-client="ca-pub-TEST"
+              data-ad-slot="TEST-BOTTOM"
+              data-ad-format="auto"
+              data-full-width-responsive="true"
+              data-test="true"
+            />
+          ) : (
+            <div className="ads-disabled" style={{
+              padding: 'var(--spacing-md)',
+              textAlign: 'center',
+              background: 'var(--color-bg-secondary)',
+              borderRadius: 'var(--radius-md)',
+              color: 'var(--color-text-tertiary)',
+              fontSize: '0.875rem'
+            }}>
+              {t('result.adsConsent')}
             </div>
           )}
         </div>
-
-        {isAdsReady && (
-          <div className="container">
-            <AdUnit unitId="SIDEBAR" />
-            <AdUnit unitId="BOTTOM_BANNER" />
-          </div>
-        )}
       </main>
     </>
   );
