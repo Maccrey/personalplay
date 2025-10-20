@@ -63,28 +63,32 @@ export default function AuthButton() {
         style={{
           display: 'flex',
           alignItems: 'center',
-          gap: '8px',
+          gap: '6px',
           padding: '8px 16px',
-          background: 'white',
-          border: '1px solid #ddd',
-          borderRadius: '8px',
+          background: 'var(--color-bg-secondary)',
+          border: '1px solid var(--color-border)',
+          borderRadius: 'var(--radius-md)',
           cursor: isSigningIn ? 'not-allowed' : 'pointer',
           fontSize: '14px',
-          fontWeight: '500',
-          transition: 'all 0.2s',
-          boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
+          fontWeight: '600',
+          color: 'var(--color-text)',
+          transition: 'all 0.2s ease',
+          minWidth: '80px',
+          whiteSpace: 'nowrap',
           opacity: isSigningIn ? 0.6 : 1
         }}
-        onMouseOver={(e) => {
+        onMouseEnter={(e) => {
           if (!isSigningIn) {
-            e.currentTarget.style.boxShadow = '0 2px 6px rgba(0,0,0,0.15)';
+            e.currentTarget.style.background = 'var(--color-bg-tertiary)';
+            e.currentTarget.style.borderColor = 'var(--color-primary)';
           }
         }}
-        onMouseOut={(e) => {
-          e.currentTarget.style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
+        onMouseLeave={(e) => {
+          e.currentTarget.style.background = 'var(--color-bg-secondary)';
+          e.currentTarget.style.borderColor = 'var(--color-border)';
         }}
       >
-        <svg width="18" height="18" viewBox="0 0 18 18">
+        <svg width="16" height="16" viewBox="0 0 18 18">
           <path
             fill="#4285F4"
             d="M16.51 8H8.98v3h4.3c-.18 1-.74 1.48-1.6 2.04v2.01h2.6a7.8 7.8 0 0 0 2.38-5.88c0-.57-.05-.66-.15-1.18z"
@@ -102,7 +106,9 @@ export default function AuthButton() {
             d="M8.98 4.18c1.17 0 2.23.4 3.06 1.2l2.3-2.3A8 8 0 0 0 1.83 5.4L4.5 7.49a4.77 4.77 0 0 1 4.48-3.3z"
           />
         </svg>
-        {isSigningIn ? (t('auth.signingIn') || 'Signing in...') : (t('auth.signIn') || 'Sign in with Google')}
+        <span style={{ fontSize: '12px' }}>
+          {isSigningIn ? (t('auth.signingIn') || '로그인 중...') : (t('auth.signIn') || '로그인')}
+        </span>
       </button>
     );
   }
@@ -116,21 +122,25 @@ export default function AuthButton() {
           display: 'flex',
           alignItems: 'center',
           gap: '8px',
-          padding: '6px 12px',
-          background: 'white',
-          border: '1px solid #ddd',
-          borderRadius: '24px',
+          padding: '8px 12px',
+          background: 'var(--color-bg-secondary)',
+          border: '1px solid var(--color-border)',
+          borderRadius: 'var(--radius-md)',
           cursor: 'pointer',
           fontSize: '14px',
-          fontWeight: '500',
-          transition: 'all 0.2s',
-          boxShadow: '0 1px 3px rgba(0,0,0,0.1)'
+          fontWeight: '600',
+          color: 'var(--color-text)',
+          transition: 'all 0.2s ease',
+          minWidth: '80px',
+          whiteSpace: 'nowrap'
         }}
-        onMouseOver={(e) => {
-          e.currentTarget.style.boxShadow = '0 2px 6px rgba(0,0,0,0.15)';
+        onMouseEnter={(e) => {
+          e.currentTarget.style.background = 'var(--color-bg-tertiary)';
+          e.currentTarget.style.borderColor = 'var(--color-primary)';
         }}
-        onMouseOut={(e) => {
-          e.currentTarget.style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
+        onMouseLeave={(e) => {
+          e.currentTarget.style.background = 'var(--color-bg-secondary)';
+          e.currentTarget.style.borderColor = 'var(--color-border)';
         }}
       >
         {user.photoURL && (

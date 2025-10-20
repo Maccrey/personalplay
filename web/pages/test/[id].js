@@ -6,6 +6,7 @@ import AdUnit from "@/components/AdUnit";
 import useAdScripts from "@/hooks/useAdScripts";
 import { trackEvent } from "@/utils/analytics";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import AuthButton from "@/components/AuthButton";
 import { useTranslation } from "@/hooks/useTranslation";
 import { getTestById } from "@/lib/tests-data";
 
@@ -85,15 +86,19 @@ export default function TestPage({ initialTest }) {
       </Head>
 
       <main className="fade-in">
-        {/* Language Switcher */}
+        {/* Top Navigation */}
         <div
           style={{
             position: 'fixed',
             top: '20px',
             right: '20px',
             zIndex: 100,
+            display: 'flex',
+            gap: '12px',
+            alignItems: 'center'
           }}
         >
+          <AuthButton />
           <LanguageSwitcher />
         </div>
 

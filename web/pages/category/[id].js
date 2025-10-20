@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import AuthButton from "@/components/AuthButton";
 import { useTranslation } from "@/hooks/useTranslation";
 import { getCategoryById, getAllTests } from "@/lib/tests-data";
 
@@ -61,15 +62,19 @@ export default function CategoryPage() {
       </Head>
 
       <main className="fade-in">
-        {/* Language Switcher */}
+        {/* Top Navigation */}
         <div
           style={{
             position: 'fixed',
             top: '20px',
             right: '20px',
             zIndex: 100,
+            display: 'flex',
+            gap: '12px',
+            alignItems: 'center'
           }}
         >
+          <AuthButton />
           <LanguageSwitcher />
         </div>
 
