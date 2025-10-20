@@ -5,7 +5,6 @@
 import { initializeApp, getApps } from 'firebase/app';
 import {
   getAuth,
-  signInWithPopup,
   signInWithRedirect,
   getRedirectResult,
   GoogleAuthProvider,
@@ -53,32 +52,18 @@ export const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
 
 /**
- * Sign in with Google (tries popup first, falls back to redirect)
- * @returns {Promise<UserCredential|void>}
+ * Sign in with Google using redirect (works best on GitHub Pages)
+ * @returns {Promise<void>}
  */
 export async function signInWithGoogle() {
   try {
-    // Try popup first (works better on GitHub Pages)
-    console.log('Attempting Google sign-in with popup...');
-    const result = await signInWithPopup(auth, googleProvider);
-    console.log('Sign-in successful:', result.user.email);
-    return result;
+    // Use redirect method to avoid COOP errors on GitHub Pages
+    console.log('Attempting Google sign-in with redirect...');
+    await signInWithRedirect(auth, googleProvider);
+    // User will be redirected, no return value
   } catch (error) {
-    console.error('Error signing in with Google popup:', error);
-
-    // If popup fails, try redirect as fallback
-    if (error.code === 'auth/popup-blocked' || error.code === 'auth/popup-closed-by-user') {
-      console.log('Popup blocked, trying redirect...');
-      try {
-        await signInWithRedirect(auth, googleProvider);
-        // User will be redirected, no return value
-      } catch (redirectError) {
-        console.error('Error signing in with redirect:', redirectError);
-        throw redirectError;
-      }
-    } else {
-      throw error;
-    }
+    console.error('Error signing in with Google redirect:', error);
+    throw error;
   }
 }
 
