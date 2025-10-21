@@ -1,12 +1,20 @@
 import { useEffect, useRef } from "react";
 import { AD_UNITS } from "@/config/ad-manager";
+import { useAdContext } from "@/contexts/AdContext";
 import { requestBids, trackAdMetrics } from "@/utils/header-bidding";
 
 export default function AdUnit({ unitId }) {
   const adContainerRef = useRef(null);
+  const { isAdAllowed } = useAdContext();
 
   useEffect(() => {
     if (!adContainerRef.current) return;
+
+    // 전역 컨텍스트의 광고 허용 상태를 확인
+    if (!isAdAllowed) {
+      console.log(`Ad skipped for unitId: ${unitId} due to content check.`);
+      return;
+    }
 
     const adUnit = AD_UNITS[unitId];
     if (!adUnit) return;
@@ -47,7 +55,12 @@ export default function AdUnit({ unitId }) {
         window.googletag.destroySlots();
       });
     };
-  }, [unitId]);
+  }, [unitId, isAdAllowed]);
+
+  // 광고가 허용되지 않으면 컨테이너 자체를 렌더링하지 않음
+  if (!isAdAllowed) {
+    return null;
+  }
 
   return (
     <div
