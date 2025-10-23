@@ -64,7 +64,8 @@
     "shareResult": "Share Your Result",
     "shareText": "I got {{result}} on PersonaPlay!",
     "relatedTests": "Related Tests",
-    "adsConsent": "Please consent to show ads"
+    "adsConsent": "Please consent to show ads",
+    "advice": "Advice"
   },
   "language": {
     "en": "English",
@@ -1954,10 +1955,10 @@
     "24": {
       "title": "MBTI Compatibility Test",
       "questions": [
-        "Are you extrovert (E) or introvert (I)?",
-        "Between Sensing (S) and Intuition (N)?",
-        "Am I better at thinking (T) or feeling (F)?",
-        "Judgment (J) or Perception (P)?",
+        "Are you closer to an extrovert (E)?",
+        "Are you closer to a sensing (S) person?",
+        "Are you closer to a thinking (T) person?",
+        "Are you closer to a judging (J) person?",
         "Do you want your partner to talk a lot?",
         "Do you want your partner to be intentional?",
         "Do you want the other person to be logical?",

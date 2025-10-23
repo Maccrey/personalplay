@@ -6,6 +6,7 @@
 export const TEST_CATEGORIES = {
   // Love & Relationships (연애 & 관계)
   '1': 'love',
+  '24': 'love',
   '31': 'love',
   '32': 'love',
   '33': 'love',
@@ -22,7 +23,6 @@ export const TEST_CATEGORIES = {
 
   // Learning & Education (학습 & 교육)
   '23': 'learning',
-  '24': 'learning',
   '25': 'learning',
   '26': 'learning',
   '27': 'learning',
