@@ -1,3 +1,5 @@
+import fs from "fs";
+import path from "path";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
@@ -15,7 +17,6 @@ export default function ResultPage() {
   const { t, locale } = useTranslation();
   const [res, setRes] = useState(null);
   const [testInfo, setTestInfo] = useState(null);
-  const [adsEnabled, setAdsEnabled] = useState(false);
 
   useEffect(() => {
     if (!id || !r) return;
@@ -42,43 +43,6 @@ export default function ResultPage() {
       console.error("Error fetching test:", error);
     });
   }, [id, r, locale]);
-
-  useEffect(() => {
-    // A/B 토글 쿼리 파라미터 처리: ?ab=A 또는 ?ab=B
-    const params = new URLSearchParams(window.location.search);
-    const ab = params.get("ab");
-    if (ab) {
-      // 광고 토글 이벤트 추적
-      trackEvent("ab_experiment_view", {
-        experiment: "ads_layout",
-        variant: ab,
-        page: "result",
-      });
-      // 간단히 data-ad-slot 속성을 변경하여 노출 구성 바꿀 수 있음
-      document.documentElement.setAttribute("data-ab-variant", ab);
-    }
-  }, []);
-
-  useEffect(() => {
-    // consent 변경 이벤트를 청취하여 광고 노출 상태 업데이트
-    function onConsentChange(e) {
-      const c = e?.detail;
-      const enabled = c?.ads === true;
-      setAdsEnabled(enabled === true);
-    }
-
-    // 초기 상태 반영
-    try {
-      const raw = localStorage.getItem("pp_consent");
-      const obj = raw ? JSON.parse(raw) : null;
-      const enabled = obj?.ads === true;
-      setAdsEnabled(enabled === true);
-    } catch (e) {}
-
-    window.addEventListener("pp:consent:changed", onConsentChange);
-    return () =>
-      window.removeEventListener("pp:consent:changed", onConsentChange);
-  }, []);
 
   if (!res) {
     return (
@@ -113,12 +77,6 @@ export default function ResultPage() {
         <meta property="og:image:height" content="630" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        {/* AdSense */}
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9128371394963939"
-          crossOrigin="anonymous"
-        />
       </Head>
 
       <main className="fade-in">
@@ -161,21 +119,6 @@ export default function ResultPage() {
             </Link>
           </div>
         </header>
-
-        {/* Top Ad */}
-        <div className="container" style={{ marginTop: 'var(--spacing-lg)' }} data-ad-slot="top" data-ads-slot-visible>
-          {adsEnabled ? (
-            <ins
-              className="adsbygoogle"
-              style={{ display: "block" }}
-              data-ad-client="ca-pub-9128371394963939"
-              data-ad-format="auto"
-              data-full-width-responsive="true"
-            />
-          ) : (
-            <div className="ads-disabled">{t('result.adsConsent')}</div>
-          )}
-        </div>
 
         {/* Result Container */}
         <div className="container" style={{
@@ -419,21 +362,6 @@ export default function ResultPage() {
               resultTitle={resultTitle}
             />
 
-            {/* In-Article Ad */}
-            <div style={{ marginBottom: 'var(--spacing-xl)' }} data-ad-slot="in-article">
-              {adsEnabled ? (
-                <ins
-                  className="adsbygoogle"
-                  style={{ display: "block", textAlign: "center" }}
-                  data-ad-client="ca-pub-9128371394963939"
-                  data-ad-format="fluid"
-                  data-ad-layout="in-article"
-                />
-              ) : (
-                <div className="ads-disabled">{t('result.adsConsent')}</div>
-              )}
-            </div>
-
             {/* Action Buttons */}
             <div style={{
               display: 'flex',
@@ -484,40 +412,6 @@ export default function ResultPage() {
           </div>
         </div>
 
-        {/* Bottom Ad */}
-        <div className="container" style={{ marginBottom: 'var(--spacing-xl)' }} data-ad-slot="bottom">
-          {adsEnabled ? (
-            <ins
-              className="adsbygoogle"
-              style={{ display: "block" }}
-              data-ad-client="ca-pub-9128371394963939"
-              data-ad-format="auto"
-              data-full-width-responsive="true"
-            />
-          ) : (
-            <div className="ads-disabled">{t('result.adsConsent')}</div>
-          )}
-        </div>
-
-        {/* Sticky Ad */}
-        <div style={{
-          position: 'fixed',
-          right: 'var(--spacing-md)',
-          bottom: 'var(--spacing-md)',
-          width: '160px',
-          zIndex: 1000
-        }} data-ad-slot="sticky">
-          {adsEnabled ? (
-            <ins
-              className="adsbygoogle"
-              style={{ display: "block" }}
-              data-ad-client="ca-pub-9128371394963939"
-              data-ad-format="vertical"
-            />
-          ) : (
-            <div className="ads-disabled">{t('result.adsConsent')}</div>
-          )}
-        </div>
       </main>
     </>
   );
@@ -525,14 +419,26 @@ export default function ResultPage() {
 
 // Static Site Generation - 빌드 시 모든 결과 페이지 생성
 export async function getStaticPaths() {
-  // 1-60번 테스트 ID
-  const testIds = Array.from({ length: 60 }, (_, i) => String(i + 1));
+  let testIds = [];
+
+  try {
+    const dataPath = path.join(process.cwd(), "public", "data", "tests-ko.json");
+    const fileContents = fs.readFileSync(dataPath, "utf-8");
+    const parsed = JSON.parse(fileContents);
+    testIds = Object.keys(parsed?.tests || {});
+  } catch (error) {
+    console.error("Failed to load test IDs for static paths:", error);
+  }
+
+  if (testIds.length === 0) {
+    testIds = Array.from({ length: 60 }, (_, i) => String(i + 1));
+  }
 
   return {
     paths: testIds.map((id) => ({
       params: { id },
     })),
-    fallback: 'blocking', // 새로운 테스트가 추가되면 동적으로 생성
+    fallback: false, // Static export와 호환을 위해 모든 경로를 빌드 시 생성
   };
 }
 

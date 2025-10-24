@@ -4,12 +4,12 @@
 
 ## 🌐 주요 특징
 
-- **🧪 60개의 전문 심리테스트** - ADHD, MBTI, 연애, 학습, 트렌드, 취미 등 6개 카테고리
+- **🧪 88개의 전문 심리테스트** - 연애, 성격, 학습, 트렌드, 취미 등 6개 카테고리
 - **🌍 다국어 지원** - 한국어, 영어, 일본어 자동 감지 및 전환
 - **📱 모바일 최적화** - 반응형 디자인과 빠른 로딩
 - **🎨 SNS 공유 최적화** - OG 태그 및 이미지 자동 생성
 - **🔍 SEO 최적화** - Multilingual SEO, hreflang 태그, sitemap
-- **💰 AdSense 준비 완료** - GDPR/CCPA 준수 쿠키 동의 관리
+- **💰 카카오 AdFit 연동** - GDPR/CCPA 준수 쿠키 동의 기반 광고 제어
 - **📊 Analytics** - Firebase를 통한 사용자 행동 추적 및 통계
 - **👥 실시간 방문자 카운터** - 오늘/전체 방문자 수 실시간 표시
 - **⚡ Next.js 14** - Static Export로 최적화된 성능
@@ -37,19 +37,27 @@ npm install
 
 ### Firebase 설정
 
-1. Firebase 프로젝트 생성 및 Firestore 활성화
-2. `.env.local` 파일 생성:
+1. **Firebase 콘솔 접속** → 프로젝트 설정 → **내 앱**(</>)에서 SDK 구성 객체를 복사합니다.
+2. `web/.env.local` 파일을 생성하고 아래 값으로 채웁니다.
    ```bash
    cd web
    cp .env.example .env.local
-   # .env.local 파일을 편집하여 Firebase 설정 입력
    ```
-3. 데이터 마이그레이션:
+   ```env
+   NEXT_PUBLIC_FIREBASE_API_KEY=...
+   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=...
+   NEXT_PUBLIC_FIREBASE_PROJECT_ID=...
+   NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=...
+   NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=...
+   NEXT_PUBLIC_FIREBASE_APP_ID=...
+   NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=... # 선택
+   ```
+3. GitHub Actions 배포를 사용한다면 같은 값을 Repository Secrets (`Settings → Secrets and variables → Actions`)에 등록합니다.
+4. 초기 데이터 업로드:
    ```bash
    npm run migrate
    ```
-
-자세한 내용은 [DEPLOYMENT.md](DEPLOYMENT.md) 참조
+   Firestore와 번역 컬렉션이 모두 채워져야 프런트엔드가 정상 동작합니다.
 
 ### 개발 서버 실행
 
@@ -65,6 +73,14 @@ npm run dev
 npm run build
 # 정적 파일이 out/ 디렉토리에 생성됨
 ```
+
+## 🧹 저장소 정리 (2024)
+
+- Playwright 기반 E2E 테스트 코드와 결과 디렉터리를 제거해 유지보수 범위를 단순화했습니다.
+- `web/out/`, `web/node_modules/`, `firebase-debug.log` 등 빌드/로그 산출물을 리포지토리에서 비우고 `.gitignore` 규칙으로 관리합니다.
+- Firebase 설정, GitHub Secrets, 번역 워크플로 안내를 README로 통합해 참조 위치를 하나로 정리했습니다.
+- `translate_tests.py`를 경로 기반으로 리팩터링하여 절대 경로 의존성을 제거하고 다국어 생성 옵션을 추가했습니다.
+- 연애 & 관계 카테고리를 30개 테스트로 확장하고 `scripts/add_love_tests.py`로 다국어 데이터와 로케일 번들을 일괄 업데이트했습니다.
 
 ## 📁 프로젝트 구조
 
@@ -98,11 +114,11 @@ myself-test/
 │   │   ├── analytics.js          # Analytics 유틸
 │   │   └── consent.js            # 동의 관리
 │   ├── locales/
-│   │   ├── ko.json               # 한국어 번역 (60개 테스트 포함)
-│   │   ├── en.json               # 영어 번역 (60개 테스트 포함)
-│   │   └── ja.json               # 일본어 번역 (60개 테스트 포함)
+│   │   ├── ko.json               # 한국어 번역 (88개 테스트 포함)
+│   │   ├── en.json               # 영어 번역 (88개 테스트 포함)
+│   │   └── ja.json               # 일본어 번역 (88개 테스트 포함)
 │   ├── data/
-│   │   ├── tests.json            # 60개 테스트 데이터 (로컬 백업)
+│   │   ├── tests.json            # 88개 테스트 데이터 (로컬 백업)
 │   │   └── categories.json       # 6개 카테고리 데이터 (로컬 백업)
 │   ├── public/
 │   │   └── robots.txt            # 검색엔진 최적화
@@ -208,79 +224,16 @@ const icons = {
 };
 ```
 
-## 📊 60개 테스트 목록
+## 📊 테스트 카테고리 현황
 
-### 💕 연애 & 관계 (9개)
-1. 내가 연애할 때 캐릭터는?
-22. MBTI별 이상형
-24. MBTI별 연애 궁합
-31. 섹스리스 관계 진단
-32. 사랑 유형 (6가지)
-33. 성인 애착 유형 (ECR)
-37. 여자친구 이별 확률
-38. 남자친구 이별 확률
-39. 에겐남 테토녀 검사기
+- 💕 **연애 & 관계**: 30개 테스트 (신규 23종 추가) — 첫인상 매력도, 연락 템포 궁합, 동거 준비 성향 등 최신 연애 트렌드를 반영한 콘텐츠.
+- 🧠 **성격 & 심리**: 10개 — 스트레스, 자기이해, 심리 진단.
+- 📚 **학습 & 교육**: 7개 — 학습 스타일, 동기, 자기조절 지수.
+- 🌟 **라이프스타일**: 14개 — 소비, 건강, 루틴, 취향 분석.
+- 🔥 **트렌드 & 밈**: 10개 — SNS·유행 적응도와 밈 감도 테스트.
+- 🎭 **취미 & 엔터**: 10개 — 음악, 영화, 여행, 콘텐츠 소비 습관.
 
-### 🧠 성격 & 심리 (10개)
-2. 친구관계 테스트
-4. 휴가 성향
-5. 밈 성향
-6. MBTI 동물상
-7. SNS 중독도
-8. 스트레스 해소법
-34. 문장완성 검사 (SCT)
-35. 간이 MMPI
-36. TCI 기질 & 성격
-**60. ADHD 자가진단 테스트** ✨ NEW
-
-### 📚 학습 & 교육 (7개)
-23. MBTI별 학습법
-25. VARK 학습 유형
-26. Felder-Silverman 학습 스타일
-27. Kolb 경험학습 유형
-28. 자기조절학습
-29. 학습 동기 유형
-30. U&I 학습유형
-
-### 🌟 라이프스타일 (14개)
-3. 직장 성격
-9. 카페 음료 성격
-10. 여행 스타일
-11. 소비 습관
-12. 식습관
-13. 운동 성향
-14. 수면 패턴
-15. 독서 스타일
-16. 음악 취향
-17. 청소 습관
-18. 반려동물 육아 스타일
-19. 패션 감각
-20. 게임 성향
-21. 영화 취향
-
-### 🔥 트렌드 & 밈 (10개)
-40. 유행어 마스터
-41. 챌린지 참여도
-42. 숏폼 콘텐츠 중독
-43. 온라인 커뮤니티 활동
-44. 이모티콘 사용 스타일
-45. 스트리밍 시청 패턴
-46. 밈 크리에이터 잠재력
-47. 온라인 쇼핑 트렌드 민감도
-48. 디지털 노마드 성향
-49. Z세대 트렌드 이해도
-
-### 🎭 취미 & 엔터 (10개)
-50. K-POP 팬 레벨
-51. 드라마 정주행 성향
-52. 요리 실력 & 관심도
-53. 사진/영상 촬영 열정
-54. 보드게임/방탈출 매니아도
-55. 공연/전시 문화생활
-56. 애니메이션 오타쿠 레벨
-57. DIY & 수공예 열정
-58. 스포츠 관람 & 응원
-59. 악기 연주 & 음악 창작
+연애 & 관계 카테고리의 신규 테스트(IDs 100-122)는 한국어/영어/일본어 번역과 로컬라이징 번들을 동시에 업데이트해 글로벌 사용자도 즉시 참여할 수 있습니다.
 
 ## 🌍 다국어 지원
 
@@ -329,7 +282,7 @@ const icons = {
 
 - ✅ **Multilingual Meta Tags** - og:locale, og:locale:alternate
 - ✅ **Hreflang Tags** - 모든 페이지에 언어 대체 태그
-- ✅ **Dynamic Sitemap** - 60개 테스트 + 6개 카테고리 포함
+- ✅ **Dynamic Sitemap** - 88개 테스트 + 6개 카테고리 포함
 - ✅ **Robots.txt** - AI 크롤러 허용, 공격적 크롤러 차단
 - ✅ **OG Images** - 동적 생성 (1200x630)
 - ✅ **Structured Data** - JSON-LD 지원
@@ -363,41 +316,36 @@ curl http://localhost:3000/api/track?limit=10
 
 ## 💰 수익화
 
-### AdSense 준비 상태
+### 카카오 AdFit 운영
 
-- ✅ 4개 광고 슬롯 (TOP, IN-ARTICLE, BOTTOM, STICKY)
-- ✅ GDPR/CCPA 준수 동의 관리
-- ✅ 동의 거부 시 광고 비활성화
-- ✅ A/B 테스트 인프라
+- ✅ 테스트 진행 화면의 질문/답변 사이에 카카오 광고 노출
+- ✅ GDPR/CCPA 준수 동의 배너로 광고 허용 여부 제어
+- ✅ `pp_consent` 커스텀 이벤트를 통해 동의 변경 시 실시간 반영
 
 ### 광고 슬롯 위치
 
-1. **TOP** - 결과 페이지 상단
-2. **IN-ARTICLE** - 결과 설명 하단
-3. **BOTTOM** - 페이지 하단
-4. **STICKY** - 우측 하단 고정 (모바일 숨김)
+- 테스트 페이지 질문 카드와 답변 버튼 사이 (카카오 AdFit)
 
-## 🧪 테스트
+## 🌐 번역 워크플로
 
-### E2E 테스트
+1. 기준 데이터는 루트의 `tests_korean.json`이며, 번역본은 `tests_<lang>.json`으로 관리합니다.
+2. `ANTHROPIC_API_KEY`를 환경 변수로 설정한 뒤 다음 명령으로 다국어 JSON을 생성합니다.
+   ```bash
+   python translate_tests.py --languages en ja --output-dir .
+   ```
+3. 생성된 결과를 검토한 후 `web/locales/<lang>.json`과 `web/data/tests.json`에 반영하고, 변경 사항은 `translation_log.txt`에 요약합니다.
+4. 대규모 번역 업데이트는 별도 브랜치/PR로 분리해 리뷰와 배포를 안정적으로 진행합니다.
+5. 연애 & 관계 테스트를 대량으로 확장할 때는 예시 스크립트인 `scripts/add_love_tests.py`를 참고하면 다국어 데이터 구조를 한 번에 추가할 수 있습니다.
 
-```bash
-# Playwright 설치
-npx playwright install
+## 🧪 테스트 & QA
 
-# 테스트 실행
-npm run dev  # 서버 실행
-npx playwright test
-```
-
-### 테스트 커버리지
-
-- ✅ 테스트 엔진
-- ✅ 다국어 전환
-- ✅ OG 메타 태그
-- ✅ 광고 슬롯
-- ✅ 동의 관리
-- ✅ Analytics
+- 유지보수 범위 단순화를 위해 Playwright 기반 자동화 테스트를 제거했습니다.
+- 배포 전에 아래 수동 시나리오를 필수로 확인하세요.
+  - 홈 → 카테고리 → 테스트 → 결과 페이지 전체 흐름
+  - 언어 스위처(ko/en/ja) 동작 및 번역 누락 여부
+  - 동의 배너 표시/거부 시 Analytics 및 광고 상태 변화
+  - 방문자 카운터 숫자와 Firebase write 오류 (브라우저 콘솔에서 확인)
+- 버그 리포트 시 브라우저/장치 정보와 함께 `npm run dev` 로그, 콘솔 메시지를 첨부하면 원인 파악이 빠릅니다.
 
 ## 🔒 보안 & 개인정보
 
@@ -415,7 +363,7 @@ npx playwright test
 - **Database**: Firebase Firestore
 - **i18n**: Custom hook + JSON translations
 - **Analytics**: Firebase Analytics
-- **Testing**: Playwright E2E
+- **Testing**: Manual QA checklist (필수 사용자 여정 점검)
 - **Deployment**: GitHub Pages + GitHub Actions
 
 ## 🚀 배포
@@ -436,7 +384,7 @@ npm run build
 
 ### Firebase 설정
 
-Firebase 프로젝트 생성 및 설정은 [DEPLOYMENT.md](DEPLOYMENT.md) 참조
+위의 **Firebase 설정** 절차를 마치고 동일한 값을 GitHub Secrets에도 등록해야 자동 배포가 성공합니다.
 
 **⚠️ 보안 주의**: `lib/firebase-admin.js` 파일은 절대 Git에 커밋하지 마세요!
 

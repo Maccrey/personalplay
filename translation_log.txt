@@ -1,4 +1,18 @@
-Traceback (most recent call last):
-  File "/Users/maccrey/Development/myself-test/translate_tests.py", line 3, in <module>
-    import anthropic
-ModuleNotFoundError: No module named 'anthropic'
+2024-03-17: Added 23 new love & relationship tests (IDs 100-122) with Korean/English/Japanese content.
+ - Titles: 첫인상 연애 매력도 테스트 등 23종
+ - Added consistent result templates (직진 로맨틱형 / Balanced Partner / Warm Observer)
+ - Updated public data (`web/public/data/tests-*.json`) and locale bundles.
+ - Expanded category mapping so 연애 & 관계 카테고리가 총 30개 테스트를 제공.
+2025-03-07: Added 23 new learning & education tests (IDs 61-83) with KO/EN/JA coverage.
+ - Titles: 학습 집중력 진단, 온라인 수업 적응력 테스트 등 23종
+ - Applied shared learning result archetypes (계획형 / 리듬형 / 탐험형)
+ - Updated `web/public/data/tests-*.json`, locale bundles, and learning category mappings to reach 30 tests.
+2025-03-07: Added 20 new personality & psychology tests (IDs 84-99, 123-126) with KO/EN/JA content.
+ - Topics: 감정 회복, 커뮤니케이션, 의사결정, 가치관 등 20종
+ - Applied shared personality result archetypes (통찰/공감/도전)
+ - Updated `web/public/data/tests-*.json`, locale bundles, category mappings, and tests.json.
+2025-03-07: Refined Korean results for personality tests 84-99, 123-126 with theme-specific copy.
+2025-03-07: Expanded Korean love/relationship test advice to 10-line guidance across all results.
+2025-03-07: Added 10-line Korean study guidance across learning/education tests 23, 25-30, 61-83.
+2025-03-07: Synced English/Japanese 10-line learning advice for tests 23, 25-30, 61-83.
+2025-03-07: Normalised 10-line advice for personality tests (ko/en/ja) including legacy IDs 6,22,34-36,60 and new 84-99,123-126.

@@ -5,13 +5,6 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          {/* Google AdSense */}
-          <script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9128371394963939"
-            crossOrigin="anonymous"
-          />
-
           {/* 초기 설정 */}
           <script
             dangerouslySetInnerHTML={{

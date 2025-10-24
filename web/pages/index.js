@@ -1,10 +1,8 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import Script from "next/script";
 import SEOHead from "@/components/SEOHead";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import VisitorCounter from "@/components/VisitorCounter";
-import AuthButton from "@/components/AuthButton";
 import { useTranslation } from "@/hooks/useTranslation";
 import { getAllCategories } from "@/lib/tests-data";
 
@@ -80,13 +78,6 @@ export default function Home() {
               {t('home.description')}
             </p>
 
-            {/* Kakao Adfit */}
-            <div style={{ textAlign: "center", marginTop: "var(--spacing-xl)" }}>
-              <ins className="kakao_ad_area" style={{display:"none"}}
-                data-ad-unit = "DAN-39Qufk252UXag4XA"
-                data-ad-width = "728"
-                data-ad-height = "90"></ins>
-            </div>
           </div>
         </section>
 
@@ -266,12 +257,6 @@ export default function Home() {
           </div>
         </footer>
       </main>
-
-      <Script
-        src="//t1.daumcdn.net/kas/static/ba.min.js"
-        strategy="afterInteractive"
-        async
-      />
     </>
   );
 }

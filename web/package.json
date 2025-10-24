@@ -6,7 +6,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test:e2e": "playwright test",
     "migrate": "node scripts/migrate-to-firestore.js"
   },
   "dependencies": {
@@ -19,7 +18,5 @@
     "react-dom": "18.2.0",
     "swr": "2.3.0"
   },
-  "devDependencies": {
-    "@playwright/test": "1.56.0"
-  }
+  "devDependencies": {}
 }

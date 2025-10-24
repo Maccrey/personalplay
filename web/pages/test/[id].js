@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import Head from "next/head";
+import Script from "next/script";
 import Link from "next/link";
 import { trackEvent } from "@/utils/analytics";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
@@ -101,11 +102,6 @@ export default function TestPage({ initialTest }) {
       <Head>
         <title>{testTitle} - PersonaPlay</title>
         <meta name="description" content={`${testTitle} - ${t('home.subtitle')}`} />
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9128371394963939"
-          crossOrigin="anonymous"
-        />
       </Head>
 
       <main className="fade-in">
@@ -148,30 +144,6 @@ export default function TestPage({ initialTest }) {
             </Link>
           </div>
         </header>
-
-        {/* Top Ad */}
-        <div className="container" style={{ marginTop: 'var(--spacing-lg)' }}>
-          {adsEnabled ? (
-            <ins
-              className="adsbygoogle"
-              style={{ display: "block" }}
-              data-ad-client="ca-pub-9128371394963939"
-              data-ad-format="auto"
-              data-full-width-responsive="true"
-            />
-          ) : (
-            <div className="ads-disabled" style={{
-              padding: 'var(--spacing-md)',
-              textAlign: 'center',
-              background: 'var(--color-bg-secondary)',
-              borderRadius: 'var(--radius-md)',
-              color: 'var(--color-text-tertiary)',
-              fontSize: '0.875rem'
-            }}>
-              {t('result.adsConsent')}
-            </div>
-          )}
-        </div>
 
         {/* Test Container */}
         <div className="container" style={{
@@ -237,6 +209,33 @@ export default function TestPage({ initialTest }) {
             }}>
               {currentQuestion}
             </p>
+          </div>
+
+          {/* Kakao Ad between question and answers */}
+          <div style={{
+            marginBottom: 'var(--spacing-xl)',
+            textAlign: 'center'
+          }}>
+            {adsEnabled ? (
+              <ins
+                className="kakao_ad_area"
+                style={{ display: "none" }}
+                data-ad-unit="DAN-39Qufk252UXag4XA"
+                data-ad-width="320"
+                data-ad-height="100"
+              />
+            ) : (
+              <div className="ads-disabled" style={{
+                padding: 'var(--spacing-md)',
+                textAlign: 'center',
+                background: 'var(--color-bg-secondary)',
+                borderRadius: 'var(--radius-md)',
+                color: 'var(--color-text-tertiary)',
+                fontSize: '0.875rem'
+              }}>
+                {t('result.adsConsent')}
+              </div>
+            )}
           </div>
 
           {/* Answer Buttons */}
@@ -305,56 +304,14 @@ export default function TestPage({ initialTest }) {
               {t('common.no')}
             </button>
           </div>
-
-          {/* In-Article Ad Below Answer Buttons */}
-          <div style={{ marginTop: 'var(--spacing-xl)' }}>
-            {adsEnabled ? (
-              <ins
-                className="adsbygoogle"
-                style={{ display: "block", textAlign: "center" }}
-                data-ad-client="ca-pub-9128371394963939"
-                data-ad-format="fluid"
-                data-ad-layout="in-article"
-              />
-            ) : (
-              <div className="ads-disabled" style={{
-                padding: 'var(--spacing-md)',
-                textAlign: 'center',
-                background: 'var(--color-bg-secondary)',
-                borderRadius: 'var(--radius-md)',
-                color: 'var(--color-text-tertiary)',
-                fontSize: '0.875rem'
-              }}>
-                {t('result.adsConsent')}
-              </div>
-            )}
-          </div>
         </div>
 
-        {/* Bottom Ad */}
-        <div className="container" style={{ marginBottom: 'var(--spacing-xl)' }}>
-          {adsEnabled ? (
-            <ins
-              className="adsbygoogle"
-              style={{ display: "block" }}
-              data-ad-client="ca-pub-9128371394963939"
-              data-ad-format="auto"
-              data-full-width-responsive="true"
-            />
-          ) : (
-            <div className="ads-disabled" style={{
-              padding: 'var(--spacing-md)',
-              textAlign: 'center',
-              background: 'var(--color-bg-secondary)',
-              borderRadius: 'var(--radius-md)',
-              color: 'var(--color-text-tertiary)',
-              fontSize: '0.875rem'
-            }}>
-              {t('result.adsConsent')}
-            </div>
-          )}
-        </div>
       </main>
+      <Script
+        src="//t1.daumcdn.net/kas/static/ba.min.js"
+        strategy="afterInteractive"
+        async
+      />
     </>
   );
 }
