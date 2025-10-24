@@ -5,6 +5,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 import VisitorCounter from "@/components/VisitorCounter";
 import { useTranslation } from "@/hooks/useTranslation";
 import { getAllCategories } from "@/lib/tests-data";
+import AuthButton from "@/components/AuthButton";
 
 export default function Home() {
   const [categories, setCategories] = useState([]);
@@ -39,7 +40,7 @@ export default function Home() {
             alignItems: 'center'
           }}
         >
-          {/* <AuthButton /> */}
+          <AuthButton />
           <LanguageSwitcher />
         </div>
 

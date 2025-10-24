@@ -62,23 +62,25 @@ export default function MyResultsPage() {
         <p style={{ marginBottom: 'var(--spacing-xl)', color: 'var(--color-text-secondary)' }}>
           {t('auth.loginToSave')}
         </p>
-        {/* <AuthButton /> */}
+        <AuthButton />
       </div>
     );
   }
 
   return (
     <>
-      <div style={{
-        position: 'fixed',
-        top: '20px',
-        right: '20px',
-        zIndex: 100,
-        display: 'flex',
-        gap: '12px',
-        alignItems: 'center'
-      }}>
-        {/* <AuthButton /> */}
+      <div
+        style={{
+          position: 'fixed',
+          top: '20px',
+          right: '20px',
+          zIndex: 100,
+          display: 'flex',
+          gap: '12px',
+          alignItems: 'center'
+        }}
+      >
+        <AuthButton />
         <LanguageSwitcher />
       </div>
 

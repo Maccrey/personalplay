@@ -1864,6 +1864,250 @@
           "desc": "듣는 게 좋아요! 연주보다는 음악 감상을 선호하는 청취자 타입입니다."
         }
       }
+    },
+    "127": {
+      "title": "Inner Dialogue Tone Check",
+      "questions": [
+        "When you feel stressed, do you notice an inner voice talking to you?",
+        "After making a mistake, do you comfort yourself with words like 'It's okay, you can try again'?",
+        "Before a major decision, do you replay scenarios in your head several times?",
+        "Do you tend to hold yourself to a strict personal standard?",
+        "Do you take a moment at the end of the day to recall what went well?",
+        "Do you praise yourself for small wins?",
+        "In tense moments, is 'This might not work' the first thought that appears?",
+        "When your mind feels crowded, have you written down your inner dialogue?",
+        "Do you speak kindly to yourself the way you would to a close friend?",
+        "Do you repeatedly remind yourself of lessons learned from failure?",
+        "Does your inner talk become scattered when worries pile up?",
+        "Does the tone of your inner voice shift dramatically with your mood?"
+      ],
+      "results": {
+        "A": {
+          "title": "Self-Coaching Voice",
+          "summary": "You lead yourself with supportive coaching and practical strategy.",
+          "description": "You analyse situations while giving yourself realistic encouragement and action ideas.",
+          "characteristics": [
+            "You offer yourself concrete advice even in tough moments.",
+            "You organise issues and quickly picture the next action plan.",
+            "You acknowledge feelings and wrap them in caring language."
+          ],
+          "strengths": [
+            "You raise self-efficacy and keep challenges moving forward.",
+            "You spread positive language habits to people around you.",
+            "You capture lessons quickly and turn them into growth notes."
+          ],
+          "weaknesses": [
+            "You may get overly strategic and stay in planning mode.",
+            "Prioritising action over comfort can hide accumulated fatigue.",
+            "You might miss the right moment to ask for support."
+          ],
+          "advice": "1. Keyword today: A self-coaching voice that guides you with encouragement and strategy.\n2. Emotional check: Name the feeling you notice right now in one sentence.\n3. Strength spotlight: Use your clear advice to lift yourself and others.\n4. Learning memo: Summarise today's insight in a crisp three-line note.\n5. Boundary cue: Ask for help before carrying everything alone wears you out.\n6. Rest plan: Reserve a 20-minute routine that restores your energy.\n7. Language habit: Say your favourite affirming sentence to yourself three times today.\n8. Relationship tip: When listening to someone close, choose empathy before evaluation.\n9. Reset ritual: Set weekly goals and pair each with a joyful reward.\n10. Tomorrow's pledge: Write one sentence about what you look forward to tackling next."
+        },
+        "B": {
+          "title": "Inner Critic Analyst",
+          "summary": "You refine yourself with high standards and sharp analysis.",
+          "description": "You deliver cool-headed feedback and scan for risks to raise the quality of every outcome.",
+          "characteristics": [
+            "You analyse mistakes quickly and extract improvement points.",
+            "You set ambitious goals and keep upgrading your benchmarks.",
+            "You have a strong radar for spotting potential risks early."
+          ],
+          "strengths": [
+            "You produce deliverables with impressive polish.",
+            "You catch problems early and prevent costly detours.",
+            "You grow by applying rigorous personal standards."
+          ],
+          "weaknesses": [
+            "Excessive self-criticism can chip away at confidence.",
+            "Reviewing before resting may build hidden exhaustion.",
+            "It can take time to let others' encouragement sink in."
+          ],
+          "advice": "1. Keyword today: An analytic inner critic who sharpens every detail.\n2. Emotional check: Capture the sentence that keeps echoing in your mind.\n3. Strength spotlight: Log each risk you find together with a solution idea.\n4. Learning memo: Collect wins and compliments in a dedicated list.\n5. Recovery signal: When fatigue appears, pause the critique and declare a break.\n6. Self-compassion: Follow every critical note with a warm supportive line.\n7. Collaboration strategy: Share feedback with someone you trust to widen your view.\n8. Language refresh: Say one out-loud compliment to yourself each day.\n9. Balance check: Confirm that there's still joy in the way you chase goals.\n10. Tomorrow's pledge: Note one strength you're excited to see from yourself tomorrow."
+        }
+      }
+    },
+    "128": {
+      "title": "Emotional Boundary Style",
+      "questions": [
+        "When someone asks a favour, does accepting pop up before declining?",
+        "Do heart-to-heart talks stretch longer even when you are busy?",
+        "Do you set meeting times or check-in windows in advance to protect your boundaries?",
+        "When asked for help, do you prioritise their situation over your schedule?",
+        "Do you request alone time when emotions feel heavy?",
+        "If someone opens up quickly, do you also dive into deep stories?",
+        "Do you end up doing uncomfortable favours because you soften your refusal?",
+        "When a relationship shifts, do you journal your feelings?",
+        "When you feel drained, do you officially declare a rest period for yourself?",
+        "Do you feel guilty when you enforce your boundaries?",
+        "In new relationships, do you intentionally slow down the pace?",
+        "Can you speak up to reset the line when someone crosses your emotional boundary?"
+      ],
+      "results": {
+        "A": {
+          "title": "Boundary Architect",
+          "summary": "You protect your capacity by designing structured emotional boundaries.",
+          "description": "You organise schedules and language to avoid overuse and consciously keep relationships balanced.",
+          "characteristics": [
+            "You share your time and energy limits before meeting someone.",
+            "You set a duration for conversations and prepare a gentle closing cue.",
+            "When your emotions wobble, you adjust your rest schedule right away."
+          ],
+          "strengths": [
+            "You prevent burnout and maintain a steady personal rhythm.",
+            "Clear explanations reduce misunderstandings about boundaries.",
+            "You respect yourself and others over the long term."
+          ],
+          "weaknesses": [
+            "People may perceive you as overly structured.",
+            "Spontaneous responses can feel difficult when flexibility is needed.",
+            "Requests for help can feel heavy because you sense the full cost."
+          ],
+          "advice": "1. Keyword today: A precise guardian who designs boundaries with structure.\n2. Emotional check: Define the limit you need right now in one sentence.\n3. Strength spotlight: Offer healthy relationship standards through clear explanations.\n4. Learning memo: Record a recent moment when your boundary worked well.\n5. Flexibility tip: Prepare an alternate scenario for plans that cannot stay perfect.\n6. Rest lock-in: Block dedicated 'me time' on this week's calendar.\n7. Language practice: Draft a courteous sentence you can use when declining.\n8. Relationship hint: Acknowledge the other's feelings, then calmly share your needs.\n9. Boundary audit: Once a month, check whether your personal criteria need updating.\n10. Tomorrow's pledge: Send a thank-you note to someone you can lean on."
+        },
+        "B": {
+          "title": "Flow Harmoniser",
+          "summary": "You read emotional currents and adjust boundaries with gentle empathy.",
+          "description": "You match pace to each person and create safe space through dialogue and empathy.",
+          "characteristics": [
+            "You tune the depth of conversation to the signals you notice.",
+            "You can gently slow or pause the pace when needed.",
+            "When emotional shifts appear, you look to resolve them through dialogue."
+          ],
+          "strengths": [
+            "You create spaces where others feel accepted and calm.",
+            "You read relational flow and soften potential conflicts.",
+            "You adapt smoothly to changing contexts."
+          ],
+          "weaknesses": [
+            "You may delay stating your limits and end up drained.",
+            "Unspoken boundaries can lead to misunderstandings.",
+            "Emotional labour can accumulate and slow recovery."
+          ],
+          "advice": "1. Keyword today: An empathetic flow-setter who tunes boundaries with sensitivity.\n2. Emotional check: Express your strongest current feeling as a colour.\n3. Strength spotlight: Use gentle language to align each relationship's pace.\n4. Learning memo: Record a moment when you could share feelings safely.\n5. Self-protection: Pair every helping commitment with a promised rest slot.\n6. Request script: Prepare a simple sentence to ask for a pause when you need it.\n7. Relationship tip: Confirm the other's expectations and share your limits honestly.\n8. Recovery routine: Set a go-to ritual that refills you after emotional labour.\n9. Support network: List two or more people you can debrief with comfortably.\n10. Tomorrow's pledge: Affirm that your boundaries deserve respect and you will back them."
+        }
+      }
+    },
+    "129": {
+      "title": "Decision Energy Flow",
+      "questions": [
+        "When an idea appears, do you immediately sketch an execution plan?",
+        "Before deciding, do you gather information across a wide range?",
+        "Does time pressure actually sharpen your focus?",
+        "Have you seen great results when following intuition over data?",
+        "After deciding, do you keep comparing alternative options?",
+        "Do you schedule pockets where you deliberately delay decisions?",
+        "Do you take a quick walk or ritual before major choices?",
+        "During collaboration, do you notice the team's emotional reactions while deciding?",
+        "Does your energy surge when the goal is crystal clear?",
+        "Does lacking information spike your anxiety?",
+        "Do you set aside reflection time after decisions to capture lessons?",
+        "Is it hard to drop one option when faced with many?"
+      ],
+      "results": {
+        "A": {
+          "title": "Momentum Architect",
+          "summary": "You drive decisions with speed and focus, creating waves of momentum.",
+          "description": "Clear goals and deadlines heighten your immersion, combining intuition and execution to deliver results.",
+          "characteristics": [
+            "You quickly narrow options to the essentials.",
+            "You move into execution almost immediately after deciding.",
+            "You use personal ignition rituals to boost concentration."
+          ],
+          "strengths": [
+            "You inject momentum into projects.",
+            "You find answers through action even in uncertainty.",
+            "You become a catalyst for motivation around you."
+          ],
+          "weaknesses": [
+            "You risk skipping thorough information checks.",
+            "Prioritising speed can slow alignment with the team.",
+            "You may treat course corrections as failure."
+          ],
+          "advice": "1. Keyword today: A momentum builder who designs decisions with speed and focus.\n2. Emotional check: Note the direction your energy is pointing right now.\n3. Strength spotlight: Use quick execution to kick-start the team.\n4. Learning memo: Capture the reasoning behind your choice on a single slide.\n5. Information boost: Consult a must-check list before impulsive moves.\n6. Rhythm control: Declare one 'slow day' each week to ease the pace.\n7. Relationship tip: Share the decision context and expectations clearly with teammates.\n8. Feedback ritual: Record a short retro within 24 hours of each decision.\n9. Recovery strategy: Schedule an energy-recharge activity after intense focus.\n10. Tomorrow's pledge: Write one idea you want to explore with fresh curiosity."
+        },
+        "B": {
+          "title": "Adaptive Explorer",
+          "summary": "You widen options and coordinate decisions with adaptive calm.",
+          "description": "You connect diverse viewpoints, co-create timing with your team, and spread risk before committing.",
+          "characteristics": [
+            "You collect rich data and seek perspectives before choosing.",
+            "You break plans into detailed paths for different scenarios.",
+            "You gather feedback after decisions to keep improving."
+          ],
+          "strengths": [
+            "You set safeguards that reduce potential missteps.",
+            "You weave multiple voices together during collaboration.",
+            "You adjust strategy quickly when new information surfaces."
+          ],
+          "weaknesses": [
+            "Decisions can slow down and dilute your energy.",
+            "Considering every possibility can build mental fatigue.",
+            "Bold leaps may feel risky at crucial moments."
+          ],
+          "advice": "1. Keyword today: An explorer who curates data and aligns decisions with agility.\n2. Emotional check: Describe how this decision feels in a single word.\n3. Strength spotlight: Elevate quality by synthesising the voices you've gathered.\n4. Learning memo: Summarise the top three insights from your research.\n5. Speed guardrail: Set a firm decision deadline to maintain focus.\n6. Confidence boost: When the groundwork is solid, launch a small experiment.\n7. Relationship tip: Share the scenarios you are weighing with your team.\n8. Fatigue shield: Block your research time and pair each block with rest.\n9. Follow-up ritual: Redefine your success metrics after major calls.\n10. Tomorrow's pledge: Note one bold move you'll test in the next decision cycle."
+        }
+      }
+    },
+    "130": {
+      "title": "Recharge Routine Finder",
+      "questions": [
+        "After big projects, do you have a pre-set recovery routine?",
+        "Do you stay tense during breaks because you think about what's next?",
+        "Do you need solo time to truly refill your energy?",
+        "Does exploring new places refresh your mood quickly?",
+        "Do you schedule regular digital detox sessions?",
+        "Do you outline plans even for days off?",
+        "Does being with people actually raise your energy?",
+        "Do you try new hobbies often to recharge?",
+        "When you notice body fatigue, do you rearrange your plans?",
+        "Do you announce rest time in advance so others honour it?",
+        "Do you close focus sessions with a short ritual like tea or stretching?",
+        "Do creative ideas surprise you even while resting?"
+      ],
+      "results": {
+        "A": {
+          "title": "Structured Recharger",
+          "summary": "You restore energy steadily through predictable routines.",
+          "description": "You design schedules and rituals to draw clear lines between work and rest, resetting daily life.",
+          "characteristics": [
+            "You log rest start and end times on your calendar.",
+            "You monitor body signals and plan each recovery stage.",
+            "You outline the first task after recharging before you disconnect."
+          ],
+          "strengths": [
+            "You keep a sustainable personal rhythm.",
+            "Your routines give people around you a sense of stability.",
+            "You prevent overload and regain focus efficiently."
+          ],
+          "weaknesses": [
+            "Unexpected changes can trigger unease.",
+            "If rest deviates from the plan, satisfaction drops.",
+            "You may feel tempted to measure productivity even while resting."
+          ],
+          "advice": "1. Keyword today: A structure lover who recharges through reliable routines.\n2. Emotional check: Note the rest signal your body is asking for right now.\n3. Strength spotlight: Share the calm your planning creates with family or teammates.\n4. Learning memo: List the elements that made your recovery routine effective.\n5. Flexibility tip: Prepare a 'plan B' rest option for unexpected twists.\n6. Boundary declaration: Let others know your rest window so it stays protected.\n7. Sensory charge: Focus on one sense—scent, sound, or touch—while resting.\n8. Reset ritual: Include a 10-minute tidy-up before you return to work.\n9. Self-appreciation: Write a thank-you note to yourself for resting well.\n10. Tomorrow's pledge: Jot down an activity you want to try during your next break."
+        },
+        "B": {
+          "title": "Immersive Recharger",
+          "summary": "You refill energy through new stimuli and deep immersion.",
+          "description": "You dive into engaging experiences, awaken your senses, and inject fresh vitality into everyday life.",
+          "characteristics": [
+            "You seek new places or plan mini adventures.",
+            "You gain emotional recovery through rich conversations.",
+            "You jot down ideas that surface while recharging."
+          ],
+          "strengths": [
+            "You can elevate your energy even in short bursts.",
+            "You share creative inspiration generously.",
+            "You dissolve boredom quickly with sensory experiences."
+          ],
+          "weaknesses": [
+            "Overbooking activities can leave you exhausted.",
+            "Rest and work boundaries may blur.",
+            "Spontaneous plans can stretch your budget."
+          ],
+          "advice": "1. Keyword today: An energy seeker who restores vitality through stimulation and immersion.\n2. Emotional check: Note the sensory cue you crave right now on a sticky note.\n3. Strength spotlight: Share the fresh inspiration you collect with people around you.\n4. Learning memo: Capture how you felt after each immersive experience.\n5. Rhythm control: Insert a 30-minute quiet pocket between high-activity sessions.\n6. Budget guardrail: Decide the scope of your fun plans and track it ahead of time.\n7. Relationship tip: Align on the vibe you hope for with anyone joining you.\n8. Digital distance: Mute notifications while you recharge.\n9. Gratitude ritual: Thank the people or places that refreshed you.\n10. Tomorrow's pledge: Jot one idea for the next immersive adventure."
+        }
+      }
     }
   }
 }

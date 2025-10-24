@@ -16,3 +16,7 @@
 2025-03-07: Added 10-line Korean study guidance across learning/education tests 23, 25-30, 61-83.
 2025-03-07: Synced English/Japanese 10-line learning advice for tests 23, 25-30, 61-83.
 2025-03-07: Normalised 10-line advice for personality tests (ko/en/ja) including legacy IDs 6,22,34-36,60 and new 84-99,123-126.
+2025-03-08: Added 4 new personality & psychology tests (IDs 127-130) with KO/EN/JA parity.
+ - Topics: 내면 대화, 감정 경계, 결정 에너지, 재충전 루틴.
+ - Authored unique 10-line advice blocks per result across all three locales.
+ - Updated `web/public/data/tests-*.json`, locale bundles, root fixtures, `web/data/tests.json`, and category mapping to reach 30 personality tests.

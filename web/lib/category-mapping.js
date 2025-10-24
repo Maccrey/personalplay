@@ -63,6 +63,10 @@ export const TEST_CATEGORIES = {
   '124': 'personality',
   '125': 'personality',
   '126': 'personality',
+  '127': 'personality',
+  '128': 'personality',
+  '129': 'personality',
+  '130': 'personality',
 
   // Learning & Education (학습 & 교육)
   '23': 'learning',

@@ -6,10 +6,13 @@ import { initializeApp, getApps } from 'firebase/app';
 import {
   getAuth,
   signInWithRedirect,
+  signInWithPopup,
   getRedirectResult,
   GoogleAuthProvider,
   signOut as firebaseSignOut,
-  onAuthStateChanged
+  onAuthStateChanged,
+  setPersistence,
+  browserLocalPersistence
 } from 'firebase/auth';
 
 // Firebase configuration from environment variables
@@ -48,6 +51,13 @@ if (!getApps().length) {
 // Get Auth instance
 export const auth = getAuth(app);
 
+// Ensure auth state persists across reloads in supported environments
+if (typeof window !== 'undefined') {
+  setPersistence(auth, browserLocalPersistence).catch((error) => {
+    console.error('Failed to set Firebase auth persistence:', error);
+  });
+}
+
 // Google Auth Provider
 const googleProvider = new GoogleAuthProvider();
 
@@ -56,11 +66,32 @@ const googleProvider = new GoogleAuthProvider();
  * @returns {Promise<void>}
  */
 export async function signInWithGoogle() {
+  // Prefer popup locally for a quicker auth flow, fall back to redirect if needed
+  if (typeof window !== 'undefined') {
+    try {
+      console.log('Attempting Google sign-in with popup...');
+      await signInWithPopup(auth, googleProvider);
+      return;
+    } catch (error) {
+      // If popup is blocked or not supported, try redirect as a fallback
+      const fallbackCodes = new Set([
+        'auth/popup-blocked',
+        'auth/cancelled-popup-request',
+        'auth/operation-not-supported-in-this-environment'
+      ]);
+
+      if (!fallbackCodes.has(error?.code)) {
+        console.error('Popup sign-in failed:', error);
+        throw error;
+      }
+
+      console.warn('Popup sign-in unavailable, falling back to redirect:', error?.code);
+    }
+  }
+
   try {
-    // Use redirect method to avoid COOP errors on GitHub Pages
     console.log('Attempting Google sign-in with redirect...');
     await signInWithRedirect(auth, googleProvider);
-    // User will be redirected, no return value
   } catch (error) {
     console.error('Error signing in with Google redirect:', error);
     throw error;

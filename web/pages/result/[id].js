@@ -91,9 +91,22 @@ export default function ResultPage() {
             gap: '12px',
             alignItems: 'center'
           }}
-              >
-                {/* <AuthButton /> */}
-                <LanguageSwitcher />        </div>
+        >
+          <Link
+            href="/"
+            className="btn btn-secondary"
+            style={{
+              padding: '8px 16px',
+              textDecoration: 'none',
+              display: 'inline-flex',
+              alignItems: 'center'
+            }}
+          >
+            {t('common.home')}
+          </Link>
+          <AuthButton />
+          <LanguageSwitcher />
+        </div>
 
         {/* Header */}
         <header style={{
