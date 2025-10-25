@@ -28,22 +28,6 @@ export default function Home() {
       />
 
       <main className="fade-in">
-        {/* Top Navigation */}
-        <div
-          style={{
-            position: 'fixed',
-            top: '20px',
-            right: '20px',
-            zIndex: 100,
-            display: 'flex',
-            gap: '12px',
-            alignItems: 'center'
-          }}
-        >
-          <AuthButton />
-          <LanguageSwitcher />
-        </div>
-
         {/* Hero Section */}
         <section
           style={{
@@ -55,6 +39,21 @@ export default function Home() {
           }}
         >
           <div className="container">
+            <div
+              className="home-top-nav"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'flex-end',
+                gap: '12px',
+                flexWrap: 'wrap',
+                width: '100%',
+                marginBottom: 'var(--spacing-xl)'
+              }}
+            >
+              <AuthButton />
+              <LanguageSwitcher />
+            </div>
             <h1
               style={{
                 fontSize: "3rem",
@@ -80,6 +79,14 @@ export default function Home() {
             </p>
 
           </div>
+          <style jsx>{`
+            @media (max-width: 768px) {
+              .home-top-nav {
+                justify-content: center;
+                margin-bottom: var(--spacing-lg);
+              }
+            }
+          `}</style>
         </section>
 
         {/* Categories Grid */}
