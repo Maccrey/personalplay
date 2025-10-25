@@ -1,16 +1,18 @@
 import Head from "next/head";
 import { useLanguage } from "@/contexts/LanguageContext";
 
+const SITE_URL = "https://www.maccrey.com";
+const DEFAULT_OG_IMAGE = `${SITE_URL}/icon-512.png`;
+
 export default function SEOHead({
   title,
   description,
   keywords,
-  ogImage = "https://maccre.com/og-image.png",
+  ogImage = DEFAULT_OG_IMAGE,
   ogType = "website",
   canonical,
 }) {
   const { language } = useLanguage();
-  const siteUrl = "https://maccre.com";
   const fullTitle = title?.includes("PersonaPlay") ? title : `${title} - PersonaPlay`;
 
   // Language to locale mapping
@@ -43,21 +45,21 @@ export default function SEOHead({
       <meta name="format-detection" content="telephone=no" />
 
       {/* Canonical URL */}
-      {canonical && <link rel="canonical" href={`${siteUrl}${canonical}`} />}
+      {canonical && <link rel="canonical" href={`${SITE_URL}${canonical}`} />}
 
       {/* Hreflang tags for multilingual SEO */}
       {canonical && (
         <>
-          <link rel="alternate" hrefLang="en" href={`${siteUrl}${canonical}`} />
-          <link rel="alternate" hrefLang="ko" href={`${siteUrl}${canonical}`} />
-          <link rel="alternate" hrefLang="ja" href={`${siteUrl}${canonical}`} />
-          <link rel="alternate" hrefLang="x-default" href={`${siteUrl}${canonical}`} />
+          <link rel="alternate" hrefLang="en" href={`${SITE_URL}${canonical}`} />
+          <link rel="alternate" hrefLang="ko" href={`${SITE_URL}${canonical}`} />
+          <link rel="alternate" hrefLang="ja" href={`${SITE_URL}${canonical}`} />
+          <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}${canonical}`} />
         </>
       )}
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonical ? `${siteUrl}${canonical}` : siteUrl} />
+      <meta property="og:url" content={canonical ? `${SITE_URL}${canonical}` : SITE_URL} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
@@ -71,7 +73,7 @@ export default function SEOHead({
 
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={canonical ? `${siteUrl}${canonical}` : siteUrl} />
+      <meta property="twitter:url" content={canonical ? `${SITE_URL}${canonical}` : SITE_URL} />
       <meta property="twitter:title" content={fullTitle} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={ogImage} />
@@ -103,12 +105,12 @@ export default function SEOHead({
             "@type": "WebSite",
             "name": "PersonaPlay",
             "description": description,
-            "url": siteUrl,
+            "url": SITE_URL,
             "potentialAction": {
               "@type": "SearchAction",
               "target": {
                 "@type": "EntryPoint",
-                "urlTemplate": `${siteUrl}/search?q={search_term_string}`
+                "urlTemplate": `${SITE_URL}/search?q={search_term_string}`
               },
               "query-input": "required name=search_term_string"
             }

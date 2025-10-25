@@ -1,7 +1,6 @@
 import fs from "fs";
 import path from "path";
 import { useRouter } from "next/router";
-import Head from "next/head";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { trackEvent } from "../../utils/analytics";
@@ -10,6 +9,7 @@ import AuthButton from "@/components/AuthButton";
 import SaveResultButton from "@/components/SaveResultButton";
 import { useTranslation } from "@/hooks/useTranslation";
 import { getTestById } from "../../lib/tests-data";
+import SEOHead from "@/components/SEOHead";
 
 export default function ResultPage() {
   const router = useRouter();
@@ -62,22 +62,29 @@ export default function ResultPage() {
   const weaknesses = t(`tests.${id}.results.${r}.weaknesses`) || [];
   const advice = t(`tests.${id}.results.${r}.advice`);
 
-  const ogImageUrl = `/api/og/${id}?title=${encodeURIComponent(
-    resultTitle || ""
-  )}&desc=${encodeURIComponent(resultSummary || "")}`;
+  const SITE_URL = "https://www.maccrey.com";
+  const sharePath = typeof router.asPath === "string" && router.asPath.startsWith("/")
+    ? router.asPath
+    : (id && r ? `/result/${id}?r=${r}` : "");
+  const shareUrl = sharePath ? `${SITE_URL}${sharePath}` : SITE_URL;
+  const ogImageUrl = id
+    ? `${SITE_URL}/api/og/${id}?title=${encodeURIComponent(resultTitle || "")}&desc=${encodeURIComponent(resultSummary || "")}`
+    : `${SITE_URL}/icon-512.png`;
+  const metaDescription = resultSummary || resultDesc || t('home.subtitle');
+  const metaKeywords = [testTitle, resultTitle, "PersonaPlay"]
+    .filter(Boolean)
+    .join(", ");
 
   return (
     <>
-      <Head>
-        <title>{resultTitle} - PersonaPlay</title>
-        <meta property="og:title" content={resultTitle} />
-        <meta property="og:description" content={resultSummary} />
-        <meta property="og:image" content={ogImageUrl} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
+      <SEOHead
+        title={resultTitle}
+        description={metaDescription}
+        keywords={metaKeywords}
+        ogImage={ogImageUrl}
+        ogType="article"
+        canonical={sharePath || "/"}
+      />
 
       <main className="fade-in">
         {/* Header */}
@@ -396,11 +403,11 @@ export default function ResultPage() {
                     navigator.share({
                       title: resultTitle,
                       text: resultDesc,
-                      url: window.location.href,
+                      url: shareUrl,
                     });
                   } else {
                     navigator.clipboard
-                      .writeText(window.location.href)
+                      .writeText(shareUrl)
                       .then(() => alert(t('result.shareResult')))
                       .catch(() => alert("Failed to copy link"));
                   }
