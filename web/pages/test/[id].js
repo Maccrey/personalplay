@@ -65,13 +65,20 @@ export default function TestPage({ initialTest }) {
     const maxScale = 2;
 
     function updateAdScale() {
-      if (!adWrapperRef.current) return;
-      const availableWidth = adWrapperRef.current.offsetWidth;
+      const wrapper = adWrapperRef.current;
+      if (!wrapper) return;
+      const availableWidth = wrapper.offsetWidth;
       if (!availableWidth) return;
       const nextScaleX = Math.min(Math.max(availableWidth / desiredWidth, 0.3), maxScale);
       const nextScaleY = nextScaleX <= 1 ? nextScaleX : 1;
       setAdScaleX(nextScaleX);
       setAdScaleY(nextScaleY);
+    }
+
+    if (!adsEnabled) {
+      setAdScaleX(1);
+      setAdScaleY(1);
+      return;
     }
 
     updateAdScale();
@@ -89,7 +96,7 @@ export default function TestPage({ initialTest }) {
         resizeObserver.disconnect();
       }
     };
-  }, []);
+  }, [adsEnabled]);
 
   if (!def) {
     return (
