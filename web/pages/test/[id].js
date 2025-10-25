@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import Script from "next/script";
 import Link from "next/link";
@@ -17,6 +17,8 @@ export default function TestPage({ initialTest }) {
   const [answers, setAnswers] = useState([]);
   const [currentQ, setCurrentQ] = useState(0);
   const [adsEnabled, setAdsEnabled] = useState(false);
+  const [adScale, setAdScale] = useState(1);
+  const adWrapperRef = useRef(null);
 
   useEffect(() => {
     if (def) return; // server-side provided
@@ -55,6 +57,34 @@ export default function TestPage({ initialTest }) {
 
     window.addEventListener("pp:consent:changed", onConsentChange);
     return () => window.removeEventListener("pp:consent:changed", onConsentChange);
+  }, []);
+
+  useEffect(() => {
+    const desiredWidth = 320;
+
+    function updateAdScale() {
+      if (!adWrapperRef.current) return;
+      const availableWidth = adWrapperRef.current.offsetWidth;
+      if (!availableWidth) return;
+      const nextScale = Math.min(1, availableWidth / desiredWidth);
+      setAdScale(nextScale);
+    }
+
+    updateAdScale();
+    window.addEventListener("resize", updateAdScale);
+    window.addEventListener("orientationchange", updateAdScale);
+    let resizeObserver;
+    if (typeof ResizeObserver !== "undefined" && adWrapperRef.current) {
+      resizeObserver = new ResizeObserver(updateAdScale);
+      resizeObserver.observe(adWrapperRef.current);
+    }
+    return () => {
+      window.removeEventListener("resize", updateAdScale);
+      window.removeEventListener("orientationchange", updateAdScale);
+      if (resizeObserver) {
+        resizeObserver.disconnect();
+      }
+    };
   }, []);
 
   if (!def) {
@@ -105,32 +135,18 @@ export default function TestPage({ initialTest }) {
       </Head>
 
       <main className="fade-in">
-        {/* Top Navigation */}
-        <div
-          style={{
-            position: 'fixed',
-            top: '20px',
-            right: '20px',
-            zIndex: 100,
-            display: 'flex',
-            gap: '12px',
-            alignItems: 'center'
-          }}
-        >
-          <AuthButton />
-          <LanguageSwitcher />
-        </div>
-
         {/* Header */}
-        <header style={{
+        <header className="page-header" style={{
           background: 'var(--color-bg)',
           borderBottom: '1px solid var(--color-border)',
           padding: 'var(--spacing-md) 0'
         }}>
-          <div className="container" style={{
+          <div className="container header-inner" style={{
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'space-between'
+            justifyContent: 'space-between',
+            flexWrap: 'wrap',
+            gap: 'var(--spacing-sm)'
           }}>
             <Link href="/" style={{
               fontSize: '1.25rem',
@@ -143,7 +159,33 @@ export default function TestPage({ initialTest }) {
             }}>
               PersonaPlay
             </Link>
+            <div className="header-actions" style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '12px',
+              flexWrap: 'wrap',
+              justifyContent: 'flex-end'
+            }}>
+              <AuthButton />
+              <LanguageSwitcher />
+            </div>
           </div>
+          <style jsx>{`
+            @media (max-width: 768px) {
+              .page-header .header-inner {
+                flex-direction: column;
+                align-items: center;
+              }
+              .page-header .header-actions {
+                justify-content: center;
+                order: -1;
+                width: 100%;
+              }
+              .page-header .header-inner :global(a) {
+                text-align: center;
+              }
+            }
+          `}</style>
         </header>
 
         {/* Test Container */}
@@ -217,26 +259,39 @@ export default function TestPage({ initialTest }) {
             marginBottom: 'var(--spacing-xl)',
             textAlign: 'center'
           }}>
-            {adsEnabled ? (
+          {adsEnabled ? (
+            <div
+              ref={adWrapperRef}
+              style={{
+                width: '100%',
+                maxWidth: '320px',
+                margin: '0 auto',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'flex-start',
+                height: `${100 * adScale}px`,
+                overflow: 'hidden'
+              }}
+            >
               <div
                 style={{
-                  width: '100%',
-                  maxWidth: '320px',
-                  margin: '0 auto',
-                  display: 'flex',
-                  justifyContent: 'center'
+                  width: '320px',
+                  height: '100px',
+                  transform: `scale(${adScale})`,
+                  transformOrigin: 'top center'
                 }}
               >
                 <ins
                   className="kakao_ad_area"
-                  style={{ display: 'block', width: '100%' }}
+                  style={{ display: 'none', width: '320px', height: '100px' }}
                   data-ad-unit="DAN-39Qufk252UXag4XA"
                   data-ad-width="320"
                   data-ad-height="100"
                 />
               </div>
-            ) : (
-              <div className="ads-disabled" style={{
+            </div>
+          ) : (
+            <div className="ads-disabled" style={{
                 padding: 'var(--spacing-md)',
                 textAlign: 'center',
                 background: 'var(--color-bg-secondary)',

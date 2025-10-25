@@ -69,12 +69,12 @@ export default function MyResultsPage() {
 
   return (
     <>
-      <header style={{
+      <header className="page-header" style={{
         background: 'var(--color-bg)',
         borderBottom: '1px solid var(--color-border)',
         padding: 'var(--spacing-md) 0'
       }}>
-        <div className="container" style={{
+        <div className="container header-inner" style={{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
@@ -92,7 +92,7 @@ export default function MyResultsPage() {
           }}>
             PersonaPlay
           </Link>
-          <div style={{
+          <div className="header-actions" style={{
             display: 'flex',
             alignItems: 'center',
             gap: '12px',
@@ -103,6 +103,22 @@ export default function MyResultsPage() {
             <LanguageSwitcher />
           </div>
         </div>
+        <style jsx>{`
+          @media (max-width: 768px) {
+            .page-header .header-inner {
+              flex-direction: column;
+              align-items: center;
+            }
+            .page-header .header-actions {
+              justify-content: center;
+              order: -1;
+              width: 100%;
+            }
+            .page-header .header-inner :global(a) {
+              text-align: center;
+            }
+          }
+        `}</style>
       </header>
 
       <div className="container" style={{ padding: 'var(--spacing-2xl)' }}>

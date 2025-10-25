@@ -62,24 +62,9 @@ export default function CategoryPage() {
       </Head>
 
       <main className="fade-in">
-        {/* Top Navigation */}
-        <div
-          style={{
-            position: 'fixed',
-            top: '20px',
-            right: '20px',
-            zIndex: 100,
-            display: 'flex',
-            gap: '12px',
-            alignItems: 'center'
-          }}
-        >
-          <AuthButton />
-          <LanguageSwitcher />
-        </div>
-
         {/* Header */}
         <header
+          className="page-header"
           style={{
             background: "var(--color-bg)",
             borderBottom: "1px solid var(--color-border)",
@@ -87,11 +72,13 @@ export default function CategoryPage() {
           }}
         >
           <div
-            className="container"
+            className="container header-inner"
             style={{
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
+              flexWrap: "wrap",
+              gap: "var(--spacing-sm)",
             }}
           >
             <Link
@@ -108,7 +95,36 @@ export default function CategoryPage() {
             >
               PersonaPlay
             </Link>
+            <div
+              className="header-actions"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "12px",
+                flexWrap: "wrap",
+                justifyContent: "flex-end",
+              }}
+            >
+              <AuthButton />
+              <LanguageSwitcher />
+            </div>
           </div>
+          <style jsx>{`
+            @media (max-width: 768px) {
+              .page-header .header-inner {
+                flex-direction: column;
+                align-items: center;
+              }
+              .page-header .header-actions {
+                justify-content: center;
+                order: -1;
+                width: 100%;
+              }
+              .page-header .header-inner :global(a) {
+                text-align: center;
+              }
+            }
+          `}</style>
         </header>
 
         {/* Category Header */}
