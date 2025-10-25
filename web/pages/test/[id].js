@@ -218,13 +218,21 @@ export default function TestPage({ initialTest }) {
             textAlign: 'center'
           }}>
             {adsEnabled ? (
-              <ins
-                className="kakao_ad_area"
-                style={{ display: "none" }}
-                data-ad-unit="DAN-39Qufk252UXag4XA"
-                data-ad-width="320"
-                data-ad-height="100"
-              />
+              <div
+                style={{
+                  width: '100%',
+                  maxWidth: '320px',
+                  margin: '0 auto'
+                }}
+              >
+                <ins
+                  className="kakao_ad_area"
+                  style={{ display: 'block', width: '100%' }}
+                  data-ad-unit="DAN-39Qufk252UXag4XA"
+                  data-ad-width="320"
+                  data-ad-height="100"
+                />
+              </div>
             ) : (
               <div className="ads-disabled" style={{
                 padding: 'var(--spacing-md)',
