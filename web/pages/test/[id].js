@@ -17,7 +17,8 @@ export default function TestPage({ initialTest }) {
   const [answers, setAnswers] = useState([]);
   const [currentQ, setCurrentQ] = useState(0);
   const [adsEnabled, setAdsEnabled] = useState(false);
-  const [adScale, setAdScale] = useState(1);
+  const [adScaleX, setAdScaleX] = useState(1);
+  const [adScaleY, setAdScaleY] = useState(1);
   const adWrapperRef = useRef(null);
 
   useEffect(() => {
@@ -61,13 +62,16 @@ export default function TestPage({ initialTest }) {
 
   useEffect(() => {
     const desiredWidth = 320;
+    const maxScale = 2;
 
     function updateAdScale() {
       if (!adWrapperRef.current) return;
       const availableWidth = adWrapperRef.current.offsetWidth;
       if (!availableWidth) return;
-      const nextScale = Math.min(1, availableWidth / desiredWidth);
-      setAdScale(nextScale);
+      const nextScaleX = Math.min(Math.max(availableWidth / desiredWidth, 0.3), maxScale);
+      const nextScaleY = nextScaleX <= 1 ? nextScaleX : 1;
+      setAdScaleX(nextScaleX);
+      setAdScaleY(nextScaleY);
     }
 
     updateAdScale();
@@ -264,12 +268,11 @@ export default function TestPage({ initialTest }) {
               ref={adWrapperRef}
               style={{
                 width: '100%',
-                maxWidth: '320px',
                 margin: '0 auto',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'flex-start',
-                height: `${100 * adScale}px`,
+                height: `${100 * adScaleY}px`,
                 overflow: 'hidden'
               }}
             >
@@ -277,7 +280,7 @@ export default function TestPage({ initialTest }) {
                 style={{
                   width: '320px',
                   height: '100px',
-                  transform: `scale(${adScale})`,
+                  transform: `scale(${adScaleX}, ${adScaleY})`,
                   transformOrigin: 'top center'
                 }}
               >
