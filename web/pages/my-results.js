@@ -84,6 +84,30 @@ export default function MyResultsPage() {
         <LanguageSwitcher />
       </div>
 
+      <header style={{
+        background: 'var(--color-bg)',
+        borderBottom: '1px solid var(--color-border)',
+        padding: 'var(--spacing-md) 0'
+      }}>
+        <div className="container" style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between'
+        }}>
+          <Link href="/" style={{
+            fontSize: '1.25rem',
+            fontWeight: '700',
+            background: 'var(--gradient-primary)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            textDecoration: 'none'
+          }}>
+            PersonaPlay
+          </Link>
+        </div>
+      </header>
+
       <div className="container" style={{ padding: 'var(--spacing-2xl)' }}>
         <h1 style={{
           fontSize: '2.5rem',

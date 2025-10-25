@@ -92,18 +92,6 @@ export default function ResultPage() {
             alignItems: 'center'
           }}
         >
-          <Link
-            href="/"
-            className="btn btn-secondary"
-            style={{
-              padding: '8px 16px',
-              textDecoration: 'none',
-              display: 'inline-flex',
-              alignItems: 'center'
-            }}
-          >
-            {t('common.home')}
-          </Link>
           <AuthButton />
           <LanguageSwitcher />
         </div>
