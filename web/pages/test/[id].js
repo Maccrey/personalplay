@@ -222,7 +222,9 @@ export default function TestPage({ initialTest }) {
                 style={{
                   width: '100%',
                   maxWidth: '320px',
-                  margin: '0 auto'
+                  margin: '0 auto',
+                  display: 'flex',
+                  justifyContent: 'center'
                 }}
               >
                 <ins
