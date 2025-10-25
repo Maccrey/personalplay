@@ -69,21 +69,6 @@ export default function MyResultsPage() {
 
   return (
     <>
-      <div
-        style={{
-          position: 'fixed',
-          top: '20px',
-          right: '20px',
-          zIndex: 100,
-          display: 'flex',
-          gap: '12px',
-          alignItems: 'center'
-        }}
-      >
-        <AuthButton />
-        <LanguageSwitcher />
-      </div>
-
       <header style={{
         background: 'var(--color-bg)',
         borderBottom: '1px solid var(--color-border)',
@@ -92,7 +77,9 @@ export default function MyResultsPage() {
         <div className="container" style={{
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'space-between'
+          justifyContent: 'space-between',
+          flexWrap: 'wrap',
+          gap: 'var(--spacing-sm)'
         }}>
           <Link href="/" style={{
             fontSize: '1.25rem',
@@ -105,6 +92,16 @@ export default function MyResultsPage() {
           }}>
             PersonaPlay
           </Link>
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '12px',
+            flexWrap: 'wrap',
+            justifyContent: 'flex-end'
+          }}>
+            <AuthButton />
+            <LanguageSwitcher />
+          </div>
         </div>
       </header>
 

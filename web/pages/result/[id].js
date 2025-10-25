@@ -80,22 +80,6 @@ export default function ResultPage() {
       </Head>
 
       <main className="fade-in">
-        {/* Top Navigation */}
-        <div
-          style={{
-            position: 'fixed',
-            top: '20px',
-            right: '20px',
-            zIndex: 100,
-            display: 'flex',
-            gap: '12px',
-            alignItems: 'center'
-          }}
-        >
-          <AuthButton />
-          <LanguageSwitcher />
-        </div>
-
         {/* Header */}
         <header style={{
           background: 'var(--color-bg)',
@@ -105,7 +89,9 @@ export default function ResultPage() {
           <div className="container" style={{
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'space-between'
+            justifyContent: 'space-between',
+            flexWrap: 'wrap',
+            gap: 'var(--spacing-sm)'
           }}>
             <Link href="/" style={{
               fontSize: '1.25rem',
@@ -118,6 +104,16 @@ export default function ResultPage() {
             }}>
               PersonaPlay
             </Link>
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '12px',
+              flexWrap: 'wrap',
+              justifyContent: 'flex-end'
+            }}>
+              <AuthButton />
+              <LanguageSwitcher />
+            </div>
           </div>
         </header>
 
