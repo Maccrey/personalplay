@@ -1,30 +1,16 @@
 
 import { useEffect, useRef, useState } from "react";
-import { useTranslation } from "@/hooks/useTranslation";
 
 export default function KakaoAd({ unitId, width, height }) {
-  const { t } = useTranslation();
-  const [adsEnabled, setAdsEnabled] = useState(false);
+  const [adsEnabled, setAdsEnabled] = useState(true);
   const [adScaleX, setAdScaleX] = useState(1);
   const [adScaleY, setAdScaleY] = useState(1);
   const adWrapperRef = useRef(null);
+  const adInsRef = useRef(null);
+  const [isDev, setIsDev] = useState(false);
 
   useEffect(() => {
-    function onConsentChange(e) {
-      const c = e?.detail;
-      const enabled = c?.ads === true;
-      setAdsEnabled(enabled === true);
-    }
-
-    try {
-      const raw = localStorage.getItem("pp_consent");
-      const obj = raw ? JSON.parse(raw) : null;
-      const enabled = obj?.ads === true;
-      setAdsEnabled(enabled === true);
-    } catch (e) {}
-
-    window.addEventListener("pp:consent:changed", onConsentChange);
-    return () => window.removeEventListener("pp:consent:changed", onConsentChange);
+    setIsDev(process.env.NODE_ENV === 'development');
   }, []);
 
   useEffect(() => {
@@ -56,6 +42,12 @@ export default function KakaoAd({ unitId, width, height }) {
       resizeObserver = new ResizeObserver(updateAdScale);
       resizeObserver.observe(adWrapperRef.current);
     }
+
+    // Reload ad when unitId changes
+    if (window.kakaoAsyncInit) {
+      window.kakaoAsyncInit();
+    }
+
     return () => {
       window.removeEventListener("resize", updateAdScale);
       window.removeEventListener("orientationchange", updateAdScale);
@@ -63,19 +55,28 @@ export default function KakaoAd({ unitId, width, height }) {
         resizeObserver.disconnect();
       }
     };
-  }, [adsEnabled, width]);
+  }, [adsEnabled, width, unitId]);
 
   if (!adsEnabled) {
+    return null;
+  }
+
+  if (process.env.NODE_ENV === 'development') {
     return (
-      <div className="ads-disabled" style={{
-          padding: 'var(--spacing-md)',
-          textAlign: 'center',
-          background: 'var(--color-bg-secondary)',
-          borderRadius: 'var(--radius-md)',
-          color: 'var(--color-text-tertiary)',
-          fontSize: '0.875rem'
-        }}>
-          {t('result.adsConsent')}
+      <div
+        style={{
+          width: '100%',
+          height: `${height}px`,
+          background: '#f0f0f0',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          border: '1px dashed #ccc',
+          margin: 'var(--spacing-xl) auto',
+          boxSizing: 'border-box',
+        }}
+      >
+        <span style={{ color: '#999', fontSize: '14px' }}>Kakao Ad Placeholder ({width}x{height})</span>
       </div>
     );
   }
@@ -102,6 +103,7 @@ export default function KakaoAd({ unitId, width, height }) {
         }}
       >
         <ins
+          ref={adInsRef}
           className="kakao_ad_area"
           style={{ display: 'none', width: `${width}px`, height: `${height}px` }}
           data-ad-unit={unitId}

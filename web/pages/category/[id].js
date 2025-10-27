@@ -174,6 +174,7 @@ export default function CategoryPage() {
           className="container"
           style={{ padding: "var(--spacing-2xl) var(--spacing-lg)" }}
         >
+          <KakaoAd unitId="DAN-39Qufk252UXag4XA" width={728} height={90} />
           <div
             style={{
               display: "grid",
@@ -255,14 +256,9 @@ export default function CategoryPage() {
                     </div>
                   </div>
                 </Link>
-                {(index + 1) % 4 === 0 && (
-                  <KakaoAd unitId="DAN-39Qufk252UXag4XA" width={320} height={100} />
-                )}
               </Fragment>
             ))}
-          </div>
-
-          {/* Back Button */}
+            </div>
           <div style={{ textAlign: "center", marginTop: "var(--spacing-2xl)" }}>
             <Link href="/" className="btn btn-secondary">
               {t('test.viewOtherCategories')}

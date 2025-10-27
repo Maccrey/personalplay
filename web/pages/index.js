@@ -217,7 +217,7 @@ export default function Home() {
           </div>
 
           {/* Kakao Ad */}
-          <KakaoAd unitId="DAN-39Qufk252UXag4XA" width={320} height={100} />
+          <KakaoAd unitId="DAN-39Qufk252UXag4XA" width={728} height={90} />
 
           {/* Stats Section */}
           <div
