@@ -116,7 +116,7 @@ export default function KakaoAd({ unitId, width, height }) {
           id={`kakao-ad-${uniqueId}`}
           className="kakao_ad_area"
           style={{ display: 'block', width: `${width}px`, height: `${height}px` }} // Changed display to block
-          data-ad-unit={unitId}
+          data-ad-unit={`${unitId}-${uniqueId}`}
           data-ad-width={width}
           data-ad-height={height}
         />
