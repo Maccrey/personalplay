@@ -1,5 +1,5 @@
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useId } from "react";
 
 export default function KakaoAd({ unitId, width, height }) {
   const [adsEnabled, setAdsEnabled] = useState(true);
@@ -7,6 +7,7 @@ export default function KakaoAd({ unitId, width, height }) {
   const [adScaleY, setAdScaleY] = useState(1);
   const adWrapperRef = useRef(null);
   const adInsRef = useRef(null);
+  const uniqueId = useId(); // Generate a unique ID for each ad instance
 
   useEffect(() => {
     const desiredWidth = width;
@@ -39,22 +40,29 @@ export default function KakaoAd({ unitId, width, height }) {
     }
 
     // Initialize/Reload ad when unitId changes or component mounts
-    if (adInsRef.current) {
-      try {
-        (window.adsbykakao = window.adsbykakao || []).push({});
-      } catch (e) {
-        console.error("Failed to load Kakao Ad:", e);
+    const initializeAd = () => {
+      if (adInsRef.current && window.adsbykakao) {
+        try {
+          (window.adsbykakao = window.adsbykakao || []).push({});
+        } catch (e) {
+          console.error("Failed to load Kakao Ad:", e);
+        }
       }
-    }
+    };
+
+    // Give the script a moment to load and then initialize the ad
+    const timer = setTimeout(initializeAd, 100);
 
     return () => {
+      clearTimeout(timer);
       window.removeEventListener("resize", updateAdScale);
       window.removeEventListener("orientationchange", updateAdScale);
       if (resizeObserver) {
         resizeObserver.disconnect();
       }
+      // No explicit destroy method for Kakao Adfit, but removing the element should suffice
     };
-  }, [adsEnabled, width, unitId]);
+  }, [adsEnabled, width, unitId, uniqueId]);
 
   if (!adsEnabled) {
     return null;
@@ -105,6 +113,7 @@ export default function KakaoAd({ unitId, width, height }) {
       >
         <ins
           ref={adInsRef}
+          id={`kakao-ad-${uniqueId}`}
           className="kakao_ad_area"
           style={{ display: 'block', width: `${width}px`, height: `${height}px` }} // Changed display to block
           data-ad-unit={unitId}

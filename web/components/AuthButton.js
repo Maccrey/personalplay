@@ -9,6 +9,13 @@ import { useTranslation } from '@/hooks/useTranslation';
 import Link from 'next/link';
 
 export default function AuthButton() {
+  const deduplicateDisplayName = (displayName) => {
+    if (!displayName) return '';
+    const parts = displayName.split(' ');
+    const uniqueParts = [...new Set(parts)];
+    return uniqueParts.join(' ');
+  };
+
   const { user, loading, signIn, signOut } = useAuth();
   const { t } = useTranslation();
   const [isSigningIn, setIsSigningIn] = useState(false);
@@ -181,7 +188,7 @@ export default function AuthButton() {
         {user.photoURL && (
           <img
             src={user.photoURL}
-            alt={user.displayName || 'User'}
+            alt=""
             className="user-avatar"
             style={{
               width: '24px',
@@ -190,7 +197,7 @@ export default function AuthButton() {
             }}
           />
         )}
-        <span className="user-name">{user.displayName || user.email}</span>
+        <span className="user-name">{deduplicateDisplayName(user.displayName) || user.email}</span>
 
         <style jsx>{`
           /* Mobile optimizations */
