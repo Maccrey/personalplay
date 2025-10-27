@@ -90,6 +90,7 @@ export default function KakaoAd({ unitId, width, height }) {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'flex-start',
+        minHeight: `${height}px`, // Ensure minimum height
         height: `${height * adScaleY}px`,
         overflow: 'hidden'
       }}
@@ -99,7 +100,8 @@ export default function KakaoAd({ unitId, width, height }) {
           width: `${width}px`,
           height: `${height}px`,
           transform: `scale(${adScaleX}, ${adScaleY})`,
-          transformOrigin: 'top center'
+          transformOrigin: 'top center',
+          minWidth: `${width * 0.3}px`, // Prevent ad from becoming too small
         }}
       >
         <ins

@@ -204,7 +204,7 @@ export default function TestPage({ initialTest }) {
           </div>
 
           {/* Kakao Ad between question and answers */}
-          <KakaoAd unitId="DAN-39Qufk252UXag4XA" width={320} height={100} />
+          <KakaoAd unitId="DAN-39Qufk252UXag4XA" width={728} height={90} />
 
           {/* Answer Buttons */}
           <div style={{

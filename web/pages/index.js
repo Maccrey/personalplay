@@ -27,6 +27,7 @@ export default function Home() {
         canonical="/"
         ogType="website"
       />
+      <KakaoAd unitId="DAN-39Qufk252UXag4XA" width={728} height={90} />
 
       <main className="fade-in">
         {/* Hero Section */}
