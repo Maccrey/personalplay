@@ -7,10 +7,16 @@ import { useTranslation } from "@/hooks/useTranslation";
 import { getAllCategories } from "@/lib/tests-data";
 import AuthButton from "@/components/AuthButton";
 import KakaoAd from "@/components/KakaoAd";
+import useMobileDetect from "@/hooks/useMobileDetect";
 
 export default function Home() {
   const [categories, setCategories] = useState([]);
   const { t, locale } = useTranslation();
+  const isMobile = useMobileDetect();
+
+  const adUnitId = isMobile ? "DAN-2zFdK8c07u2jF7YL" : "DAN-39Qufk252UXag4XA";
+  const adWidth = isMobile ? 320 : 728;
+  const adHeight = isMobile ? 100 : 90;
 
   useEffect(() => {
     getAllCategories(locale)
@@ -94,16 +100,7 @@ export default function Home() {
           className="container"
           style={{ paddingBottom: "var(--spacing-2xl)" }}
         >
-          <KakaoAd unitId="DAN-39Qufk252UXag4XA" width={728} height={90} />
-          <h2
-            style={{
-              textAlign: "center",
-              marginBottom: "var(--spacing-xl)",
-              fontSize: "2rem",
-            }}
-          >
-            {t('home.categories')}
-          </h2>
+          <KakaoAd unitId={adUnitId} width={adWidth} height={adHeight} />
 
           <div
             style={{
@@ -217,7 +214,7 @@ export default function Home() {
           </div>
 
           {/* Kakao Ad */}
-          <KakaoAd unitId="DAN-39Qufk252UXag4XA" width={728} height={90} />
+          <KakaoAd unitId={adUnitId} width={adWidth} height={adHeight} />
 
           {/* Stats Section */}
           <div

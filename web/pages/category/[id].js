@@ -6,6 +6,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 import AuthButton from "@/components/AuthButton";
 import KakaoAd from "@/components/KakaoAd";
 import { useTranslation } from "@/hooks/useTranslation";
+import useMobileDetect from "@/hooks/useMobileDetect";
 import { getCategoryById, getAllTests } from "@/lib/tests-data";
 
 export default function CategoryPage() {
@@ -14,6 +15,11 @@ export default function CategoryPage() {
   const [category, setCategory] = useState(null);
   const [tests, setTests] = useState([]);
   const { t, locale } = useTranslation();
+  const isMobile = useMobileDetect();
+
+  const adUnitId = isMobile ? "DAN-2zFdK8c07u2jF7YL" : "DAN-39Qufk252UXag4XA";
+  const adWidth = isMobile ? 320 : 728;
+  const adHeight = isMobile ? 100 : 90;
 
   useEffect(() => {
     if (!id) return;
@@ -174,7 +180,7 @@ export default function CategoryPage() {
           className="container"
           style={{ padding: "var(--spacing-2xl) var(--spacing-lg)" }}
         >
-          <KakaoAd unitId="DAN-39Qufk252UXag4XA" width={728} height={90} />
+          <KakaoAd unitId={adUnitId} width={adWidth} height={adHeight} />
 
           <div
             style={{
@@ -260,7 +266,7 @@ export default function CategoryPage() {
               </Fragment>
             ))}
             </div>
-          <KakaoAd unitId="DAN-39Qufk252UXag4XA" width={728} height={90} />
+          <KakaoAd unitId={adUnitId} width={adWidth} height={adHeight} />
 
           <div style={{ textAlign: "center", marginTop: "var(--spacing-2xl)" }}>
             <Link href="/" className="btn btn-secondary">

@@ -7,6 +7,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 import AuthButton from "@/components/AuthButton";
 import KakaoAd from "@/components/KakaoAd";
 import { useTranslation } from "@/hooks/useTranslation";
+import useMobileDetect from "@/hooks/useMobileDetect";
 import { getTestById } from "@/lib/tests-data";
 
 export default function TestPage({ initialTest }) {
@@ -16,6 +17,11 @@ export default function TestPage({ initialTest }) {
   const [def, setDef] = useState(initialTest || null);
   const [answers, setAnswers] = useState([]);
   const [currentQ, setCurrentQ] = useState(0);
+  const isMobile = useMobileDetect();
+
+  const adUnitId = isMobile ? "DAN-2zFdK8c07u2jF7YL" : "DAN-39Qufk252UXag4XA";
+  const adWidth = isMobile ? 320 : 728;
+  const adHeight = isMobile ? 100 : 90;
 
   useEffect(() => {
     if (def) return; // server-side provided
@@ -206,7 +212,7 @@ export default function TestPage({ initialTest }) {
           {/* Kakao Ad between question and answers */}
 
 
-          <KakaoAd unitId="DAN-39Qufk252UXag4XA" width={728} height={90} />
+          <KakaoAd unitId={adUnitId} width={adWidth} height={adHeight} />
 
           {/* Answer Buttons */}
           <div style={{
