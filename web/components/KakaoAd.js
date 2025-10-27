@@ -7,11 +7,6 @@ export default function KakaoAd({ unitId, width, height }) {
   const [adScaleY, setAdScaleY] = useState(1);
   const adWrapperRef = useRef(null);
   const adInsRef = useRef(null);
-  const [isDev, setIsDev] = useState(false);
-
-  useEffect(() => {
-    setIsDev(process.env.NODE_ENV === 'development');
-  }, []);
 
   useEffect(() => {
     const desiredWidth = width;
@@ -43,9 +38,13 @@ export default function KakaoAd({ unitId, width, height }) {
       resizeObserver.observe(adWrapperRef.current);
     }
 
-    // Reload ad when unitId changes
-    if (window.kakaoAsyncInit) {
-      window.kakaoAsyncInit();
+    // Initialize/Reload ad when unitId changes or component mounts
+    if (adInsRef.current) {
+      try {
+        (window.adsbykakao = window.adsbykakao || []).push({});
+      } catch (e) {
+        console.error("Failed to load Kakao Ad:", e);
+      }
     }
 
     return () => {
@@ -107,7 +106,7 @@ export default function KakaoAd({ unitId, width, height }) {
         <ins
           ref={adInsRef}
           className="kakao_ad_area"
-          style={{ display: 'none', width: `${width}px`, height: `${height}px` }}
+          style={{ display: 'block', width: `${width}px`, height: `${height}px` }} // Changed display to block
           data-ad-unit={unitId}
           data-ad-width={width}
           data-ad-height={height}

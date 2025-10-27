@@ -3,31 +3,12 @@ import { useRouter } from "next/router";
 import "../styles/globals.css";
 import Head from "next/head";
 import Script from "next/script";
-import ConsentBanner from "../components/ConsentBanner";
 import Analytics from "../components/Analytics";
 import AdInitializer from "@/components/AdInitializer";
 import { LanguageProvider } from "../contexts/LanguageContext";
 import { AuthProvider } from "../contexts/AuthContext";
-import { AdProvider, useAdContext } from "../contexts/AdContext";
+import { AdProvider } from "../contexts/AdContext";
 import * as analytics from "../lib/analytics";
-
-// 광고 허용 여부를 결정하는 컨트롤러 컴포넌트
-function AdContentController({ pageProps }) {
-  const { setIsAdAllowed } = useAdContext();
-
-  useEffect(() => {
-    // pageProps에 핵심 콘텐츠가 있는지 확인
-    const hasContent = 
-      pageProps.categories?.length > 0 ||
-      (pageProps.category && pageProps.tests?.length > 0) ||
-      !!pageProps.test ||
-      !!pageProps.result;
-
-    setIsAdAllowed(hasContent);
-  }, [pageProps, setIsAdAllowed]);
-
-  return null; // 이 컴포넌트는 UI를 렌더링하지 않음
-}
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
@@ -65,10 +46,8 @@ export default function App({ Component, pageProps }) {
             <meta name-color="#8B5CF6" />
           </Head>
           <AdInitializer />
-          <AdContentController pageProps={pageProps} />
           <Analytics />
           <Component {...pageProps} />
-          <ConsentBanner />
           <Script
             src="//t1.daumcdn.net/kas/static/ba.min.js"
             strategy="afterInteractive"

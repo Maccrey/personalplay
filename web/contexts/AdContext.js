@@ -1,12 +1,10 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext } from 'react';
 
 const AdContext = createContext();
 
 export function AdProvider({ children }) {
-  const [isAdAllowed, setIsAdAllowed] = useState(false);
-
   return (
-    <AdContext.Provider value={{ isAdAllowed, setIsAdAllowed }}>
+    <AdContext.Provider value={{ isAdAllowed: true, setIsAdAllowed: () => {} }}>
       {children}
     </AdContext.Provider>
   );

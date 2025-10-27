@@ -27,8 +27,6 @@ export default function Home() {
         canonical="/"
         ogType="website"
       />
-      <KakaoAd unitId="DAN-39Qufk252UXag4XA" width={728} height={90} />
-
       <main className="fade-in">
         {/* Hero Section */}
         <section
@@ -96,6 +94,7 @@ export default function Home() {
           className="container"
           style={{ paddingBottom: "var(--spacing-2xl)" }}
         >
+          <KakaoAd unitId="DAN-39Qufk252UXag4XA" width={728} height={90} />
           <h2
             style={{
               textAlign: "center",
