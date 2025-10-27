@@ -174,9 +174,7 @@ export default function CategoryPage() {
           className="container"
           style={{ padding: "var(--spacing-2xl) var(--spacing-lg)" }}
         >
-
-
-
+          <KakaoAd unitId="DAN-39Qufk252UXag4XA" width={728} height={90} />
 
           <div
             style={{
