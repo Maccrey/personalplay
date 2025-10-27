@@ -175,6 +175,9 @@ export default function CategoryPage() {
           style={{ padding: "var(--spacing-2xl) var(--spacing-lg)" }}
         >
 
+
+
+
           <div
             style={{
               display: "grid",
@@ -251,7 +254,7 @@ export default function CategoryPage() {
                           marginLeft: "auto",
                         }}
                       >
-                        {t('test.startTest')}
+                        →
                       </span>
                     </div>
                   </div>
@@ -259,12 +262,15 @@ export default function CategoryPage() {
               </Fragment>
             ))}
             </div>
+          <KakaoAd unitId="DAN-39Qufk252UXag4XA" width={728} height={90} />
+
           <div style={{ textAlign: "center", marginTop: "var(--spacing-2xl)" }}>
             <Link href="/" className="btn btn-secondary">
               {t('test.viewOtherCategories')}
             </Link>
           </div>
         </section>
+
 
       </main>
     </>
