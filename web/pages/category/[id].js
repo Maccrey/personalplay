@@ -1,9 +1,10 @@
 import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import AuthButton from "@/components/AuthButton";
+import KakaoAd from "@/components/KakaoAd";
 import { useTranslation } from "@/hooks/useTranslation";
 import { getCategoryById, getAllTests } from "@/lib/tests-data";
 
@@ -180,80 +181,84 @@ export default function CategoryPage() {
               gap: "var(--spacing-lg)",
             }}
           >
-            {tests.map((test) => (
-              <Link
-                key={test.id}
-                href={`/test/${test.id}`}
-                style={{ textDecoration: "none" }}
-              >
-                <div
-                  className="card"
-                  style={{
-                    height: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                    cursor: "pointer",
-                    border: "2px solid transparent",
-                    transition: "all 0.3s ease",
-                  }}
+            {tests.map((test, index) => (
+              <Fragment key={test.id}>
+                <Link
+                  href={`/test/${test.id}`}
+                  style={{ textDecoration: "none" }}
                 >
                   <div
+                    className="card"
                     style={{
-                      width: "70px",
-                      height: "70px",
-                      borderRadius: "var(--radius-lg)",
-                      background: category.color,
+                      height: "100%",
                       display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      marginBottom: "var(--spacing-md)",
-                      fontSize: "2.5rem",
+                      flexDirection: "column",
+                      cursor: "pointer",
+                      border: "2px solid transparent",
+                      transition: "all 0.3s ease",
                     }}
                   >
-                    {getTestIcon(test.id)}
-                  </div>
-
-                  <h3
-                    style={{
-                      fontSize: "1.25rem",
-                      marginBottom: "var(--spacing-sm)",
-                      color: "var(--color-text)",
-                    }}
-                  >
-                    {t(`tests.${test.id}.title`)}
-                  </h3>
-
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "var(--spacing-sm)",
-                      marginTop: "auto",
-                      paddingTop: "var(--spacing-md)",
-                      borderTop: "1px solid var(--color-border)",
-                    }}
-                  >
-                    <span
+                    <div
                       style={{
-                        fontSize: "0.875rem",
-                        color: "var(--color-text-tertiary)",
+                        width: "70px",
+                        height: "70px",
+                        borderRadius: "var(--radius-lg)",
+                        background: category.color,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        marginBottom: "var(--spacing-md)",
+                        fontSize: "2.5rem",
                       }}
                     >
-                      {test.questions?.length || 0}{t('test.questions')}
-                    </span>
-                    <span
+                      {getTestIcon(test.id)}
+                    </div>
+
+                    <h3
                       style={{
-                        fontSize: "0.875rem",
-                        fontWeight: "600",
-                        color: category.color,
-                        marginLeft: "auto",
+                        fontSize: "1.25rem",
+                        marginBottom: "var(--spacing-sm)",
+                        color: "var(--color-text)",
                       }}
                     >
-                      {t('test.startTest')}
-                    </span>
+                      {t(`tests.${test.id}.title`)}
+                    </h3>
+
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "var(--spacing-sm)",
+                        marginTop: "auto",
+                        paddingTop: "var(--spacing-md)",
+                        borderTop: "1px solid var(--color-border)",
+                      }}
+                    >
+                      <span
+                        style={{
+                          fontSize: "0.875rem",
+                          color: "var(--color-text-tertiary)",
+                        }}
+                      >
+                        {test.questions?.length || 0}{t('test.questions')}
+                      </span>
+                      <span
+                        style={{
+                          fontSize: "0.875rem",
+                          fontWeight: "600",
+                          color: category.color,
+                          marginLeft: "auto",
+                        }}
+                      >
+                        {t('test.startTest')}
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </Link>
+                </Link>
+                {(index + 1) % 4 === 0 && (
+                  <KakaoAd unitId="DAN-39Qufk252UXag4XA" width={320} height={100} />
+                )}
+              </Fragment>
             ))}
           </div>
 

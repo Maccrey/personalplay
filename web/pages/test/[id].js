@@ -1,11 +1,11 @@
 import { useRouter } from "next/router";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
-import Script from "next/script";
 import Link from "next/link";
 import { trackEvent } from "@/utils/analytics";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import AuthButton from "@/components/AuthButton";
+import KakaoAd from "@/components/KakaoAd";
 import { useTranslation } from "@/hooks/useTranslation";
 import { getTestById } from "@/lib/tests-data";
 
@@ -16,10 +16,6 @@ export default function TestPage({ initialTest }) {
   const [def, setDef] = useState(initialTest || null);
   const [answers, setAnswers] = useState([]);
   const [currentQ, setCurrentQ] = useState(0);
-  const [adsEnabled, setAdsEnabled] = useState(false);
-  const [adScaleX, setAdScaleX] = useState(1);
-  const [adScaleY, setAdScaleY] = useState(1);
-  const adWrapperRef = useRef(null);
 
   useEffect(() => {
     if (def) return; // server-side provided
@@ -39,64 +35,6 @@ export default function TestPage({ initialTest }) {
       });
     }
   }, [def, id]);
-
-  // Consent state management
-  useEffect(() => {
-    function onConsentChange(e) {
-      const c = e?.detail;
-      const enabled = c?.ads === true;
-      setAdsEnabled(enabled === true);
-    }
-
-    // Initial state
-    try {
-      const raw = localStorage.getItem("pp_consent");
-      const obj = raw ? JSON.parse(raw) : null;
-      const enabled = obj?.ads === true;
-      setAdsEnabled(enabled === true);
-    } catch (e) {}
-
-    window.addEventListener("pp:consent:changed", onConsentChange);
-    return () => window.removeEventListener("pp:consent:changed", onConsentChange);
-  }, []);
-
-  useEffect(() => {
-    const desiredWidth = 320;
-    const maxScale = 2;
-
-    function updateAdScale() {
-      const wrapper = adWrapperRef.current;
-      if (!wrapper) return;
-      const availableWidth = wrapper.offsetWidth;
-      if (!availableWidth) return;
-      const nextScaleX = Math.min(Math.max(availableWidth / desiredWidth, 0.3), maxScale);
-      const nextScaleY = nextScaleX <= 1 ? nextScaleX : 1;
-      setAdScaleX(nextScaleX);
-      setAdScaleY(nextScaleY);
-    }
-
-    if (!adsEnabled) {
-      setAdScaleX(1);
-      setAdScaleY(1);
-      return;
-    }
-
-    updateAdScale();
-    window.addEventListener("resize", updateAdScale);
-    window.addEventListener("orientationchange", updateAdScale);
-    let resizeObserver;
-    if (typeof ResizeObserver !== "undefined" && adWrapperRef.current) {
-      resizeObserver = new ResizeObserver(updateAdScale);
-      resizeObserver.observe(adWrapperRef.current);
-    }
-    return () => {
-      window.removeEventListener("resize", updateAdScale);
-      window.removeEventListener("orientationchange", updateAdScale);
-      if (resizeObserver) {
-        resizeObserver.disconnect();
-      }
-    };
-  }, [adsEnabled]);
 
   if (!def) {
     return (
@@ -266,53 +204,7 @@ export default function TestPage({ initialTest }) {
           </div>
 
           {/* Kakao Ad between question and answers */}
-          <div style={{
-            marginBottom: 'var(--spacing-xl)',
-            textAlign: 'center'
-          }}>
-          {adsEnabled ? (
-            <div
-              ref={adWrapperRef}
-              style={{
-                width: '100%',
-                margin: '0 auto',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'flex-start',
-                height: `${100 * adScaleY}px`,
-                overflow: 'hidden'
-              }}
-            >
-              <div
-                style={{
-                  width: '320px',
-                  height: '100px',
-                  transform: `scale(${adScaleX}, ${adScaleY})`,
-                  transformOrigin: 'top center'
-                }}
-              >
-                <ins
-                  className="kakao_ad_area"
-                  style={{ display: 'none', width: '320px', height: '100px' }}
-                  data-ad-unit="DAN-39Qufk252UXag4XA"
-                  data-ad-width="320"
-                  data-ad-height="100"
-                />
-              </div>
-            </div>
-          ) : (
-            <div className="ads-disabled" style={{
-                padding: 'var(--spacing-md)',
-                textAlign: 'center',
-                background: 'var(--color-bg-secondary)',
-                borderRadius: 'var(--radius-md)',
-                color: 'var(--color-text-tertiary)',
-                fontSize: '0.875rem'
-              }}>
-                {t('result.adsConsent')}
-              </div>
-            )}
-          </div>
+          <KakaoAd unitId="DAN-39Qufk252UXag4XA" width={320} height={100} />
 
           {/* Answer Buttons */}
           <div style={{
@@ -383,11 +275,6 @@ export default function TestPage({ initialTest }) {
         </div>
 
       </main>
-      <Script
-        src="//t1.daumcdn.net/kas/static/ba.min.js"
-        strategy="afterInteractive"
-        async
-      />
     </>
   );
 }

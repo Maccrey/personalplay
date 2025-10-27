@@ -6,6 +6,7 @@ import VisitorCounter from "@/components/VisitorCounter";
 import { useTranslation } from "@/hooks/useTranslation";
 import { getAllCategories } from "@/lib/tests-data";
 import AuthButton from "@/components/AuthButton";
+import KakaoAd from "@/components/KakaoAd";
 
 export default function Home() {
   const [categories, setCategories] = useState([]);
@@ -214,6 +215,9 @@ export default function Home() {
               </Link>
             ))}
           </div>
+
+          {/* Kakao Ad */}
+          <KakaoAd unitId="DAN-39Qufk252UXag4XA" width={320} height={100} />
 
           {/* Stats Section */}
           <div

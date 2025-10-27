@@ -2,8 +2,10 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import "../styles/globals.css";
 import Head from "next/head";
+import Script from "next/script";
 import ConsentBanner from "../components/ConsentBanner";
 import Analytics from "../components/Analytics";
+import AdInitializer from "@/components/AdInitializer";
 import { LanguageProvider } from "../contexts/LanguageContext";
 import { AuthProvider } from "../contexts/AuthContext";
 import { AdProvider, useAdContext } from "../contexts/AdContext";
@@ -60,12 +62,18 @@ export default function App({ Component, pageProps }) {
             <link rel="manifest" href="/site.webmanifest" />
 
             {/* Theme Color */}
-            <meta name="theme-color" content="#8B5CF6" />
+            <meta name-color="#8B5CF6" />
           </Head>
+          <AdInitializer />
           <AdContentController pageProps={pageProps} />
           <Analytics />
           <Component {...pageProps} />
           <ConsentBanner />
+          <Script
+            src="//t1.daumcdn.net/kas/static/ba.min.js"
+            strategy="afterInteractive"
+            async
+          />
         </AdProvider>
       </AuthProvider>
     </LanguageProvider>
