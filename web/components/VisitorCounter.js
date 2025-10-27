@@ -7,21 +7,20 @@ export default function VisitorCounter() {
   const { t } = useTranslation();
 
   useEffect(() => {
-    // 방문 기록
-    recordVisit();
+    async function initVisitStats() {
+      await recordVisit();
+      const initialStats = await getVisitorStats();
+      setStats(initialStats);
 
-    // 통계 조회
-    async function fetchStats() {
-      const data = await getVisitorStats();
-      setStats(data);
+      const interval = setInterval(async () => {
+        const updatedStats = await getVisitorStats();
+        setStats(updatedStats);
+      }, 10000);
+
+      return () => clearInterval(interval);
     }
 
-    fetchStats();
-
-    // 10초마다 업데이트 (실시간 반영)
-    const interval = setInterval(fetchStats, 10000);
-
-    return () => clearInterval(interval);
+    initVisitStats();
   }, []);
 
   return (
