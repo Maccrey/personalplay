@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import SEOHead from "@/components/SEOHead";
@@ -10,6 +11,7 @@ import KakaoAd from "@/components/KakaoAd";
 import useMobileDetect from "@/hooks/useMobileDetect";
 
 export default function Home() {
+  const router = useRouter();
   const [categories, setCategories] = useState([]);
   const { t, locale } = useTranslation();
   const isMobile = useMobileDetect();
@@ -101,7 +103,7 @@ export default function Home() {
           className="container"
           style={{ paddingBottom: "var(--spacing-2xl)" }}
         >
-          <KakaoAd key={adUnitId} unitId={adUnitId} width={adWidth} height={adHeight} />
+          <KakaoAd key={`${router.asPath}-${adUnitId}`} unitId={adUnitId} width={adWidth} height={adHeight} />
 
           <div
             style={{
@@ -214,7 +216,7 @@ export default function Home() {
             ))}
           </div>
 
-<KakaoAd key={bottomAdUnitId} unitId={bottomAdUnitId} width={adWidth} height={adHeight} />
+<KakaoAd key={`${router.asPath}-${bottomAdUnitId}`} unitId={bottomAdUnitId} width={adWidth} height={adHeight} />
 
           {/* Stats Section */}
           <div

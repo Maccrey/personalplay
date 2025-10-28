@@ -181,7 +181,7 @@ export default function CategoryPage() {
           className="container"
           style={{ padding: "var(--spacing-2xl) var(--spacing-lg)" }}
         >
-          <KakaoAd key={adUnitId} unitId={adUnitId} width={adWidth} height={adHeight} />
+          <KakaoAd key={`${router.asPath}-${adUnitId}`} unitId={adUnitId} width={adWidth} height={adHeight} />
 
           <div
             style={{
@@ -266,7 +266,7 @@ export default function CategoryPage() {
                 </Link>
               </Fragment>
             ))}
-            </div><KakaoAd key={bottomAdUnitId} unitId={bottomAdUnitId} width={adWidth} height={adHeight} />
+            </div><KakaoAd key={`${router.asPath}-${bottomAdUnitId}`} unitId={bottomAdUnitId} width={adWidth} height={adHeight} />
 
           <div style={{ textAlign: "center", marginTop: "var(--spacing-2xl)" }}>
             <Link href="/" className="btn btn-secondary">
