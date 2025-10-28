@@ -52,6 +52,9 @@ export default function App({ Component, pageProps }) {
             src="//t1.daumcdn.net/kas/static/ba.min.js"
             strategy="afterInteractive"
             async
+            onLoad={() => {
+              window.kakaoAdsReady = true;
+            }}
           />
         </AdProvider>
       </AuthProvider>

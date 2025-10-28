@@ -5,11 +5,9 @@ export default function KakaoAd({ unitId, width, height }) {
   const uniqueId = useId(); // To ensure re-initialization on navigation
 
   useEffect(() => {
-    // When the component mounts or unitId changes, re-initialize the ad.
     const initializeAd = () => {
       if (adInsRef.current && window.adsbykakao) {
         try {
-          // This tells the Kakao script to find and fill new ad slots.
           (window.adsbykakao = window.adsbykakao || []).push({});
         } catch (e) {
           console.error("Failed to load Kakao Ad:", e);
@@ -17,13 +15,20 @@ export default function KakaoAd({ unitId, width, height }) {
       }
     };
 
-    // The script might load after the component, so we delay slightly.
-    const timer = setTimeout(initializeAd, 100);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [unitId, uniqueId]); // Depend on unitId and uniqueId
+    // Wait for the Kakao Ad script to be ready
+    if (window.kakaoAdsReady) {
+      initializeAd();
+    } else {
+      // If not ready, poll every 100ms
+      const interval = setInterval(() => {
+        if (window.kakaoAdsReady) {
+          initializeAd();
+          clearInterval(interval);
+        }
+      }, 100);
+      return () => clearInterval(interval);
+    }
+  }, [unitId, uniqueId]);
 
   // In development, show a placeholder.
   if (process.env.NODE_ENV === 'development') {
@@ -56,7 +61,6 @@ export default function KakaoAd({ unitId, width, height }) {
         display: 'flex',
         justifyContent: 'center',
         minHeight: `${height}px`,
-        backgroundColor: 'rgba(255, 0, 0, 0.2)', // Debugging background
       }}
     >
       <ins
