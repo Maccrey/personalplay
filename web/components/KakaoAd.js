@@ -1,34 +1,7 @@
-import { useEffect, useRef, useId } from "react";
+import { useRef } from "react";
 
 export default function KakaoAd({ unitId, width, height }) {
   const adInsRef = useRef(null);
-  const uniqueId = useId(); // To ensure re-initialization on navigation
-
-  useEffect(() => {
-    const initializeAd = () => {
-      if (adInsRef.current && window.adsbykakao) {
-        try {
-          (window.adsbykakao = window.adsbykakao || []).push({});
-        } catch (e) {
-          console.error("Failed to load Kakao Ad:", e);
-        }
-      }
-    };
-
-    // Wait for the Kakao Ad script to be ready
-    if (window.kakaoAdsReady) {
-      initializeAd();
-    } else {
-      // If not ready, poll every 100ms
-      const interval = setInterval(() => {
-        if (window.kakaoAdsReady) {
-          initializeAd();
-          clearInterval(interval);
-        }
-      }, 100);
-      return () => clearInterval(interval);
-    }
-  }, [unitId, uniqueId]);
 
   // In development, show a placeholder.
   if (process.env.NODE_ENV === 'development') {
