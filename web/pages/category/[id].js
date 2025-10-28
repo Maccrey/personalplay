@@ -7,13 +7,13 @@ import AuthButton from "@/components/AuthButton";
 import KakaoAd from "@/components/KakaoAd";
 import { useTranslation } from "@/hooks/useTranslation";
 import useMobileDetect from "@/hooks/useMobileDetect";
-import { getCategoryById, getAllTests } from "@/lib/tests-data";
+import { getCategoryData } from "@/lib/category-data";
+import { getCategoryForTest } from "@/lib/category-mapping";
 
-export default function CategoryPage() {
+export default function CategoryPage({ initialCategory, initialTests }) {
   const router = useRouter();
-  const { id } = router.query;
-  const [category, setCategory] = useState(null);
-  const [tests, setTests] = useState([]);
+  const [category, setCategory] = useState(initialCategory);
+  const [tests, setTests] = useState(initialTests);
   const { t, locale } = useTranslation();
   const isMobile = useMobileDetect();
 
@@ -23,15 +23,16 @@ export default function CategoryPage() {
   const bottomAdUnitId = isMobile ? "DAN-pshRbpDXYbRPPLcG" : "DAN-c7xWiCYKN6ZkDMLs";
 
   useEffect(() => {
-    if (!id) return;
-
-    getCategoryById(id, locale).then((cat) => {
-      if (cat) {
-        setCategory(cat);
-        setTests(cat.tests || []);
-      }
-    });
-  }, [id, locale]);
+    if (!category && router.query.id) {
+      // Fallback for client-side rendering if static props fails
+      getCategoryById(router.query.id, locale).then((cat) => {
+        if (cat) {
+          setCategory(cat);
+          setTests(cat.tests || []);
+        }
+      });
+    }
+  }, [router.query.id, locale, category]);
 
   if (!category) {
     return (
@@ -293,11 +294,42 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  return {
-    props: {
-      categoryId: params.id,
-    },
-  };
+  const { id } = params;
+  const fs = require("fs");
+  const path = require("path");
+
+  try {
+    const testsFilePath = path.join(process.cwd(), 'data', 'tests.json');
+    const testsFileContents = fs.readFileSync(testsFilePath, 'utf8');
+    const allTests = JSON.parse(testsFileContents).tests;
+
+    const categoryTests = allTests.filter(test => getCategoryForTest(test.id) === id);
+
+    const categoryData = getCategoryData(id);
+
+    const category = {
+      id: id,
+      icon: categoryData.icon,
+      color: categoryData.color,
+      gradient: categoryData.gradient,
+      tests: categoryTests
+    };
+
+    return {
+      props: {
+        initialCategory: category,
+        initialTests: categoryTests,
+      },
+    };
+  } catch (error) {
+    console.error(error);
+    return {
+      props: {
+        initialCategory: null,
+        initialTests: [],
+      },
+    };
+  }
 }
 
 function getTestIcon(id) {

@@ -301,13 +301,16 @@ export async function getStaticProps(context) {
   const { id } = context.params || {};
   const fs = require("fs");
   const path = require("path");
+
   try {
-    const p = path.join(process.cwd(), "data", "tests.json");
-    const raw = fs.readFileSync(p, "utf8");
-    const obj = JSON.parse(raw);
-    const t = obj.tests.find((x) => x.id === id) || null;
-    return { props: { initialTest: t } };
+    const filePath = path.join(process.cwd(), 'data', 'tests.json');
+    const fileContents = fs.readFileSync(filePath, 'utf8');
+    const allTests = JSON.parse(fileContents).tests;
+    const testData = allTests.find((t) => t.id === id) || null;
+
+    return { props: { initialTest: testData } };
   } catch (e) {
+    console.error(e);
     return { props: { initialTest: null } };
   }
 }

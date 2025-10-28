@@ -5,8 +5,6 @@
 
 import { getCategoryForTest } from './category-mapping';
 import { getCategoryData } from './category-data';
-import path from 'path';
-import fs from 'fs';
 
 let cachedTests = null;
 
@@ -16,19 +14,6 @@ let cachedTests = null;
  * @returns {Promise<Object>} Tests data
  */
 export async function loadTestsData(locale = 'ko') {
-  // On the server, read the file directly from the filesystem
-  if (typeof window === 'undefined') {
-    try {
-      const filePath = path.join(process.cwd(), 'public', 'data', `tests-${locale}.json`);
-      const fileContents = fs.readFileSync(filePath, 'utf8');
-      return JSON.parse(fileContents);
-    } catch (error) {
-      console.error(`Error reading tests data file for locale ${locale}:`, error);
-      throw error;
-    }
-  }
-
-  // On the client, fetch the file
   try {
     const response = await fetch(`/data/tests-${locale}.json`);
 
