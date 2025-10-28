@@ -212,7 +212,7 @@ export default function TestPage({ initialTest }) {
           {/* Kakao Ad between question and answers */}
 
 
-          <KakaoAd unitId={adUnitId} width={adWidth} height={adHeight} />
+          <KakaoAd key={adUnitId} unitId={adUnitId} width={adWidth} height={adHeight} />
 
           {/* Answer Buttons */}
           <div style={{

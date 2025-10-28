@@ -101,7 +101,7 @@ export default function Home() {
           className="container"
           style={{ paddingBottom: "var(--spacing-2xl)" }}
         >
-          <KakaoAd unitId={adUnitId} width={adWidth} height={adHeight} />
+          <KakaoAd key={adUnitId} unitId={adUnitId} width={adWidth} height={adHeight} />
 
           <div
             style={{
@@ -214,7 +214,7 @@ export default function Home() {
             ))}
           </div>
 
-<KakaoAd unitId={bottomAdUnitId} width={adWidth} height={adHeight} />
+<KakaoAd key={bottomAdUnitId} unitId={bottomAdUnitId} width={adWidth} height={adHeight} />
 
           {/* Stats Section */}
           <div
