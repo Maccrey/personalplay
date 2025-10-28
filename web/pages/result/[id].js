@@ -387,7 +387,8 @@ export default function ResultPage() {
               display: 'flex',
               gap: 'var(--spacing-md)',
               justifyContent: 'center',
-              flexWrap: 'wrap'
+              flexWrap: 'wrap',
+              marginTop: 'var(--spacing-lg)'
             }}>
               <button
                 onClick={() => {
@@ -412,19 +413,45 @@ export default function ResultPage() {
                       .catch(() => alert("Failed to copy link"));
                   }
                 }}
-                className="btn btn-primary"
+                className="btn"
                 style={{
-                  padding: 'var(--spacing-md) var(--spacing-xl)'
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  padding: '8px 16px',
+                  background: 'var(--color-bg-secondary)',
+                  border: '1px solid var(--color-border)',
+                  borderRadius: 'var(--radius-md)',
+                  cursor: 'pointer',
+                  fontSize: '14px',
+                  fontWeight: '600',
+                  color: 'var(--color-text)',
+                  transition: 'all 0.2s ease',
+                  minWidth: '80px',
+                  height: '38px',
+                  whiteSpace: 'nowrap',
                 }}
               >
                 {t('result.shareResult')}
               </button>
 
-              <Link href="/" className="btn btn-secondary" style={{
-                padding: 'var(--spacing-md) var(--spacing-xl)',
+              <Link href="/" className="btn" style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+                padding: '8px 16px',
+                background: 'var(--color-bg-secondary)',
+                border: '1px solid var(--color-border)',
+                borderRadius: 'var(--radius-md)',
+                cursor: 'pointer',
+                fontSize: '14px',
+                fontWeight: '600',
+                color: 'var(--color-text)',
+                transition: 'all 0.2s ease',
+                minWidth: '80px',
+                height: '38px',
+                whiteSpace: 'nowrap',
                 textDecoration: 'none',
-                display: 'inline-flex',
-                alignItems: 'center'
               }}>
                 {t('common.home')}
               </Link>
