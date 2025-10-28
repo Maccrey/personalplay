@@ -10,12 +10,17 @@ import SaveResultButton from "@/components/SaveResultButton";
 import { useTranslation } from "@/hooks/useTranslation";
 import { getTestById } from "../../lib/tests-data";
 import SEOHead from "@/components/SEOHead";
-import KakaoAdBanner from '@/components/KakaoAdBanner';
+import KakaoAd from "@/components/KakaoAd";
+import useMobileDetect from "@/hooks/useMobileDetect";
 
 export default function ResultPage() {
   const router = useRouter();
   const { id, r } = router.query;
   const { t, locale } = useTranslation();
+  const isMobile = useMobileDetect();
+  const adUnitId = isMobile ? "DAN-SB97uaxvv0AS2uSp" : "DAN-5mEps5uhWVWanR29";
+  const adWidth = isMobile ? 320 : 728;
+  const adHeight = isMobile ? 100 : 90;
   const [res, setRes] = useState(null);
   const [testInfo, setTestInfo] = useState(null);
 
@@ -384,7 +389,7 @@ export default function ResultPage() {
             />
 
             {/* Ad Banner */}
-            <KakaoAdBanner />
+            <KakaoAd key={`${router.asPath}-${adUnitId}`} unitId={adUnitId} width={adWidth} height={adHeight} />
 
             {/* Action Buttons */}
             <div style={{
