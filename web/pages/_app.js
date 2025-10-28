@@ -21,13 +21,15 @@ export default function App({ Component, pageProps }) {
     const handleRouteChange = (url) => {
       analytics.pageview(url);
       // 클라이언트 사이드 네비게이션 시 카카오 광고 재호출
-      try {
-        if (window.adsbykakao) {
-          (window.adsbykakao = window.adsbykakao || []).push({});
+      setTimeout(() => {
+        try {
+          if (window.adsbykakao) {
+            (window.adsbykakao = window.adsbykakao || []).push({});
+          }
+        } catch (e) {
+          console.error("Kakao Ad re-initialization failed", e);
         }
-      } catch (e) {
-        console.error("Kakao Ad re-initialization failed", e);
-      }
+      }, 100);
     };
 
     router.events.on("routeChangeComplete", handleRouteChange);
