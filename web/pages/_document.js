@@ -26,6 +26,12 @@ class MyDocument extends Document {
             src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
             onLoad="window.gptLoaded = true;"
           />
+          {/* Kakao AdFit */}
+          <script
+            type="text/javascript"
+            src="//t1.daumcdn.net/kas/static/ba.min.js"
+            async
+          ></script>
         </Head>
         <body>
           <Main />
