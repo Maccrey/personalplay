@@ -10,6 +10,7 @@ import SaveResultButton from "@/components/SaveResultButton";
 import { useTranslation } from "@/hooks/useTranslation";
 import { getTestById } from "../../lib/tests-data";
 import SEOHead from "@/components/SEOHead";
+import KakaoAdBanner from '@/components/KakaoAdBanner';
 
 export default function ResultPage() {
   const router = useRouter();
@@ -381,6 +382,9 @@ export default function ResultPage() {
               testTitle={testTitle}
               resultTitle={resultTitle}
             />
+
+            {/* Ad Banner */}
+            <KakaoAdBanner />
 
             {/* Action Buttons */}
             <div style={{
