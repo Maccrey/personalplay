@@ -17,9 +17,17 @@ export default function App({ Component, pageProps }) {
     // 초기 페이지뷰 추적
     analytics.pageview(router.pathname);
 
-    // 라우트 변경 시 페이지뷰 추적
+    // 라우트 변경 시 페이지뷰 추적 및 광고 재초기화
     const handleRouteChange = (url) => {
       analytics.pageview(url);
+      // 클라이언트 사이드 네비게이션 시 카카오 광고 재호출
+      try {
+        if (window.adsbykakao) {
+          (window.adsbykakao = window.adsbykakao || []).push({});
+        }
+      } catch (e) {
+        console.error("Kakao Ad re-initialization failed", e);
+      }
     };
 
     router.events.on("routeChangeComplete", handleRouteChange);
