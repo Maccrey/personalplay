@@ -191,7 +191,7 @@ export default function CategoryPage() {
             }}
           >
             {tests.map((test, index) => (
-              <Fragment key={test.id}>
+              <div key={test.id}>
                 <Link
                   href={`/test/${test.id}`}
                   style={{ textDecoration: "none" }}
@@ -264,7 +264,7 @@ export default function CategoryPage() {
                     </div>
                   </div>
                 </Link>
-              </Fragment>
+              </div>
             ))}
             </div><KakaoAd key={`${router.asPath}-${bottomAdUnitId}`} unitId={bottomAdUnitId} width={adWidth} height={adHeight} />
 
