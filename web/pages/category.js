@@ -193,7 +193,7 @@ export default function CategoryPage() {
             {tests.map((test, index) => (
               <div key={test.id}>
                 <Link
-                  href={`/test/${test.id}`}
+                  href={`/test?id=${test.id}`}
                   style={{ textDecoration: "none" }}
                 >
                   <div
@@ -281,25 +281,6 @@ export default function CategoryPage() {
   );
 }
 
-// Static Site Generation - 빌드 시 모든 카테고리 페이지 생성
-export async function getStaticPaths() {
-  const categories = ['love', 'personality', 'learning', 'lifestyle', 'meme-trend', 'hobby-entertainment'];
-
-  return {
-    paths: categories.map((id) => ({
-      params: { id },
-    })),
-    fallback: false,
-  };
-}
-
-export async function getStaticProps({ params }) {
-  return {
-    props: {
-      categoryId: params.id,
-    },
-  };
-}
 
 function getTestIcon(id) {
   const icons = {
