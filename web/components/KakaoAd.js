@@ -39,7 +39,7 @@ export default function KakaoAd({ unitId, width, height }) {
       <ins
         ref={adInsRef}
         className="kakao_ad_area"
-        style={{ display: 'block', width: `${width}px`, height: `${height}px` }}
+        style={{ display: 'block', width: `${width}px`, height: `${height}px`, maxWidth: '100%' }}
         data-ad-unit={unitId}
         data-ad-width={width}
         data-ad-height={height}
