@@ -9,11 +9,10 @@ import { useTranslation } from "@/hooks/useTranslation";
 import useMobileDetect from "@/hooks/useMobileDetect";
 import { getCategoryById, getAllTests } from "@/lib/tests-data";
 
-export default function CategoryPage() {
+export default function CategoryPage({ initialCategory, initialTests }) {
   const router = useRouter();
-  const { id } = router.query;
-  const [category, setCategory] = useState(null);
-  const [tests, setTests] = useState([]);
+  const [category, setCategory] = useState(initialCategory);
+  const [tests, setTests] = useState(initialTests);
   const { t, locale } = useTranslation();
   const isMobile = useMobileDetect();
 
@@ -23,15 +22,9 @@ export default function CategoryPage() {
   const bottomAdUnitId = isMobile ? "DAN-pshRbpDXYbRPPLcG" : "DAN-c7xWiCYKN6ZkDMLs";
 
   useEffect(() => {
-    if (!id) return;
-
-    getCategoryById(id, locale).then((cat) => {
-      if (cat) {
-        setCategory(cat);
-        setTests(cat.tests || []);
-      }
-    });
-  }, [id, locale]);
+    // Data is now pre-fetched, but we can keep this for client-side updates if needed in the future.
+    // For now, it can be empty or handle locale changes if necessary.
+  }, [locale]);
 
   if (!category) {
     return (
@@ -193,7 +186,7 @@ export default function CategoryPage() {
             {tests.map((test, index) => (
               <div key={test.id}>
                 <Link
-                  href={`/test?id=${test.id}`}
+                  href={`/test/${test.id}`}
                   style={{ textDecoration: "none" }}
                 >
                   <div
@@ -281,6 +274,31 @@ export default function CategoryPage() {
   );
 }
 
+// Static Site Generation - 빌드 시 모든 카테고리 페이지 생성
+export async function getStaticPaths() {
+  const categories = ['love', 'personality', 'learning', 'lifestyle', 'meme-trend', 'hobby-entertainment'];
+
+  return {
+    paths: categories.map((id) => ({
+      params: { id },
+    })),
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params, locale }) {
+  const { id } = params;
+  const category = await getCategoryById(id, locale || 'en');
+  const tests = category ? category.tests : [];
+
+  return {
+    props: {
+      initialCategory: category,
+      initialTests: tests,
+    },
+    revalidate: 60, // Re-generate the page every 60 seconds
+  };
+}
 
 function getTestIcon(id) {
   const icons = {

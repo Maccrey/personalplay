@@ -116,7 +116,7 @@ export default function Home() {
             {categories.map((category) => (
               <Link
                 key={category.id}
-                href={`/category?id=${category.id}`}
+                href={`/category/${category.id}`}
                 style={{ textDecoration: "none" }}
               >
                 <div

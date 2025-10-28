@@ -287,3 +287,28 @@ export default function TestPage({ initialTest }) {
   );
 }
 
+export async function getStaticPaths() {
+  const fs = require("fs");
+  const path = require("path");
+  const p = path.join(process.cwd(), "data", "tests.json");
+  const raw = fs.readFileSync(p, "utf8");
+  const obj = JSON.parse(raw);
+  const paths = (obj.tests || []).map((t) => ({ params: { id: t.id } }));
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps(context) {
+  const { id } = context.params || {};
+  const fs = require("fs");
+  const path = require("path");
+  try {
+    const p = path.join(process.cwd(), "data", "tests.json");
+    const raw = fs.readFileSync(p, "utf8");
+    const obj = JSON.parse(raw);
+    const t = obj.tests.find((x) => x.id === id) || null;
+    return { props: { initialTest: t } };
+  } catch (e) {
+    return { props: { initialTest: null } };
+  }
+}
+
