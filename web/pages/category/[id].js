@@ -20,6 +20,8 @@ export default function CategoryPage() {
   const adUnitId = isMobile ? "DAN-2zFdK8c07u2jF7YL" : "DAN-39Qufk252UXag4XA";
   const adWidth = isMobile ? 320 : 728;
   const adHeight = isMobile ? 100 : 90;
+  const bottomAdUnitId = isMobile ? "DAN-wnFkuwAq87yQgASc" : "DAN-KlgvPxKDBGNcuYYB";
+  const bottomAdUnitId = isMobile ? "DAN-wnFkuwAq87yQgASc" : "DAN-KlgvPxKDBGNcuYYB";
 
   useEffect(() => {
     if (!id) return;
@@ -265,8 +267,7 @@ export default function CategoryPage() {
                 </Link>
               </Fragment>
             ))}
-            </div>
-          <KakaoAd unitId={adUnitId} width={adWidth} height={adHeight} />
+<KakaoAd unitId={bottomAdUnitId} width={adWidth} height={adHeight} />
 
           <div style={{ textAlign: "center", marginTop: "var(--spacing-2xl)" }}>
             <Link href="/" className="btn btn-secondary">

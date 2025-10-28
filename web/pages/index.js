@@ -17,6 +17,7 @@ export default function Home() {
   const adUnitId = isMobile ? "DAN-2zFdK8c07u2jF7YL" : "DAN-39Qufk252UXag4XA";
   const adWidth = isMobile ? 320 : 728;
   const adHeight = isMobile ? 100 : 90;
+  const bottomAdUnitId = isMobile ? "DAN-wnFkuwAq87yQgASc" : "DAN-KlgvPxKDBGNcuYYB";
 
   useEffect(() => {
     getAllCategories(locale)
@@ -213,8 +214,7 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Kakao Ad */}
-          <KakaoAd unitId={adUnitId} width={adWidth} height={adHeight} />
+<KakaoAd unitId={bottomAdUnitId} width={adWidth} height={adHeight} />
 
           {/* Stats Section */}
           <div
