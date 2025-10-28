@@ -9,10 +9,11 @@ import { useTranslation } from "@/hooks/useTranslation";
 import useMobileDetect from "@/hooks/useMobileDetect";
 import { getCategoryById, getAllTests } from "@/lib/tests-data";
 
-export default function CategoryPage({ initialCategory, initialTests }) {
+export default function CategoryPage() {
   const router = useRouter();
-  const [category, setCategory] = useState(initialCategory);
-  const [tests, setTests] = useState(initialTests);
+  const { id } = router.query;
+  const [category, setCategory] = useState(null);
+  const [tests, setTests] = useState([]);
   const { t, locale } = useTranslation();
   const isMobile = useMobileDetect();
 
@@ -22,9 +23,15 @@ export default function CategoryPage({ initialCategory, initialTests }) {
   const bottomAdUnitId = isMobile ? "DAN-pshRbpDXYbRPPLcG" : "DAN-c7xWiCYKN6ZkDMLs";
 
   useEffect(() => {
-    // Data is now pre-fetched, but we can keep this for client-side updates if needed in the future.
-    // For now, it can be empty or handle locale changes if necessary.
-  }, [locale]);
+    if (!id) return;
+
+    getCategoryById(id, locale).then((cat) => {
+      if (cat) {
+        setCategory(cat);
+        setTests(cat.tests || []);
+      }
+    });
+  }, [id, locale]);
 
   if (!category) {
     return (
@@ -184,80 +191,79 @@ export default function CategoryPage({ initialCategory, initialTests }) {
             }}
           >
             {tests.map((test, index) => (
-              <div key={test.id}>
-                <Link
-                  href={`/test/${test.id}`}
-                  style={{ textDecoration: "none" }}
+              <Link
+                key={test.id}
+                href={`/test/${test.id}`}
+                style={{ textDecoration: "none" }}
+              >
+                <div
+                  className="card"
+                  style={{
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    cursor: "pointer",
+                    border: "2px solid transparent",
+                    transition: "all 0.3s ease",
+                  }}
                 >
                   <div
-                    className="card"
                     style={{
-                      height: "100%",
+                      width: "70px",
+                      height: "70px",
+                      borderRadius: "var(--radius-lg)",
+                      background: category.color,
                       display: "flex",
-                      flexDirection: "column",
-                      cursor: "pointer",
-                      border: "2px solid transparent",
-                      transition: "all 0.3s ease",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      marginBottom: "var(--spacing-md)",
+                      fontSize: "2.5rem",
                     }}
                   >
-                    <div
-                      style={{
-                        width: "70px",
-                        height: "70px",
-                        borderRadius: "var(--radius-lg)",
-                        background: category.color,
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        marginBottom: "var(--spacing-md)",
-                        fontSize: "2.5rem",
-                      }}
-                    >
-                      {getTestIcon(test.id)}
-                    </div>
-
-                    <h3
-                      style={{
-                        fontSize: "1.25rem",
-                        marginBottom: "var(--spacing-sm)",
-                        color: "var(--color-text)",
-                      }}
-                    >
-                      {t(`tests.${test.id}.title`)}
-                    </h3>
-
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "var(--spacing-sm)",
-                        marginTop: "auto",
-                        paddingTop: "var(--spacing-md)",
-                        borderTop: "1px solid var(--color-border)",
-                      }}
-                    >
-                      <span
-                        style={{
-                          fontSize: "0.875rem",
-                          color: "var(--color-text-tertiary)",
-                        }}
-                      >
-                        {test.questions?.length || 0}{t('test.questions')}
-                      </span>
-                      <span
-                        style={{
-                          fontSize: "0.875rem",
-                          fontWeight: "600",
-                          color: category.color,
-                          marginLeft: "auto",
-                        }}
-                      >
-                        →
-                      </span>
-                    </div>
+                    {getTestIcon(test.id)}
                   </div>
-                </Link>
-              </div>
+
+                  <h3
+                    style={{
+                      fontSize: "1.25rem",
+                      marginBottom: "var(--spacing-sm)",
+                      color: "var(--color-text)",
+                    }}
+                  >
+                    {t(`tests.${test.id}.title`)}
+                  </h3>
+
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "var(--spacing-sm)",
+                      marginTop: "auto",
+                      paddingTop: "var(--spacing-md)",
+                      borderTop: "1px solid var(--color-border)",
+                    }}
+                  >
+                    <span
+                      style={{
+                        fontSize: "0.875rem",
+                        color: "var(--color-text-tertiary)",
+                      }}
+                    >
+                      {test.questions?.length || 0}{t('test.questions')}
+                    </span>
+                    <span
+                      style={{
+                        fontSize: "0.875rem",
+                        fontWeight: "600",
+                        color: category.color,
+                        marginLeft: "auto",
+                      }}
+                    >
+                      →
+                    </span>
+                  </div>
+                </div>
+              </Link>
             ))}
             </div><KakaoAd key={`${router.asPath}-${bottomAdUnitId}`} unitId={bottomAdUnitId} width={adWidth} height={adHeight} />
 
@@ -286,17 +292,11 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params, locale }) {
-  const { id } = params;
-  const category = await getCategoryById(id, locale || 'en');
-  const tests = category ? category.tests : [];
-
+export async function getStaticProps({ params }) {
   return {
     props: {
-      initialCategory: category,
-      initialTests: tests,
+      categoryId: params.id,
     },
-    revalidate: 60, // Re-generate the page every 60 seconds
   };
 }
 
