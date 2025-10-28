@@ -17,11 +17,10 @@ export default function CategoryPage() {
   const { t, locale } = useTranslation();
   const isMobile = useMobileDetect();
 
-  const adUnitId = isMobile ? "DAN-2zFdK8c07u2jF7YL" : "DAN-39Qufk252UXag4XA";
+  const adUnitId = isMobile ? "DAN-6aDr6C3c3FqdDe9t" : "DAN-lm66z0vOnzVq5FzX";
   const adWidth = isMobile ? 320 : 728;
   const adHeight = isMobile ? 100 : 90;
-  const bottomAdUnitId = isMobile ? "DAN-wnFkuwAq87yQgASc" : "DAN-KlgvPxKDBGNcuYYB";
-  const bottomAdUnitId = isMobile ? "DAN-wnFkuwAq87yQgASc" : "DAN-KlgvPxKDBGNcuYYB";
+  const bottomAdUnitId = isMobile ? "DAN-pshRbpDXYbRPPLcG" : "DAN-c7xWiCYKN6ZkDMLs";
 
   useEffect(() => {
     if (!id) return;

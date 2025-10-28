@@ -19,7 +19,7 @@ export default function TestPage({ initialTest }) {
   const [currentQ, setCurrentQ] = useState(0);
   const isMobile = useMobileDetect();
 
-  const adUnitId = isMobile ? "DAN-2zFdK8c07u2jF7YL" : "DAN-39Qufk252UXag4XA";
+  const adUnitId = isMobile ? "DAN-7yebP80ZaDE3EnP7" : "DAN-Cj8ewHs8YSOJTAWw";
   const adWidth = isMobile ? 320 : 728;
   const adHeight = isMobile ? 100 : 90;
 
