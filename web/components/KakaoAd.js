@@ -55,6 +55,8 @@ export default function KakaoAd({ unitId, width, height }) {
         margin: 'var(--spacing-xl) auto',
         display: 'flex',
         justifyContent: 'center',
+        minHeight: `${height}px`,
+        backgroundColor: 'rgba(255, 0, 0, 0.2)', // Debugging background
       }}
     >
       <ins
