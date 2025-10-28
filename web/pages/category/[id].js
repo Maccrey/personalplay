@@ -266,7 +266,7 @@ export default function CategoryPage() {
                 </Link>
               </Fragment>
             ))}
-<KakaoAd unitId={bottomAdUnitId} width={adWidth} height={adHeight} />
+            </div><KakaoAd unitId={bottomAdUnitId} width={adWidth} height={adHeight} />
 
           <div style={{ textAlign: "center", marginTop: "var(--spacing-2xl)" }}>
             <Link href="/" className="btn btn-secondary">
