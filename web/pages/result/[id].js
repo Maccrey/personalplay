@@ -388,9 +388,6 @@ export default function ResultPage() {
               resultTitle={resultTitle}
             />
 
-            {/* Ad Banner */}
-            <KakaoAd key={`${router.asPath}-${adUnitId}`} unitId={adUnitId} width={adWidth} height={adHeight} />
-
             {/* Action Buttons */}
             <div style={{
               display: 'flex',
@@ -466,6 +463,9 @@ export default function ResultPage() {
               </Link>
             </div>
           </div>
+
+          {/* Ad Banner */}
+          <KakaoAd key={`${router.asPath}-${adUnitId}`} unitId={adUnitId} width={adWidth} height={adHeight} />
         </div>
 
       </main>
