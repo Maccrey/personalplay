@@ -5,12 +5,16 @@ import { useTranslation } from '@/hooks/useTranslation';
 import { getUserResults, deleteUserResult } from '@/lib/user-results';
 import AuthButton from '@/components/AuthButton';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import KakaoAd from '@/components/KakaoAd';
+import AdInitializer from '@/components/AdInitializer';
+import useMobileDetect from '@/hooks/useMobileDetect';
 
 export default function MyResultsPage() {
   const { user, loading } = useAuth();
   const { t } = useTranslation();
   const [results, setResults] = useState([]);
   const [loadingResults, setLoadingResults] = useState(true);
+  const isMobile = useMobileDetect();
 
   useEffect(() => {
     if (user) {
@@ -67,8 +71,13 @@ export default function MyResultsPage() {
     );
   }
 
+  const adUnitId = isMobile ? "DAN-6oOCRNxDTOh53uVz" : "DAN-jxGC1Y8xxofhQlxD";
+  const adWidth = isMobile ? 320 : 728;
+  const adHeight = isMobile ? 100 : 90;
+
   return (
     <>
+      <AdInitializer />
       <header className="page-header" style={{
         background: 'var(--color-bg)',
         borderBottom: '1px solid var(--color-border)',
@@ -261,6 +270,7 @@ export default function MyResultsPage() {
             ))}
           </div>
         )}
+        <KakaoAd unitId={adUnitId} width={adWidth} height={adHeight} />
       </div>
     </>
   );
