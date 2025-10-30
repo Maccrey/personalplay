@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useAuth } from '@/contexts/AuthContext';
 import { useTranslation } from '@/hooks/useTranslation';
 import { getUserResults, deleteUserResult } from '@/lib/user-results';
@@ -10,6 +11,7 @@ import AdInitializer from '@/components/AdInitializer';
 import useMobileDetect from '@/hooks/useMobileDetect';
 
 export default function MyResultsPage() {
+  const router = useRouter();
   const { user, loading } = useAuth();
   const { t } = useTranslation();
   const [results, setResults] = useState([]);
@@ -270,7 +272,7 @@ export default function MyResultsPage() {
             ))}
           </div>
         )}
-        <KakaoAd unitId={adUnitId} width={adWidth} height={adHeight} />
+                <KakaoAd key={router.asPath} unitId={adUnitId} width={adWidth} height={adHeight} />
       </div>
     </>
   );
