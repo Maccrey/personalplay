@@ -5,27 +5,6 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          {/* 초기 설정 */}
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.googletag = window.googletag || {};
-                window.googletag.cmd = window.googletag.cmd || [];
-                window.pbjs = window.pbjs || {};
-                window.pbjs.que = window.pbjs.que || [];
-              `,
-            }}
-          />
-          {/* Prebid.js */}
-          <script
-            src="https://cdn.jsdelivr.net/npm/prebid.js@latest/dist/prebid.js"
-            onLoad="window.prebidLoaded = true;"
-          />
-          {/* Google Publisher Tag */}
-          <script
-            src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
-            onLoad="window.gptLoaded = true;"
-          />
           {/* Kakao AdFit */}
           <script
             type="text/javascript"

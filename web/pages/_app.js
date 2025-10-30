@@ -4,7 +4,6 @@ import "../styles/globals.css";
 import Head from "next/head";
 import Script from "next/script";
 import Analytics from "../components/Analytics";
-import AdInitializer from "@/components/AdInitializer";
 import { LanguageProvider } from "../contexts/LanguageContext";
 import { AuthProvider } from "../contexts/AuthContext";
 import { AdProvider } from "../contexts/AdContext";
@@ -57,7 +56,6 @@ export default function App({ Component, pageProps }) {
             {/* Theme Color */}
             <meta name-color="#8B5CF6" />
           </Head>
-          <AdInitializer />
           <Analytics />
           <Component {...pageProps} />
           <Script

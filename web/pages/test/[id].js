@@ -6,7 +6,6 @@ import { trackEvent } from "@/utils/analytics";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import AuthButton from "@/components/AuthButton";
 import KakaoAd from "@/components/KakaoAd";
-import AdInitializer from "@/components/AdInitializer";
 import { useTranslation } from "@/hooks/useTranslation";
 import useMobileDetect from "@/hooks/useMobileDetect";
 import { getTestById } from "@/lib/tests-data";
@@ -90,7 +89,6 @@ export default function TestPage({ initialTest }) {
         <meta name="description" content={`${testTitle} - ${t('home.subtitle')}`} />
       </Head>
 
-      <AdInitializer />
       <main className="fade-in">
         {/* Header */}
         <header className="page-header" style={{
