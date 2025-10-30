@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useState, useEffect, Fragment } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
@@ -9,6 +9,8 @@ import { useTranslation } from "@/hooks/useTranslation";
 import useMobileDetect from "@/hooks/useMobileDetect";
 import { getCategoryData } from "@/lib/category-data";
 import { getCategoryForTest } from "@/lib/category-mapping";
+import { useAuth } from "@/contexts/AuthContext";
+import { getUserResults } from "@/lib/user-results";
 
 export default function CategoryPage({ initialCategory, initialTests }) {
   const router = useRouter();
@@ -16,11 +18,19 @@ export default function CategoryPage({ initialCategory, initialTests }) {
   const [tests, setTests] = useState(initialTests);
   const { t, locale } = useTranslation();
   const isMobile = useMobileDetect();
+  const { user } = useAuth();
+  const [userResults, setUserResults] = useState([]);
 
   const adUnitId = isMobile ? "DAN-6aDr6C3c3FqdDe9t" : "DAN-lm66z0vOnzVq5FzX";
   const adWidth = isMobile ? 320 : 728;
   const adHeight = isMobile ? 100 : 90;
   const bottomAdUnitId = isMobile ? "DAN-pshRbpDXYbRPPLcG" : "DAN-c7xWiCYKN6ZkDMLs";
+
+  useEffect(() => {
+    if (user) {
+      getUserResults(user.uid).then(setUserResults);
+    }
+  }, [user]);
 
   useEffect(() => {
     if (!category && router.query.id) {
@@ -191,21 +201,20 @@ export default function CategoryPage({ initialCategory, initialTests }) {
               gap: "var(--spacing-lg)",
             }}
           >
-            {tests.map((test, index) => (
-              <Link
-                key={test.id}
-                href={`/test/${test.id}`}
-                style={{ textDecoration: "none" }}
-              >
+            {tests.map((test) => {
+              const hasResult = userResults.some(result => result.testId === test.id);
+              const cardContent = (
                 <div
                   className="card"
                   style={{
                     height: "100%",
                     display: "flex",
                     flexDirection: "column",
-                    cursor: "pointer",
+                    cursor: hasResult ? "not-allowed" : "pointer",
                     border: "2px solid transparent",
                     transition: "all 0.3s ease",
+                    background: hasResult ? "#f1f3f5" : "white",
+                    opacity: hasResult ? 0.6 : 1,
                   }}
                 >
                   <div
@@ -264,8 +273,22 @@ export default function CategoryPage({ initialCategory, initialTests }) {
                     </span>
                   </div>
                 </div>
-              </Link>
-            ))}
+              );
+
+              if (hasResult) {
+                return <div key={test.id}>{cardContent}</div>;
+              }
+
+              return (
+                <Link
+                  key={test.id}
+                  href={`/test/${test.id}`}
+                  style={{ textDecoration: "none" }}
+                >
+                  {cardContent}
+                </Link>
+              );
+            })}
             </div><KakaoAd key={`${router.asPath}-${bottomAdUnitId}`} unitId={bottomAdUnitId} width={adWidth} height={adHeight} />
 
           <div style={{ textAlign: "center", marginTop: "var(--spacing-2xl)" }}>
