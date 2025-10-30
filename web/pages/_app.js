@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-import { useRouter } from "next/router";
 import "../styles/globals.css";
 import Head from "next/head";
 import Script from "next/script";
@@ -7,26 +5,8 @@ import Analytics from "../components/Analytics";
 import { LanguageProvider } from "../contexts/LanguageContext";
 import { AuthProvider } from "../contexts/AuthContext";
 import { AdProvider } from "../contexts/AdContext";
-import * as analytics from "../lib/analytics";
 
 export default function App({ Component, pageProps }) {
-  const router = useRouter();
-
-  useEffect(() => {
-    // 초기 페이지뷰 추적
-    analytics.pageview(router.pathname);
-
-    // 라우트 변경 시 페이지뷰 추적
-    const handleRouteChange = (url) => {
-      analytics.pageview(url);
-    };
-
-    router.events.on("routeChangeComplete", handleRouteChange);
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router.events, router.pathname]);
-
   return (
     <LanguageProvider>
       <AuthProvider>
@@ -47,9 +27,8 @@ export default function App({ Component, pageProps }) {
           <Analytics />
           <Component {...pageProps} />
           <Script
-            id="kakao-ad-script"
-            src="//t1.daumcdn.net/kas/static/ba.min.js"
             strategy="afterInteractive"
+            src="//t1.daumcdn.net/kas/static/ba.min.js"
             async
           />
         </AdProvider>

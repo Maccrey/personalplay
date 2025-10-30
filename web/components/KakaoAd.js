@@ -1,7 +1,13 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 export default function KakaoAd({ unitId, width, height }) {
   const adInsRef = useRef(null);
+
+  useEffect(() => {
+    if (window.kakao?.ad?.fit) {
+      window.kakao.ad.fit.render();
+    }
+  }, []);
 
   // In development, show a placeholder.
   if (process.env.NODE_ENV === 'development') {
@@ -39,7 +45,7 @@ export default function KakaoAd({ unitId, width, height }) {
       <ins
         ref={adInsRef}
         className="kakao_ad_area"
-        style={{ display: 'block', width: `${width}px`, height: `${height}px`, maxWidth: '100%' }}
+        style={{ display: 'none', width: `${width}px`, height: `${height}px`, maxWidth: '100%' }}
         data-ad-unit={unitId}
         data-ad-width={width}
         data-ad-height={height}
