@@ -16,21 +16,9 @@ export default function App({ Component, pageProps }) {
     // 초기 페이지뷰 추적
     analytics.pageview(router.pathname);
 
-    // 라우트 변경 시 페이지뷰 추적 및 광고 재초기화
+    // 라우트 변경 시 페이지뷰 추적
     const handleRouteChange = (url) => {
       analytics.pageview(url);
-
-      // Force-reload the Kakao Ad script on each navigation
-      const oldScript = document.getElementById('kakao-ad-script');
-      if (oldScript) {
-        oldScript.remove();
-      }
-
-      const newScript = document.createElement('script');
-      newScript.id = 'kakao-ad-script';
-      newScript.src = '//t1.daumcdn.net/kas/static/ba.min.js';
-      newScript.async = true;
-      document.head.appendChild(newScript);
     };
 
     router.events.on("routeChangeComplete", handleRouteChange);
