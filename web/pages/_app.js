@@ -1,6 +1,5 @@
 import "../styles/globals.css";
 import Head from "next/head";
-import Script from "next/script";
 import Analytics from "../components/Analytics";
 import { LanguageProvider } from "../contexts/LanguageContext";
 import { AuthProvider } from "../contexts/AuthContext";
@@ -26,11 +25,6 @@ export default function App({ Component, pageProps }) {
           </Head>
           <Analytics />
           <Component {...pageProps} />
-          <Script
-            strategy="afterInteractive"
-            src="//t1.daumcdn.net/kas/static/ba.min.js"
-            async
-          />
         </AdProvider>
       </AuthProvider>
     </LanguageProvider>

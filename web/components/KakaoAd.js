@@ -4,9 +4,14 @@ export default function KakaoAd({ unitId, width, height }) {
   const adInsRef = useRef(null);
 
   useEffect(() => {
-    if (window.kakao?.ad?.fit) {
-      window.kakao.ad.fit.render();
-    }
+    const script = document.createElement("script");
+    script.src = "//t1.daumcdn.net/kas/static/ba.min.js";
+    script.async = true;
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
   }, []);
 
   // In development, show a placeholder.
@@ -45,7 +50,7 @@ export default function KakaoAd({ unitId, width, height }) {
       <ins
         ref={adInsRef}
         className="kakao_ad_area"
-        style={{ display: 'none', width: `${width}px`, height: `${height}px`, maxWidth: '100%' }}
+        style={{ display: 'block', width: `${width}px`, height: `${height}px`, maxWidth: '100%' }}
         data-ad-unit={unitId}
         data-ad-width={width}
         data-ad-height={height}
