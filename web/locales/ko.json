@@ -13,32 +13,33 @@
   "home": {
     "title": "PersonaPlay",
     "subtitle": "나를 알아가는 재미있는 심리테스트",
-            "description": "카테고리별로 다양한 검사를 경험해보세요!",
-            "categories": "카테고리",
-            "totalTests": "총 130개의 다양한 심리검사",
-            "testTypes": "MBTI, ADHD, 학습 유형, 애착 유형, 사랑 유형, 트렌드, 취미 등",
-            "testTypesDesc": "전문적인 심리 검사를 경험해보세요",
-            "testsCount": "{{count}}개 검사",
-            "footer": "© 2025 PersonaPlay. All rights reserved."
-        },
-        "myResults": {
-            "title": "내 테스트 결과",
-            "description": "완료한 테스트 결과를 확인하고 공유하세요.",
-            "noResults": "아직 완료한 테스트가 없습니다.",
-            "takeTests": "테스트 하러가기",
-            "takeTest": "테스트 하러가기",
-            "noTests": "표시할 테스트가 없습니다.",
-            "goHome": "홈으로 가기",
-            "result": "결과",
-            "testTaken": "실시 날짜",
-            "viewResult": "결과 보기",
-            "delete": "삭제",
-            "confirmDelete": "정말로 이 결과를 삭제하시겠습니까?"
-        },
-        "visitor": {
-            "today": "오늘 방문자",
-            "total": "전체 방문자"
-        },  "categories": {
+    "description": "카테고리별로 다양한 검사를 경험해보세요!",
+    "categories": "카테고리",
+    "totalTests": "총 130개의 다양한 심리검사",
+    "testTypes": "MBTI, ADHD, 학습 유형, 애착 유형, 사랑 유형, 트렌드, 취미 등",
+    "testTypesDesc": "전문적인 심리 검사를 경험해보세요",
+    "testsCount": "{{count}}개 검사",
+    "footer": "© 2025 PersonaPlay. All rights reserved."
+  },
+  "myResults": {
+    "title": "내 테스트 결과",
+    "description": "완료한 테스트 결과를 확인하고 공유하세요.",
+    "noResults": "아직 완료한 테스트가 없습니다.",
+    "takeTests": "테스트 하러가기",
+    "takeTest": "테스트 하러가기",
+    "noTests": "표시할 테스트가 없습니다.",
+    "goHome": "홈으로 가기",
+    "result": "결과",
+    "testTaken": "실시 날짜",
+    "viewResult": "결과 보기",
+    "delete": "삭제",
+    "confirmDelete": "정말로 이 결과를 삭제하시겠습니까?"
+  },
+  "visitor": {
+    "today": "오늘 방문자",
+    "total": "전체 방문자"
+  },
+  "categories": {
     "love": {
       "name": "연애 & 관계",
       "description": "사랑과 인간관계에 대한 심리 검사"

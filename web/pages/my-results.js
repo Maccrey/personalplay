@@ -85,6 +85,10 @@ export default function MyResultsPage() {
   const combinedTests = allTests.map(test => {
     const result = results.find(r => r.testId === test.id);
     return { ...test, result };
+  }).sort((a, b) => {
+    if (a.result && !b.result) return -1;
+    if (!a.result && b.result) return 1;
+    return 0;
   });
 
   return (
