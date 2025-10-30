@@ -7,7 +7,7 @@ import { getUserResults, deleteUserResult } from '@/lib/user-results';
 import AuthButton from '@/components/AuthButton';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import KakaoAd from '@/components/KakaoAd';
-import AdInitializer from '@/components/AdInitializer';
+
 import useMobileDetect from '@/hooks/useMobileDetect';
 
 export default function MyResultsPage() {
@@ -79,7 +79,7 @@ export default function MyResultsPage() {
 
   return (
     <>
-      <AdInitializer />
+      
       <header className="page-header" style={{
         background: 'var(--color-bg)',
         borderBottom: '1px solid var(--color-border)',
