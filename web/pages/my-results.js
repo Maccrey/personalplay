@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { useAuth } from '@/contexts/AuthContext';
 import { useTranslation } from '@/hooks/useTranslation';
 import { getUserResults, deleteUserResult } from '@/lib/user-results';
+import { getAllTests } from '@/lib/tests-data';
 import AuthButton from '@/components/AuthButton';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import KakaoAd from '@/components/KakaoAd';
@@ -13,29 +14,33 @@ import useMobileDetect from '@/hooks/useMobileDetect';
 export default function MyResultsPage() {
   const router = useRouter();
   const { user, loading } = useAuth();
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
   const [results, setResults] = useState([]);
-  const [loadingResults, setLoadingResults] = useState(true);
+  const [allTests, setAllTests] = useState([]);
+  const [loadingData, setLoadingData] = useState(true);
   const isMobile = useMobileDetect();
 
   useEffect(() => {
-    if (user) {
-      loadResults();
-    } else if (!loading) {
-      setLoadingResults(false);
+    async function loadData() {
+      setLoadingData(true);
+      try {
+        if (user) {
+          const userResults = await getUserResults(user.uid);
+          setResults(userResults);
+        }
+        const tests = await getAllTests(language);
+        setAllTests(tests);
+      } catch (error) {
+        console.error('Error loading page data:', error);
+      } finally {
+        setLoadingData(false);
+      }
     }
-  }, [user, loading]);
 
-  const loadResults = async () => {
-    try {
-      const userResults = await getUserResults(user.uid);
-      setResults(userResults);
-    } catch (error) {
-      console.error('Error loading results:', error);
-    } finally {
-      setLoadingResults(false);
+    if (!loading) {
+      loadData();
     }
-  };
+  }, [user, loading, language]);
 
   const handleDelete = async (resultId) => {
     if (!confirm(t('myResults.confirmDelete'))) {
@@ -51,7 +56,7 @@ export default function MyResultsPage() {
     }
   };
 
-  if (loading || loadingResults) {
+  if (loading || loadingData) {
     return (
       <div className="container" style={{ padding: 'var(--spacing-2xl)', textAlign: 'center' }}>
         <p>{t('common.loading')}</p>
@@ -77,9 +82,13 @@ export default function MyResultsPage() {
   const adWidth = isMobile ? 320 : 728;
   const adHeight = isMobile ? 100 : 90;
 
+  const combinedTests = allTests.map(test => {
+    const result = results.find(r => r.testId === test.id);
+    return { ...test, result };
+  });
+
   return (
     <>
-      
       <header className="page-header" style={{
         background: 'var(--color-bg)',
         borderBottom: '1px solid var(--color-border)',
@@ -150,17 +159,17 @@ export default function MyResultsPage() {
           {t('myResults.description')}
         </p>
 
-        {results.length === 0 ? (
+        {combinedTests.length === 0 ? (
           <div style={{ textAlign: 'center', padding: 'var(--spacing-2xl)' }}>
             <p style={{ marginBottom: 'var(--spacing-xl)', color: 'var(--color-text-secondary)' }}>
-              {t('myResults.noResults')}
+              {t('myResults.noTests')}
             </p>
             <Link
               href="/"
               className="btn btn-primary"
               style={{ textDecoration: 'none', padding: 'var(--spacing-md) var(--spacing-xl)' }}
             >
-              {t('myResults.takeTests')}
+              {t('myResults.goHome')}
             </Link>
           </div>
         ) : (
@@ -171,108 +180,109 @@ export default function MyResultsPage() {
             maxWidth: '1200px',
             margin: '0 auto'
           }}>
-            {results.map((result) => (
-              <div
-                key={result.id}
-                style={{
-                  background: 'white',
-                  border: '1px solid #e0e0e0',
-                  borderRadius: '12px',
-                  padding: 'var(--spacing-lg)',
-                  boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
-                  transition: 'all 0.2s'
-                }}
-                onMouseOver={(e) => {
-                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
-                  e.currentTarget.style.transform = 'translateY(-2px)';
-                }}
-                onMouseOut={(e) => {
-                  e.currentTarget.style.boxShadow = '0 2px 4px rgba(0,0,0,0.05)';
-                  e.currentTarget.style.transform = 'translateY(0)';
-                }}
-              >
-                <h3 style={{
-                  fontSize: '1.25rem',
-                  fontWeight: '700',
-                  marginBottom: 'var(--spacing-sm)',
-                  color: 'var(--color-primary)'
-                }}>
-                  {result.testTitle}
-                </h3>
-                
-                <p style={{
-                  fontSize: '1rem',
-                  fontWeight: '600',
-                  marginBottom: 'var(--spacing-md)',
-                  color: 'var(--color-text-secondary)'
-                }}>
-                  {t('myResults.result')}: {result.resultTitle}
-                </p>
-
-                <p style={{
-                  fontSize: '0.875rem',
-                  color: '#999',
-                  marginBottom: 'var(--spacing-md)'
-                }}>
-                  {t('myResults.testTaken')}: {result.createdAt?.toLocaleDateString()}
-                </p>
-
-                <div style={{
-                  display: 'flex',
-                  gap: 'var(--spacing-sm)'
-                }}>
-                  <Link
-                    href={`/result/${result.testId}?r=${result.resultKey}`}
-                    style={{
-                      flex: 1,
-                      padding: 'var(--spacing-sm) var(--spacing-md)',
-                      background: 'var(--color-primary)',
-                      color: 'white',
-                      textDecoration: 'none',
-                      textAlign: 'center',
-                      borderRadius: '8px',
-                      fontSize: '0.875rem',
-                      fontWeight: '600',
-                      transition: 'background 0.2s'
-                    }}
-                    onMouseOver={(e) => {
-                      e.currentTarget.style.background = '#7c3aed';
-                    }}
-                    onMouseOut={(e) => {
-                      e.currentTarget.style.background = 'var(--color-primary)';
-                    }}
-                  >
-                    {t('myResults.viewResult')}
-                  </Link>
-
-                  <button
-                    onClick={() => handleDelete(result.id)}
-                    style={{
-                      padding: 'var(--spacing-sm) var(--spacing-md)',
-                      background: '#fee',
-                      color: '#d32f2f',
-                      border: 'none',
-                      borderRadius: '8px',
-                      fontSize: '0.875rem',
-                      fontWeight: '600',
-                      cursor: 'pointer',
-                      transition: 'background 0.2s'
-                    }}
-                    onMouseOver={(e) => {
-                      e.currentTarget.style.background = '#fdd';
-                    }}
-                    onMouseOut={(e) => {
-                      e.currentTarget.style.background = '#fee';
-                    }}
-                  >
-                    {t('myResults.delete')}
-                  </button>
+            {combinedTests.map(({ id, title, result }) => {
+              const isCompleted = !!result;
+              return (
+                <div
+                  key={id}
+                  style={{
+                    background: isCompleted ? '#f8f9fa' : 'white',
+                    border: '1px solid #e0e0e0',
+                    borderRadius: '12px',
+                    padding: 'var(--spacing-lg)',
+                    boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
+                    transition: 'all 0.2s',
+                    opacity: isCompleted ? 0.7 : 1,
+                  }}
+                >
+                  <h3 style={{
+                    fontSize: '1.25rem',
+                    fontWeight: '700',
+                    marginBottom: 'var(--spacing-sm)',
+                    color: 'var(--color-primary)'
+                  }}>
+                    {title}
+                  </h3>
+                  
+                  {isCompleted ? (
+                    <>
+                      <p style={{
+                        fontSize: '1rem',
+                        fontWeight: '600',
+                        marginBottom: 'var(--spacing-md)',
+                        color: 'var(--color-text-secondary)'
+                      }}>
+                        {t('myResults.result')}: {result.resultTitle}
+                      </p>
+                      <p style={{
+                        fontSize: '0.875rem',
+                        color: '#999',
+                        marginBottom: 'var(--spacing-md)'
+                      }}>
+                        {t('myResults.testTaken')}: {new Date(result.createdAt).toLocaleDateString()}
+                      </p>
+                      <div style={{ display: 'flex', gap: 'var(--spacing-sm)' }}>
+                        <Link
+                          href={`/result/${result.testId}?r=${result.resultKey}`}
+                          style={{
+                            flex: 1,
+                            padding: 'var(--spacing-sm) var(--spacing-md)',
+                            background: 'var(--color-primary)',
+                            color: 'white',
+                            textDecoration: 'none',
+                            textAlign: 'center',
+                            borderRadius: '8px',
+                            fontSize: '0.875rem',
+                            fontWeight: '600',
+                            transition: 'background 0.2s'
+                          }}
+                        >
+                          {t('myResults.viewResult')}
+                        </Link>
+                        <button
+                          onClick={() => handleDelete(result.id)}
+                          style={{
+                            padding: 'var(--spacing-sm) var(--spacing-md)',
+                            background: '#fee',
+                            color: '#d32f2f',
+                            border: 'none',
+                            borderRadius: '8px',
+                            fontSize: '0.875rem',
+                            fontWeight: '600',
+                            cursor: 'pointer',
+                            transition: 'background 0.2s'
+                          }}
+                        >
+                          {t('myResults.delete')}
+                        </button>
+                      </div>
+                    </>
+                  ) : (
+                    <Link
+                      href={`/test/${id}`}
+                      className="btn btn-primary"
+                      style={{
+                        display: 'block',
+                        padding: 'var(--spacing-sm) var(--spacing-md)',
+                        background: 'var(--color-primary)',
+                        color: 'white',
+                        textDecoration: 'none',
+                        textAlign: 'center',
+                        borderRadius: '8px',
+                        fontSize: '0.875rem',
+                        fontWeight: '600',
+                        transition: 'background 0.2s'
+                      }}
+                    >
+                      {t('myResults.takeTest')}
+                    </Link>
+                  )}
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         )}
-                <KakaoAd key={router.asPath} unitId={adUnitId} width={adWidth} height={adHeight} />
+        <KakaoAd key={router.asPath} unitId={adUnitId} width={adWidth} height={adHeight} />
       </div>
     </>
   );

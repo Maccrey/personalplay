@@ -25,6 +25,20 @@
     "testsCount": "{{count}}個の診断",
     "footer": "© 2025 PersonaPlay. All rights reserved."
   },
+  "myResults": {
+    "title": "私のテスト結果",
+    "description": "完了したテスト結果を確認して共有します。",
+    "noResults": "まだ完了したテストはありません。",
+    "takeTests": "テストを受ける",
+    "takeTest": "テストを受ける",
+    "noTests": "表示するテストがありません。",
+    "goHome": "ホームに行く",
+    "result": "結果",
+    "testTaken": "実施日",
+    "viewResult": "結果を見る",
+    "delete": "削除",
+    "confirmDelete": "この結果を本当に削除しますか？"
+  },
   "categories": {
     "love": {
       "name": "恋愛 & 人間関係",

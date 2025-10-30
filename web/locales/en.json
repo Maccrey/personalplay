@@ -25,6 +25,20 @@
     "testsCount": "{{count}} tests",
     "footer": "© 2025 PersonaPlay. All rights reserved."
   },
+  "myResults": {
+    "title": "My Test Results",
+    "description": "Check and share your completed test results.",
+    "noResults": "You have not completed any tests yet.",
+    "takeTests": "Take Tests",
+    "takeTest": "Take Test",
+    "noTests": "No tests to display.",
+    "goHome": "Go Home",
+    "result": "Result",
+    "testTaken": "Date Taken",
+    "viewResult": "View Result",
+    "delete": "Delete",
+    "confirmDelete": "Are you sure you want to delete this result?"
+  },
   "categories": {
     "love": {
       "name": "Love & Relationships",
